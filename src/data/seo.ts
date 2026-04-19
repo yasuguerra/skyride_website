@@ -261,6 +261,20 @@ export function buildMetadata(
       siteName: "Sky Ride Panama",
       locale: locale === "es" ? "es_PA" : "en_US",
       type: seo.ogType ?? "website",
+      images: [
+        {
+          url: `${SITE_URL}/images/hero/skyride-vuelos-privados-panama.webp`,
+          width: 1200,
+          height: 630,
+          alt: "Sky Ride Panama — Private flights",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: seo.title[locale],
+      description: seo.description[locale],
+      images: [`${SITE_URL}/images/hero/skyride-vuelos-privados-panama.webp`],
     },
     robots: { index: true, follow: true },
   };

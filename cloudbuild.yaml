@@ -37,7 +37,7 @@ steps:
 
 substitutions:
   _REGION: us-central1
-  _GTM_ID: ""
+  _GTM_ID: "GTM-W433GH2"
   _GA4_ID: ""
   _CLARITY_ID: ""
 

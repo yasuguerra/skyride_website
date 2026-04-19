@@ -7,7 +7,6 @@ import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { MartinChat } from "@/components/ui/MartinChat";
-import { MartinChat } from "@/components/ui/MartinChat";
 
 /**
  * /reservar-con-martin (ES) · /en/book-with-martin (EN)
