@@ -1,0 +1,125 @@
+{
+  "metadata": {
+    "siteName": "Sky Ride Panama",
+    "siteDescription": "Private charter flights, helicopter tours, and exclusive routes in Panama"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "charter": "Charter Flights",
+    "helicopter": "Helicopter Rides",
+    "affordableFlights": "Affordable Flights",
+    "availableSeats": "Available Seats",
+    "businessFlights": "Business Flights",
+    "fleet": "Our Fleet",
+    "destinations": "Destinations",
+    "routes": "Routes",
+    "blog": "Blog",
+    "contact": "Contact",
+    "faq": "FAQ"
+  },
+  "cta": {
+    "bookNow": "Book Now",
+    "learnMore": "Learn More",
+    "whatsapp": "Chat on WhatsApp",
+    "call": "Call Us",
+    "requestQuote": "Request a Quote",
+    "viewFleet": "View Our Fleet",
+    "exploreRoutes": "Explore Routes",
+    "bookThisRoute": "Book This Route",
+    "charterThisAircraft": "Charter This Aircraft",
+    "flyTo": "Fly to {destination}",
+    "startingFrom": "From {price}"
+  },
+  "hero": {
+    "eyebrow": "Premium private aviation in Panama",
+    "title": "Charter flights, helicopter rides, and exclusive routes that turn interest into bookings.",
+    "description": "Sky Ride Panama combines speed, trust, and premium service to take our clients to any destination.",
+    "stats": {
+      "flights": "500+",
+      "flightsLabel": "Flights completed",
+      "responseTime": "< 10 min",
+      "responseLabel": "Response time",
+      "destinations": "20+",
+      "destinationsLabel": "Premium destinations"
+    },
+    "steps": {
+      "step1": "Origin and destination",
+      "step2": "Date and passengers",
+      "step3": "WhatsApp confirmation"
+    }
+  },
+  "trust": {
+    "dgac": "DGAC Certified",
+    "payments": "Wompi Payments",
+    "bilingual": "Bilingual Service",
+    "coverage": "Panama & Costa Rica"
+  },
+  "services": {
+    "charterTitle": "Charter Flights",
+    "charterDescription": "Executive transfers and private routes for business, tourism, and small groups. Fly directly to your destination with no layovers.",
+    "charterBadge": "Based in Panama City",
+    "helicopterTitle": "Helicopter Rides",
+    "helicopterDescription": "Memorable aerial experiences over Panama City and exclusive destinations. Safety, comfort, and unforgettable views.",
+    "helicopterBadge": "Best Seller",
+    "seatsTitle": "Available Seats",
+    "seatsDescription": "More accessible options for flexible travelers seeking speed without sacrificing comfort on shared flights.",
+    "seatsBadge": "High Demand"
+  },
+  "fleet": {
+    "sectionTitle": "Our Fleet",
+    "sectionSubtitle": "Certified aircraft for every type of flight",
+    "passengers": "{count} passengers",
+    "type": {
+      "airplane": "Airplane",
+      "helicopter": "Helicopter"
+    }
+  },
+  "routes": {
+    "sectionTitle": "Featured Routes",
+    "sectionSubtitle": "High-demand routes ready for immediate booking",
+    "flightTime": "{time} flight time",
+    "requestRoute": "Request this route"
+  },
+  "testimonials": {
+    "sectionTitle": "What our clients say",
+    "sectionSubtitle": "Real testimonials from travelers who chose Sky Ride"
+  },
+  "contact": {
+    "title": "Contact",
+    "name": "Full name",
+    "phone": "Phone",
+    "email": "Email",
+    "origin": "Origin",
+    "destination": "Destination",
+    "message": "Message",
+    "send": "Send message"
+  },
+  "footer": {
+    "blurb": "Sky Ride Panama combines private charter, helicopters, and premium routes for travelers who need speed and trust.",
+    "copyright": "© {year} Sky Ride Panama | Private & Charter Flights. All rights reserved.",
+    "contactTitle": "Contact",
+    "servicesTitle": "Services",
+    "legalTitle": "Legal",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "faq": "FAQ"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "Sorry, the page you are looking for does not exist or has been moved.",
+    "backHome": "Back to home"
+  },
+  "booking": {
+    "step1Title": "Where are you departing from?",
+    "step1Placeholder": "Origin city",
+    "step2Title": "Where are you going?",
+    "step2Placeholder": "Destination city",
+    "step3Title": "When are you traveling?",
+    "step4Title": "How many passengers?",
+    "step4Placeholder": "Number of passengers",
+    "next": "Next",
+    "back": "Back",
+    "submit": "Send via WhatsApp"
+  }
+}

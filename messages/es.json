@@ -1,0 +1,125 @@
+{
+  "metadata": {
+    "siteName": "Sky Ride Panama",
+    "siteDescription": "Vuelos charter privados, paseos en helicóptero y rutas exclusivas en Panamá"
+  },
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "charter": "Vuelos Chárter",
+    "helicopter": "Paseo en Helicóptero",
+    "affordableFlights": "Vuelos Privados Baratos",
+    "availableSeats": "Asientos Disponibles",
+    "businessFlights": "Vuelos de Negocios",
+    "fleet": "Nuestra Flota",
+    "destinations": "Destinos",
+    "routes": "Rutas",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "faq": "Preguntas Frecuentes"
+  },
+  "cta": {
+    "bookNow": "Reservar Ahora",
+    "learnMore": "Más Información",
+    "whatsapp": "Escribir por WhatsApp",
+    "call": "Llamar",
+    "requestQuote": "Solicitar Cotización",
+    "viewFleet": "Ver Nuestra Flota",
+    "exploreRoutes": "Explorar Rutas",
+    "bookThisRoute": "Reservar Esta Ruta",
+    "charterThisAircraft": "Alquilar Esta Aeronave",
+    "flyTo": "Volar a {destination}",
+    "startingFrom": "Desde {price}"
+  },
+  "hero": {
+    "eyebrow": "Aviación privada premium en Panamá",
+    "title": "Vuelos chárter, helicópteros y rutas exclusivas que convierten interés en reservas.",
+    "description": "Sky Ride Panamá combina velocidad, confianza y servicio premium para llevar a nuestros clientes a cualquier destino.",
+    "stats": {
+      "flights": "500+",
+      "flightsLabel": "Vuelos completados",
+      "responseTime": "< 10 min",
+      "responseLabel": "Tiempo de respuesta",
+      "destinations": "20+",
+      "destinationsLabel": "Destinos premium"
+    },
+    "steps": {
+      "step1": "Origen y destino",
+      "step2": "Fecha y pasajeros",
+      "step3": "Confirmación por WhatsApp"
+    }
+  },
+  "trust": {
+    "dgac": "Certificación DGAC",
+    "payments": "Pagos con Wompi",
+    "bilingual": "Atención bilingüe",
+    "coverage": "Panamá y Costa Rica"
+  },
+  "services": {
+    "charterTitle": "Vuelos Chárter",
+    "charterDescription": "Traslados ejecutivos y rutas privadas para negocios, turismo y grupos pequeños. Vuele directo a su destino sin escalas ni esperas.",
+    "charterBadge": "Desde Panama City",
+    "helicopterTitle": "Paseos en Helicóptero",
+    "helicopterDescription": "Experiencias aéreas memorables sobre la Ciudad de Panamá y destinos exclusivos. Seguridad, confort y vistas inolvidables.",
+    "helicopterBadge": "Top servicio",
+    "seatsTitle": "Asientos Disponibles",
+    "seatsDescription": "Opciones más accesibles para viajeros flexibles que buscan velocidad sin sacrificar confort en vuelos compartidos.",
+    "seatsBadge": "Alta demanda"
+  },
+  "fleet": {
+    "sectionTitle": "Nuestra Flota",
+    "sectionSubtitle": "Aeronaves certificadas para cada tipo de vuelo",
+    "passengers": "{count} pasajeros",
+    "type": {
+      "airplane": "Avión",
+      "helicopter": "Helicóptero"
+    }
+  },
+  "routes": {
+    "sectionTitle": "Rutas Destacadas",
+    "sectionSubtitle": "Rutas con alta demanda listas para reserva inmediata",
+    "flightTime": "{time} de vuelo",
+    "requestRoute": "Solicitar esta ruta"
+  },
+  "testimonials": {
+    "sectionTitle": "Lo que dicen nuestros clientes",
+    "sectionSubtitle": "Testimonios reales de viajeros que eligieron Sky Ride"
+  },
+  "contact": {
+    "title": "Contacto",
+    "name": "Nombre completo",
+    "phone": "Teléfono",
+    "email": "Correo electrónico",
+    "origin": "Origen",
+    "destination": "Destino",
+    "message": "Mensaje",
+    "send": "Enviar mensaje"
+  },
+  "footer": {
+    "blurb": "Sky Ride Panamá combina chárter privado, helicópteros y rutas premium para viajeros que necesitan velocidad y confianza.",
+    "copyright": "© {year} Sky Ride Panamá | Vuelos Privados y Chárter. Todos los derechos reservados.",
+    "contactTitle": "Contacto",
+    "servicesTitle": "Servicios",
+    "legalTitle": "Legal",
+    "terms": "Términos y Condiciones",
+    "privacy": "Política de Privacidad",
+    "faq": "Preguntas Frecuentes"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "description": "Lo sentimos, la página que buscas no existe o ha sido movida.",
+    "backHome": "Volver al inicio"
+  },
+  "booking": {
+    "step1Title": "¿De dónde sales?",
+    "step1Placeholder": "Ciudad de origen",
+    "step2Title": "¿A dónde vas?",
+    "step2Placeholder": "Ciudad de destino",
+    "step3Title": "¿Cuándo viajas?",
+    "step4Title": "¿Cuántos pasajeros?",
+    "step4Placeholder": "Número de pasajeros",
+    "next": "Siguiente",
+    "back": "Atrás",
+    "submit": "Enviar por WhatsApp"
+  }
+}
