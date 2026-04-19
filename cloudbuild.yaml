@@ -1,0 +1,45 @@
+steps:
+  # Build the container image
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      - "build"
+      - "--build-arg=NEXT_PUBLIC_GTM_ID=${_GTM_ID}"
+      - "--build-arg=NEXT_PUBLIC_GA4_ID=${_GA4_ID}"
+      - "--build-arg=NEXT_PUBLIC_CLARITY_ID=${_CLARITY_ID}"
+      - "-t"
+      - "gcr.io/${PROJECT_ID}/skyride-web:${SHORT_SHA}"
+      - "-t"
+      - "gcr.io/${PROJECT_ID}/skyride-web:latest"
+      - "."
+
+  # Push the container image to Container Registry
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["push", "--all-tags", "gcr.io/${PROJECT_ID}/skyride-web"]
+
+  # Deploy to Cloud Run
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: gcloud
+    args:
+      - "run"
+      - "deploy"
+      - "skyride-web"
+      - "--image=gcr.io/${PROJECT_ID}/skyride-web:${SHORT_SHA}"
+      - "--region=${_REGION}"
+      - "--platform=managed"
+      - "--allow-unauthenticated"
+      - "--port=8080"
+      - "--cpu=1"
+      - "--memory=512Mi"
+      - "--min-instances=0"
+      - "--max-instances=10"
+      - "--set-env-vars=NODE_ENV=production"
+      - "--set-secrets=RESEND_API_KEY=resend-api-key:latest,VERTEX_AI_PROJECT=${PROJECT_ID}"
+
+substitutions:
+  _REGION: us-central1
+  _GTM_ID: ""
+  _GA4_ID: ""
+  _CLARITY_ID: ""
+
+options:
+  logging: CLOUD_LOGGING_ONLY

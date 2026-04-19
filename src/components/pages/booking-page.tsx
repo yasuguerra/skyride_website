@@ -6,6 +6,8 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
+import { MartinChat } from "@/components/ui/MartinChat";
+import { MartinChat } from "@/components/ui/MartinChat";
 
 /**
  * /reservar-con-martin (ES) · /en/book-with-martin (EN)
@@ -86,12 +88,9 @@ export function BookingPage({ locale }: { locale: Locale }) {
           </Link>
         </div>
 
-        {/* Martin chat slot — will be replaced with native widget */}
-        <div
-          id="martin-chat-container"
-          className="mt-12 rounded-2xl border-2 border-dashed border-slate-300 bg-white p-12 text-center"
-        >
-          <p className="text-sm text-slate-500">{t.martinPlaceholder}</p>
+        {/* Martin AI Chat — powered by Vertex AI (Gemini) */}
+        <div className="mt-12">
+          <MartinChat locale={locale} />
         </div>
       </section>
 
@@ -125,8 +124,6 @@ const es = {
   cta: "¿Prefieres hablar con una persona?",
   ctaSub: "Nuestro equipo responde por WhatsApp en menos de 10 minutos.",
   ctaButton: "Escribir por WhatsApp",
-  martinPlaceholder:
-    "El chat de Martin se activará aquí cuando la integración nativa esté lista. Por ahora, usa WhatsApp para cotizar al instante.",
 };
 
 const en = {
@@ -151,6 +148,4 @@ const en = {
   cta: "Prefer talking to a person?",
   ctaSub: "Our team replies on WhatsApp in under 10 minutes.",
   ctaButton: "Message on WhatsApp",
-  martinPlaceholder:
-    "Martin's chat will activate here once the native integration is ready. For now, use WhatsApp to get an instant quote.",
 };
