@@ -3,14 +3,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 import type { Locale } from "@/i18n/routing";
 import { getNavigation, getWhatsAppHref } from "@/data/navigation";
+import { trackLanguageSwitch } from "@/lib/analytics";
 
 export function Header({ locale }: { locale: Locale }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const nav = getNavigation(locale);
+  const pathname = usePathname();
   const homeHref = locale === "en" ? "/en" : "/";
   const switchHref = locale === "en" ? "/" : "/en";
   const switchLabel = locale === "en" ? "ES" : "EN";
@@ -97,6 +100,7 @@ export function Header({ locale }: { locale: Locale }) {
           <div className="flex items-center gap-3">
             <Link
               href={switchHref}
+              onClick={() => trackLanguageSwitch(locale, locale === "en" ? "es" : "en", pathname)}
               className="rounded-full border border-white/20 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:border-white/50"
             >
               {switchLabel}

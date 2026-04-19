@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 import type { Locale } from "@/i18n/routing";
+import { trackFormSubmit } from "@/lib/analytics";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -40,15 +41,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
         throw new Error(data?.error || "Request failed");
       }
 
-      // Fire GTM conversion event
-      if (typeof window !== "undefined") {
-        const w = window as unknown as { dataLayer?: unknown[] };
-        w.dataLayer = w.dataLayer || [];
-        w.dataLayer.push({
-          event: "contact_form_submit",
-          form_locale: locale,
-        });
-      }
+      trackFormSubmit("contact", locale, payload.origin, payload.destination);
 
       setStatus("success");
       (e.target as HTMLFormElement).reset();

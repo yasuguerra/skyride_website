@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import type { Locale } from "@/i18n/routing";
 import { WHATSAPP_PHONE } from "@/data/navigation";
+import { trackWhatsAppClick, trackPhoneCallClick } from "@/lib/analytics";
 
 /**
  * Sticky bottom bar on mobile with WhatsApp + Call buttons.
@@ -10,6 +12,7 @@ import { WHATSAPP_PHONE } from "@/data/navigation";
  */
 export function StickyMobileCTA({ locale }: { locale: Locale }) {
   const [visible, setVisible] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,6 +41,7 @@ export function StickyMobileCTA({ locale }: { locale: Locale }) {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackWhatsAppClick(pathname, "sticky-cta", locale)}
           className="flex flex-1 items-center justify-center gap-2 rounded-full bg-[#25d366] py-3 text-sm font-semibold text-white"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
@@ -47,6 +51,7 @@ export function StickyMobileCTA({ locale }: { locale: Locale }) {
         </a>
         <a
           href={phoneUrl}
+          onClick={() => trackPhoneCallClick(pathname, locale)}
           className="flex flex-1 items-center justify-center gap-2 rounded-full bg-slate-950 py-3 text-sm font-semibold text-white"
         >
           <svg

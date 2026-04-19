@@ -168,6 +168,60 @@ const seoData: Record<string, PageSeo> = {
       en: "Privacy and data protection policy for Sky Ride Panama.",
     },
   },
+  "blog-index": {
+    title: {
+      es: "Blog de Aviación Privada en Panamá | Sky Ride",
+      en: "Private Aviation Blog in Panama | Sky Ride",
+    },
+    description: {
+      es: "Guías, consejos y noticias sobre vuelos privados, helicópteros y destinos en Panamá y Centroamérica.",
+      en: "Guides, tips, and news about private flights, helicopters, and destinations in Panama and Central America.",
+    },
+    ogType: "website",
+  },
+  "hub-contadora": {
+    title: {
+      es: "Guía Completa de Isla Contadora | Vuelos, Playas y Tips | Sky Ride",
+      en: "Complete Contadora Island Guide | Flights, Beaches & Tips | Sky Ride",
+    },
+    description: {
+      es: "Todo sobre Isla Contadora: playas, cómo llegar en vuelo privado, alojamiento y actividades. La guía más completa.",
+      en: "Everything about Contadora Island: beaches, how to get there by private flight, accommodation and activities. The most complete guide.",
+    },
+    focusKeyword: { es: "isla contadora vuelo privado", en: "contadora island private flight" },
+  },
+  "hub-costa-rica": {
+    title: {
+      es: "Guía de Vuelos Panamá–Costa Rica | Destinos y Precios | Sky Ride",
+      en: "Panama–Costa Rica Flights Guide | Destinations & Prices | Sky Ride",
+    },
+    description: {
+      es: "Vuelos privados de Panamá a Costa Rica: San José, Playa Tambor, Liberia. Rutas, precios y aeronaves disponibles.",
+      en: "Private flights from Panama to Costa Rica: San José, Playa Tambor, Liberia. Routes, prices, and available aircraft.",
+    },
+    focusKeyword: { es: "vuelo privado panama costa rica", en: "private flight panama costa rica" },
+  },
+  "hub-helicopters": {
+    title: {
+      es: "Guía de Helicópteros en Panamá | Tours, Precios y Flota | Sky Ride",
+      en: "Helicopter Guide in Panama | Tours, Prices & Fleet | Sky Ride",
+    },
+    description: {
+      es: "Todo sobre helicópteros en Panamá: tours panorámicos, precios, modelos disponibles y cómo reservar.",
+      en: "Everything about helicopters in Panama: scenic tours, prices, available models, and how to book.",
+    },
+    focusKeyword: { es: "helicóptero panamá precio tour", en: "helicopter panama price tour" },
+  },
+  "booking-martin": {
+    title: {
+      es: "Reserva tu Vuelo con Martin — Asistente IA | Sky Ride",
+      en: "Book Your Flight with Martin — AI Assistant | Sky Ride",
+    },
+    description: {
+      es: "Reserva tu vuelo privado en 3 pasos con Martin, nuestro asistente de inteligencia artificial. Cotización inmediata 24/7.",
+      en: "Book your private flight in 3 steps with Martin, our AI assistant. Instant quotes 24/7.",
+    },
+  },
 };
 
 /** Get SEO metadata for a page by its pageId and locale */

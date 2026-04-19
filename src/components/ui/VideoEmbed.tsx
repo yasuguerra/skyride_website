@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { trackVideoPlay } from "@/lib/analytics";
 
 /**
  * Lazy-loaded YouTube embed. Shows a high-quality thumbnail first,
@@ -15,6 +17,7 @@ export function VideoEmbed({
   title: string;
 }) {
   const [loaded, setLoaded] = useState(false);
+  const pathname = usePathname();
 
   const thumbnailUrl = `https://img.youtube.com/vi/${encodeURIComponent(videoId)}/maxresdefault.jpg`;
 
@@ -36,7 +39,7 @@ export function VideoEmbed({
   return (
     <button
       type="button"
-      onClick={() => setLoaded(true)}
+      onClick={() => { trackVideoPlay(title, pathname); setLoaded(true); }}
       className="group relative block w-full cursor-pointer overflow-hidden rounded-2xl"
       aria-label={`Play video: ${title}`}
     >
