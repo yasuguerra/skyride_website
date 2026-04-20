@@ -31,7 +31,7 @@ export function BookingPage({ locale }: { locale: Locale }) {
   const t = locale === "es" ? es : en;
 
   return (
-    <div className="min-h-screen bg-[#f7f4ec]">
+    <div className="min-h-screen bg-[#f0f7fa]">
       <Header locale={locale} />
       <Breadcrumbs
         locale={locale}
@@ -40,10 +40,10 @@ export function BookingPage({ locale }: { locale: Locale }) {
 
       <section className="mx-auto max-w-3xl px-6 py-16 text-center lg:px-10">
         {/* Illustration / icon */}
-        <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-[#d8a651]/20">
+        <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-[#3edcc2]/20">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-12 w-12 text-[#c8953d]"
+            className="h-12 w-12 text-[#20d1b3]"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -57,7 +57,7 @@ export function BookingPage({ locale }: { locale: Locale }) {
           </svg>
         </div>
 
-        <h1 className="mt-8 font-serif text-4xl text-slate-950 sm:text-5xl">
+        <h1 className="mt-8 font-sans font-bold text-4xl text-slate-950 sm:text-5xl">
           {t.title}
         </h1>
         <p className="mt-4 text-lg text-slate-600">{t.subtitle}</p>
@@ -66,7 +66,7 @@ export function BookingPage({ locale }: { locale: Locale }) {
         <div className="mt-12 grid gap-6 text-left sm:grid-cols-3">
           {t.steps.map((step, i) => (
             <div key={i} className="rounded-2xl border border-slate-200 bg-white p-6">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#c8953d] text-sm font-bold text-white">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#20d1b3] text-sm font-bold text-white">
                 {i + 1}
               </div>
               <h3 className="mt-4 font-semibold text-slate-950">{step.title}</h3>
@@ -76,12 +76,12 @@ export function BookingPage({ locale }: { locale: Locale }) {
         </div>
 
         {/* CTA */}
-        <div className="mt-12 rounded-2xl border border-[#d8a651]/30 bg-[#d8a651]/10 p-8">
-          <h2 className="font-serif text-2xl text-slate-950">{t.cta}</h2>
+        <div className="mt-12 rounded-2xl border border-[#3edcc2]/30 bg-[#3edcc2]/10 p-8">
+          <h2 className="font-sans font-bold text-2xl text-slate-950">{t.cta}</h2>
           <p className="mt-2 text-sm text-slate-700">{t.ctaSub}</p>
           <Link
             href={whatsappHref}
-            className="mt-6 inline-flex rounded-full bg-[#c8953d] px-8 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-slate-950 transition hover:bg-[#d8a651]"
+            className="mt-6 inline-flex rounded-full bg-[#20d1b3] px-8 py-4 text-sm font-semibold uppercase tracking-wider text-slate-950 transition hover:bg-[#3edcc2]"
           >
             {t.ctaButton}
           </Link>

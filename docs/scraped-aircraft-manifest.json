@@ -1,0 +1,132 @@
+[
+  {
+    "slug": "cessna-172",
+    "ok": true,
+    "image": "cessna-172.jpg",
+    "sourceUrl": "https://www.skyride.city/wp-content/uploads/2025/03/Exterior-1.jpeg",
+    "allUrls": [
+      "https://www.skyride.city/wp-content/uploads/2025/03/Exterior-1.jpeg",
+      "https://www.skyride.city/wp-content/uploads/2025/11/Cabecera-charter-panama-skyride.webp"
+    ]
+  },
+  {
+    "slug": "piper-cherokee",
+    "ok": true,
+    "image": "piper-cherokee.jpg",
+    "sourceUrl": "https://www.skyride.city/wp-content/uploads/2025/03/20210810_075008-scaled.jpg",
+    "allUrls": [
+      "https://www.skyride.city/wp-content/uploads/2025/03/20210810_075008-scaled.jpg",
+      "https://www.skyride.city/wp-content/uploads/2025/11/Cabecera-charter-panama-skyride.webp"
+    ]
+  },
+  {
+    "slug": "piper-azteca",
+    "ok": true,
+    "image": "piper-azteca.jpg",
+    "sourceUrl": "https://www.skyride.city/wp-content/uploads/2025/03/Azteca-ext2.jpeg",
+    "allUrls": [
+      "https://www.skyride.city/wp-content/uploads/2025/03/Azteca-ext2.jpeg",
+      "https://www.skyride.city/wp-content/uploads/2025/11/Cabecera-charter-panama-skyride.webp"
+    ]
+  },
+  {
+    "slug": "cessna-206",
+    "ok": true,
+    "image": "cessna-206.jpg",
+    "sourceUrl": "https://www.skyride.city/wp-content/uploads/2025/03/C206-Exterior-Sol-rotated.jpg",
+    "allUrls": [
+      "https://www.skyride.city/wp-content/uploads/2025/03/C206-Exterior-Sol-rotated.jpg",
+      "https://www.skyride.city/wp-content/uploads/2025/11/Cabecera-charter-panama-skyride.webp"
+    ]
+  },
+  {
+    "slug": "king-air-f90",
+    "ok": true,
+    "image": "king-air-f90.png",
+    "sourceUrl": "https://www.skyride.city/wp-content/uploads/2025/05/King-90.png",
+    "allUrls": [
+      "https://www.skyride.city/wp-content/uploads/2025/05/King-90.png",
+      "https://www.skyride.city/wp-content/uploads/2025/11/Cabecera-charter-panama-skyride.webp"
+    ]
+  },
+  {
+    "slug": "king-air-200",
+    "ok": true,
+    "image": "king-air-200.png",
+    "sourceUrl": "https://www.skyride.city/wp-content/uploads/2025/05/King-Ext-4.png",
+    "allUrls": [
+      "https://www.skyride.city/wp-content/uploads/2025/05/King-Ext-4.png",
+      "https://www.skyride.city/wp-content/uploads/2025/11/Cabecera-charter-panama-skyride.webp"
+    ]
+  },
+  {
+    "slug": "robinson-r44",
+    "ok": true,
+    "image": "robinson-r44.jpg",
+    "sourceUrl": "https://www.skyride.city/wp-content/uploads/2025/03/R44-Ext-2-scaled.jpg",
+    "allUrls": [
+      "https://www.skyride.city/wp-content/uploads/2025/03/R44-Ext-2-scaled.jpg",
+      "https://www.skyride.city/wp-content/uploads/2025/11/Cabecera-charter-panama-skyride.webp"
+    ]
+  },
+  {
+    "slug": "robinson-r66",
+    "ok": true,
+    "image": "robinson-r66.jpg",
+    "sourceUrl": "https://www.skyride.city/wp-content/uploads/2025/05/R66-ext.jpg",
+    "allUrls": [
+      "https://www.skyride.city/wp-content/uploads/2025/05/R66-ext.jpg",
+      "https://www.skyride.city/wp-content/uploads/2025/11/Cabecera-charter-panama-skyride.webp"
+    ]
+  },
+  {
+    "slug": "eurocopter-b3",
+    "ok": true,
+    "image": "eurocopter-b3.jpg",
+    "sourceUrl": "https://www.skyride.city/wp-content/uploads/2025/05/B3-Front-Black.jpg",
+    "allUrls": [
+      "https://www.skyride.city/wp-content/uploads/2025/05/B3-Front-Black.jpg",
+      "https://www.skyride.city/wp-content/uploads/2025/11/Cabecera-charter-panama-skyride.webp"
+    ]
+  },
+  {
+    "slug": "eurocopter-b4",
+    "ok": true,
+    "image": "eurocopter-b4.jpg",
+    "sourceUrl": "https://www.skyride.city/wp-content/uploads/2025/05/B4-Flying.jpg",
+    "allUrls": [
+      "https://www.skyride.city/wp-content/uploads/2025/05/B4-Flying.jpg",
+      "https://www.skyride.city/wp-content/uploads/2025/11/Cabecera-charter-panama-skyride.webp"
+    ]
+  },
+  {
+    "slug": "daher-kodiak",
+    "ok": true,
+    "image": "daher-kodiak.jpg",
+    "sourceUrl": "https://www.skyride.city/wp-content/uploads/2025/03/Kkodiak-SK2.jpg",
+    "allUrls": [
+      "https://www.skyride.city/wp-content/uploads/2025/03/Kkodiak-SK2.jpg",
+      "https://www.skyride.city/wp-content/uploads/2025/11/Cabecera-charter-panama-skyride.webp"
+    ]
+  },
+  {
+    "slug": "piper-saratoga",
+    "ok": true,
+    "image": "piper-saratoga.jpg",
+    "sourceUrl": "https://www.skyride.city/wp-content/uploads/2025/03/Saratoga-Conta-scaled.jpg",
+    "allUrls": [
+      "https://www.skyride.city/wp-content/uploads/2025/03/Saratoga-Conta-scaled.jpg",
+      "https://www.skyride.city/wp-content/uploads/2025/11/Cabecera-charter-panama-skyride.webp"
+    ]
+  },
+  {
+    "slug": "cessna-caravan",
+    "ok": true,
+    "image": "cessna-caravan.jpg",
+    "sourceUrl": "https://www.skyride.city/wp-content/uploads/2025/03/Caravan-Ext-2-scaled.jpg",
+    "allUrls": [
+      "https://www.skyride.city/wp-content/uploads/2025/03/Caravan-Ext-2-scaled.jpg",
+      "https://www.skyride.city/wp-content/uploads/2025/11/Cabecera-charter-panama-skyride.webp"
+    ]
+  }
+]

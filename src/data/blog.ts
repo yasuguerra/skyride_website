@@ -29,6 +29,7 @@ export const blogPosts: BlogPost[] = [
     author: "Sky Ride Editorial",
     category: "Destinos",
     readingMinutes: 6,
+    altSlug: "discover-the-best-san-blas-islands",
   },
   {
     slug: "que-es-un-vuelo-charter-y-como-se-reserva",
@@ -41,18 +42,20 @@ export const blogPosts: BlogPost[] = [
     author: "Sky Ride Editorial",
     category: "Guías",
     readingMinutes: 5,
+    altSlug: "what-is-a-charter-flight-and-how-to-book",
   },
   {
     slug: "paseo-en-helicoptero-precio-panama",
     locale: "es",
     title: "Paseo en helicóptero en Panamá: precios y opciones 2026",
     excerpt:
-      "Descubra cuánto cuesta un paseo en helicóptero sobre la Ciudad de Panamá y el Canal. Precios desde $350/persona.",
+      "Descubra cuánto cuesta un paseo en helicóptero sobre la Ciudad de Panamá y el Canal. Precios desde $588 por aeronave (hasta 3 pasajeros).",
     image: "/images/fleet/eurocopter-b4.jpg",
     date: "2026-01-15",
     author: "Sky Ride Editorial",
     category: "Helicópteros",
     readingMinutes: 4,
+    altSlug: "helicopter-ride-prices-panama",
   },
   {
     slug: "que-hacer-en-isla-contadora",
@@ -130,6 +133,7 @@ export const blogPosts: BlogPost[] = [
     author: "Sky Ride Editorial",
     category: "Helicópteros",
     readingMinutes: 5,
+    altSlug: "unforgettable-helicopter-tour-over-panama-city",
   },
   {
     slug: "helicoptero-privado-lo-que-debes-saber-sky-ride",
@@ -142,6 +146,7 @@ export const blogPosts: BlogPost[] = [
     author: "Sky Ride Editorial",
     category: "Helicópteros",
     readingMinutes: 5,
+    altSlug: "private-helicopter-what-you-need-to-know",
   },
   {
     slug: "luna-de-miel-en-panama",
@@ -167,6 +172,7 @@ export const blogPosts: BlogPost[] = [
     author: "Sky Ride Editorial",
     category: "Rutas",
     readingMinutes: 6,
+    altSlug: "private-flight-panama-costa-rica-comfort",
   },
   {
     slug: "que-ver-y-hacer-en-playa-tambor-costa-rica",
@@ -231,6 +237,7 @@ export const blogPosts: BlogPost[] = [
     author: "Sky Ride Editorial",
     category: "Rutas",
     readingMinutes: 5,
+    altSlug: "fly-panama-to-bocas-del-toro",
   },
   {
     slug: "vuelos-privados-y-charter-tu-solucion-para-viajes-exclusivos-en-panama",
@@ -243,6 +250,7 @@ export const blogPosts: BlogPost[] = [
     author: "Sky Ride Editorial",
     category: "Guías",
     readingMinutes: 6,
+    altSlug: "private-and-charter-flights-panama",
   },
   {
     slug: "reservar-vuelo-sin-pagar-demasiado",
@@ -255,6 +263,7 @@ export const blogPosts: BlogPost[] = [
     author: "Sky Ride Editorial",
     category: "Guías",
     readingMinutes: 5,
+    altSlug: "book-a-flight-without-overpaying",
   },
   {
     slug: "apps-para-encontrar-viajes-en-avion-privado",
@@ -267,6 +276,7 @@ export const blogPosts: BlogPost[] = [
     author: "Sky Ride Editorial",
     category: "Guías",
     readingMinutes: 5,
+    altSlug: "apps-for-private-airplane-flights",
   },
   {
     slug: "tips-para-viajar-en-avion-guia-completa",
@@ -279,6 +289,7 @@ export const blogPosts: BlogPost[] = [
     author: "Sky Ride Editorial",
     category: "Guías",
     readingMinutes: 6,
+    altSlug: "tips-for-flying-complete-guide",
   },
   {
     slug: "hipertensos-pueden-viajar-en-avion",
@@ -291,6 +302,7 @@ export const blogPosts: BlogPost[] = [
     author: "Sky Ride Editorial",
     category: "Salud",
     readingMinutes: 4,
+    altSlug: "can-hypertensive-people-fly",
   },
   {
     slug: "como-elegir-asientos-de-avion-privado",
@@ -303,6 +315,7 @@ export const blogPosts: BlogPost[] = [
     author: "Sky Ride Editorial",
     category: "Guías",
     readingMinutes: 4,
+    altSlug: "how-to-choose-private-airplane-seats",
   },
 
   // ─── EN ────────────────────────────────────────
@@ -330,6 +343,7 @@ export const blogPosts: BlogPost[] = [
     author: "Sky Ride Editorial",
     category: "Travel",
     readingMinutes: 8,
+    altSlug: "luna-de-miel-en-panama",
   },
   {
     slug: "the-best-tourist-places-in-costa-rica",
@@ -434,6 +448,175 @@ export const blogPosts: BlogPost[] = [
     category: "Transport",
     readingMinutes: 6,
     altSlug: "transporte-a-contadora",
+  },
+  {
+    slug: "discover-the-best-san-blas-islands",
+    locale: "en",
+    title: "Discover the best San Blas islands with Sky Ride",
+    excerpt:
+      "Private flights to the Guna Yala archipelago. Discover the 5 must-visit islands in Panama's Caribbean paradise.",
+    image: "/images/hero/turista-skyride.webp",
+    date: "2025-11-12",
+    author: "Sky Ride Editorial",
+    category: "Destinations",
+    readingMinutes: 6,
+    altSlug: "descubre-las-mejores-islas-de-san-blas-skyride",
+  },
+  {
+    slug: "what-is-a-charter-flight-and-how-to-book",
+    locale: "en",
+    title: "What is a charter flight and how to book one?",
+    excerpt:
+      "Complete guide to private charter flights in Panama: what they are, how much they cost, and how to book in minutes.",
+    image: "/images/hero/charter-exterior.webp",
+    date: "2025-10-22",
+    author: "Sky Ride Editorial",
+    category: "Guides",
+    readingMinutes: 5,
+    altSlug: "que-es-un-vuelo-charter-y-como-se-reserva",
+  },
+  {
+    slug: "helicopter-ride-prices-panama",
+    locale: "en",
+    title: "Helicopter rides in Panama: prices and options 2026",
+    excerpt:
+      "Find out how much a helicopter ride over Panama City and the Canal costs. Prices from $588 per aircraft (up to 3 passengers).",
+    image: "/images/fleet/eurocopter-b4.jpg",
+    date: "2026-01-15",
+    author: "Sky Ride Editorial",
+    category: "Helicopters",
+    readingMinutes: 4,
+    altSlug: "paseo-en-helicoptero-precio-panama",
+  },
+  {
+    slug: "unforgettable-helicopter-tour-over-panama-city",
+    locale: "en",
+    title: "Unforgettable helicopter tour over Panama City",
+    excerpt:
+      "Fly over Panama's skyline, the Canal, and nearby islands on a private helicopter tour.",
+    image: "/images/fleet/eurocopter-b4.jpg",
+    date: "2025-10-05",
+    author: "Sky Ride Editorial",
+    category: "Helicopters",
+    readingMinutes: 5,
+    altSlug: "experimenta-un-tour-de-helicoptero-inolvidable-sobreciudad-de-panama",
+  },
+  {
+    slug: "private-helicopter-what-you-need-to-know",
+    locale: "en",
+    title: "Private helicopter: what you need to know",
+    excerpt:
+      "Essential guide to flying a private helicopter in Panama. Safety, prices, routes, and how to book.",
+    image: "/images/fleet/eurocopter-b4.jpg",
+    date: "2025-09-01",
+    author: "Sky Ride Editorial",
+    category: "Helicopters",
+    readingMinutes: 5,
+    altSlug: "helicoptero-privado-lo-que-debes-saber-sky-ride",
+  },
+  {
+    slug: "private-flight-panama-costa-rica-comfort",
+    locale: "en",
+    title: "Discover the comfort of a private flight Panama–Costa Rica",
+    excerpt:
+      "No layovers, no lines: that's what flying private from Panama to Costa Rica is like. Routes, prices, and aircraft.",
+    image: "/images/destinations/vuelos-privados.jpg",
+    date: "2025-10-30",
+    author: "Sky Ride Editorial",
+    category: "Routes",
+    readingMinutes: 6,
+    altSlug: "descubre-el-confort-vuelo-privado-panama-costa-rica",
+  },
+  {
+    slug: "fly-panama-to-bocas-del-toro",
+    locale: "en",
+    title: "Fly from Panama to Bocas del Toro: the best way to reach paradise",
+    excerpt:
+      "In just one hour of private flight you reach Panama's Caribbean. Discover Bocas del Toro with no roads or layovers.",
+    image: "/images/hero/turista-skyride.webp",
+    date: "2025-08-15",
+    author: "Sky Ride Editorial",
+    category: "Routes",
+    readingMinutes: 5,
+    altSlug: "vuela-de-panama-a-bocas-del-toro-la-mejor-forma-de-llegar-al-paraiso",
+  },
+  {
+    slug: "private-and-charter-flights-panama",
+    locale: "en",
+    title: "Private and charter flights: your solution for exclusive travel in Panama",
+    excerpt:
+      "Everything you need to know about private aviation in Panama. Flight types, benefits, and how to book.",
+    image: "/images/hero/charter-exterior.webp",
+    date: "2025-07-20",
+    author: "Sky Ride Editorial",
+    category: "Guides",
+    readingMinutes: 6,
+    altSlug: "vuelos-privados-y-charter-tu-solucion-para-viajes-exclusivos-en-panama",
+  },
+  {
+    slug: "book-a-flight-without-overpaying",
+    locale: "en",
+    title: "How to book a private flight without overpaying",
+    excerpt:
+      "Shared flights, available seats, and low season: tips for flying private at a good price in Panama.",
+    image: "/images/hero/charter-exterior.webp",
+    date: "2025-06-15",
+    author: "Sky Ride Editorial",
+    category: "Guides",
+    readingMinutes: 5,
+    altSlug: "reservar-vuelo-sin-pagar-demasiado",
+  },
+  {
+    slug: "apps-for-private-airplane-flights",
+    locale: "en",
+    title: "Apps for finding private airplane flights",
+    excerpt:
+      "The best apps and platforms to quote and book private flights in Latin America.",
+    image: "/images/hero/charter-exterior.webp",
+    date: "2025-06-01",
+    author: "Sky Ride Editorial",
+    category: "Guides",
+    readingMinutes: 5,
+    altSlug: "apps-para-encontrar-viajes-en-avion-privado",
+  },
+  {
+    slug: "tips-for-flying-complete-guide",
+    locale: "en",
+    title: "Tips for flying: complete guide",
+    excerpt:
+      "Practical tips for flying more comfortably and safely, for both commercial and private aviation.",
+    image: "/images/hero/charter-exterior.webp",
+    date: "2025-05-20",
+    author: "Sky Ride Editorial",
+    category: "Guides",
+    readingMinutes: 6,
+    altSlug: "tips-para-viajar-en-avion-guia-completa",
+  },
+  {
+    slug: "can-hypertensive-people-fly",
+    locale: "en",
+    title: "Can people with hypertension fly?",
+    excerpt:
+      "Medical recommendations and tips for people with high blood pressure who plan to fly on a private airplane.",
+    image: "/images/hero/charter-exterior.webp",
+    date: "2025-05-10",
+    author: "Sky Ride Editorial",
+    category: "Health",
+    readingMinutes: 4,
+    altSlug: "hipertensos-pueden-viajar-en-avion",
+  },
+  {
+    slug: "how-to-choose-private-airplane-seats",
+    locale: "en",
+    title: "How to choose seats on a private airplane",
+    excerpt:
+      "Guide to understanding cabin configurations in private aircraft and choosing the best seat.",
+    image: "/images/hero/charter-exterior.webp",
+    date: "2025-04-25",
+    author: "Sky Ride Editorial",
+    category: "Guides",
+    readingMinutes: 4,
+    altSlug: "como-elegir-asientos-de-avion-privado",
   },
 ];
 

@@ -28,11 +28,11 @@ export function WhatsAppButton({ locale }: { locale: Locale }) {
 
       {/* Sticky mobile CTA bar */}
       <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-slate-200 bg-white/95 p-2 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] backdrop-blur lg:hidden">
-        <div className="mx-auto flex max-w-md gap-2 text-center text-xs font-semibold uppercase tracking-[0.18em]">
+        <div className="mx-auto flex max-w-md gap-2 text-center text-xs font-semibold uppercase tracking-wider">
           <Link
             href={getWhatsAppHref(locale)}
             onClick={() => trackWhatsAppClick(pathname, "mobile-bar", locale)}
-            className="flex-1 rounded-full bg-[#d8a651] px-4 py-3 text-slate-950"
+            className="flex-1 rounded-full bg-[#3edcc2] px-4 py-3 text-slate-950"
           >
             WhatsApp
           </Link>

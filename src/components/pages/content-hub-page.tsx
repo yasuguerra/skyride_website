@@ -44,7 +44,7 @@ export function ContentHubPage({
   };
 
   return (
-    <div className="min-h-screen bg-[#f7f4ec]">
+    <div className="min-h-screen bg-[#f0f7fa]">
       <Header locale={locale} />
       <Breadcrumbs
         locale={locale}
@@ -65,7 +65,7 @@ export function ContentHubPage({
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 to-transparent" />
         <div className="absolute inset-0 flex items-end">
           <div className="mx-auto w-full max-w-7xl px-6 pb-10 lg:px-10">
-            <h1 className="font-serif text-3xl text-white sm:text-5xl">
+            <h1 className="font-sans font-bold text-3xl text-white sm:text-5xl">
               {hub.title[locale]}
             </h1>
             <p className="mt-3 max-w-2xl text-lg text-white/80">
@@ -85,29 +85,29 @@ export function ContentHubPage({
       {/* Quick links: Service + Route */}
       <section className="bg-white py-12">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <h2 className="font-serif text-3xl text-slate-950">
+          <h2 className="font-sans font-bold text-3xl text-slate-950">
             {locale === "es" ? "Acceso directo" : "Quick access"}
           </h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
             <Link
               href={hub.servicePage[locale]}
-              className="rounded-2xl border border-slate-200 bg-[#f7f4ec] p-6 transition hover:shadow-md"
+              className="rounded-2xl border border-slate-200 bg-[#f0f7fa] p-6 transition hover:shadow-md"
             >
-              <p className="text-xs uppercase tracking-[0.22em] text-sky-700">
+              <p className="text-xs uppercase tracking-wider text-sky-700">
                 {locale === "es" ? "Página de servicio" : "Service page"}
               </p>
-              <h3 className="mt-2 font-serif text-xl text-slate-950">
+              <h3 className="mt-2 font-sans font-bold text-xl text-slate-950">
                 {hub.servicePage.label[locale]}
               </h3>
             </Link>
             <Link
               href={hub.routePage[locale]}
-              className="rounded-2xl border border-slate-200 bg-[#f7f4ec] p-6 transition hover:shadow-md"
+              className="rounded-2xl border border-slate-200 bg-[#f0f7fa] p-6 transition hover:shadow-md"
             >
-              <p className="text-xs uppercase tracking-[0.22em] text-sky-700">
+              <p className="text-xs uppercase tracking-wider text-sky-700">
                 {locale === "es" ? "Detalles de la ruta" : "Route details"}
               </p>
-              <h3 className="mt-2 font-serif text-xl text-slate-950">
+              <h3 className="mt-2 font-sans font-bold text-xl text-slate-950">
                 {hub.routePage.label[locale]}
               </h3>
             </Link>
@@ -125,7 +125,7 @@ export function ContentHubPage({
       {/* Related blog posts */}
       {hubPosts.length > 0 && (
         <section className="mx-auto max-w-7xl px-6 py-12 lg:px-10">
-          <h2 className="font-serif text-3xl text-slate-950">
+          <h2 className="font-sans font-bold text-3xl text-slate-950">
             {locale === "es" ? "Artículos relacionados" : "Related articles"}
           </h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -148,10 +148,10 @@ export function ContentHubPage({
                     />
                   </div>
                   <div className="p-5">
-                    <p className="text-xs uppercase tracking-[0.18em] text-slate-500">
+                    <p className="text-xs uppercase tracking-wider text-slate-500">
                       {post.category}
                     </p>
-                    <h3 className="mt-2 font-serif text-lg text-slate-950">
+                    <h3 className="mt-2 font-sans font-bold text-lg text-slate-950">
                       {post.title}
                     </h3>
                   </div>
@@ -165,7 +165,7 @@ export function ContentHubPage({
       {/* CTA */}
       <section className="bg-slate-950 py-16 text-center">
         <div className="mx-auto max-w-3xl px-6">
-          <h2 className="font-serif text-3xl text-white sm:text-4xl">
+          <h2 className="font-sans font-bold text-3xl text-white sm:text-4xl">
             {locale === "es"
               ? "¿Listo para vivir la experiencia?"
               : "Ready to experience it?"}
@@ -177,7 +177,7 @@ export function ContentHubPage({
           </p>
           <Link
             href={whatsappHref}
-            className="mt-6 inline-flex rounded-full bg-[#c8953d] px-8 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-slate-950 transition hover:bg-[#d8a651]"
+            className="mt-6 inline-flex rounded-full bg-[#20d1b3] px-8 py-4 text-sm font-semibold uppercase tracking-wider text-slate-950 transition hover:bg-[#3edcc2]"
           >
             {locale === "es" ? "Cotizar por WhatsApp" : "Get a WhatsApp Quote"}
           </Link>

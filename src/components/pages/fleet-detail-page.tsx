@@ -42,7 +42,7 @@ export function FleetDetailPage({
     : undefined;
 
   return (
-    <div className="min-h-screen bg-[#f7f4ec]">
+    <div className="min-h-screen bg-[#f0f7fa]">
       <Header locale={locale} />
       <Breadcrumbs
         locale={locale}
@@ -63,10 +63,10 @@ export function FleetDetailPage({
       />
 
       {/* Hero */}
-      <section className="relative bg-[#0b1625]">
+      <section className="relative bg-[#152c46]">
         <div className="mx-auto grid max-w-7xl gap-8 px-6 py-16 lg:grid-cols-2 lg:px-10">
           <div className="flex flex-col justify-center text-white">
-            <p className="text-xs uppercase tracking-[0.3em] text-sky-200">
+            <p className="text-xs uppercase tracking-wider text-sky-200">
               {locale === "es"
                 ? aircraft.type === "airplane"
                   ? "Avión"
@@ -75,21 +75,21 @@ export function FleetDetailPage({
                   ? "Airplane"
                   : "Helicopter"}
             </p>
-            <h1 className="mt-4 font-serif text-4xl sm:text-5xl lg:text-6xl">
+            <h1 className="mt-4 font-sans font-bold text-4xl sm:text-5xl lg:text-6xl">
               {aircraft.name}
             </h1>
             <p className="mt-4 text-lg text-slate-300">
               {aircraft.description[locale]}
             </p>
             {aircraft.priceFrom && (
-              <p className="mt-4 inline-flex self-start rounded-full border border-[#d8a651]/30 bg-[#d8a651]/10 px-4 py-1.5 text-sm font-semibold text-[#d8a651]">
+              <p className="mt-4 inline-flex self-start rounded-full border border-[#3edcc2]/30 bg-[#3edcc2]/10 px-4 py-1.5 text-sm font-semibold text-[#3edcc2]">
                 {aircraft.priceFrom[locale]}
               </p>
             )}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 href={whatsappHref}
-                className="inline-flex items-center justify-center rounded-full bg-[#c8953d] px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-950"
+                className="inline-flex items-center justify-center rounded-full bg-[#20d1b3] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-slate-950"
               >
                 {locale === "es"
                   ? "Alquilar esta aeronave"
@@ -97,7 +97,7 @@ export function FleetDetailPage({
               </Link>
               <Link
                 href={locale === "en" ? "/en/our-fleet" : "/nuestra-flota"}
-                className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white"
+                className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white"
               >
                 {locale === "es" ? "Ver toda la flota" : "View full fleet"}
               </Link>
@@ -118,7 +118,7 @@ export function FleetDetailPage({
 
       {/* Specs */}
       <section className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
-        <h2 className="font-serif text-3xl text-slate-950">
+        <h2 className="font-sans font-bold text-3xl text-slate-950">
           {locale === "es" ? "Especificaciones" : "Specifications"}
         </h2>
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -157,7 +157,7 @@ export function FleetDetailPage({
       {aircraft.gallery && aircraft.gallery.length > 0 && (
         <section className="border-t border-slate-200 bg-white">
           <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
-            <h2 className="font-serif text-3xl text-slate-950">
+            <h2 className="font-sans font-bold text-3xl text-slate-950">
               {locale === "es" ? "Galería" : "Gallery"}
             </h2>
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -184,7 +184,7 @@ export function FleetDetailPage({
       {relatedRoutes.length > 0 && (
         <section className="border-t border-slate-200">
           <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
-            <h2 className="font-serif text-3xl text-slate-950">
+            <h2 className="font-sans font-bold text-3xl text-slate-950">
               {locale === "es"
                 ? "Rutas disponibles con esta aeronave"
                 : "Available routes with this aircraft"}
@@ -200,7 +200,7 @@ export function FleetDetailPage({
                   }
                   className="rounded-2xl border border-slate-200 bg-white p-5 transition hover:shadow-md"
                 >
-                  <p className="font-serif text-xl text-slate-950">
+                  <p className="font-sans font-bold text-xl text-slate-950">
                     {route.origin[locale]} → {route.destination[locale]}
                   </p>
                   <p className="mt-2 text-sm text-slate-600">
@@ -222,7 +222,7 @@ export function FleetDetailPage({
 function SpecCard({ label, value }: { label: string; value: string }) {
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-5">
-      <p className="text-xs uppercase tracking-[0.2em] text-slate-500">
+      <p className="text-xs uppercase tracking-wider text-slate-500">
         {label}
       </p>
       <p className="mt-2 text-2xl font-semibold text-slate-950">{value}</p>

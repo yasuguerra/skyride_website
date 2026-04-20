@@ -64,7 +64,7 @@ export function getNavigation(locale: Locale): NavItem[] {
   ];
 }
 
-export const WHATSAPP_PHONE = "50768400045";
+export const WHATSAPP_PHONE = "15557298766";
 
 export function getWhatsAppHref(locale: Locale, context?: string): string {
   const baseMessage =

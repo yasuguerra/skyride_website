@@ -23,14 +23,14 @@ export function PlaceholderPage({
   };
 
   return (
-    <div className="min-h-screen bg-[#f7f4ec]">
+    <div className="min-h-screen bg-[#f0f7fa]">
       <Header locale={locale} />
 
       <section className="mx-auto max-w-4xl px-6 py-20 text-center lg:px-10">
-        <p className="text-xs uppercase tracking-[0.3em] text-slate-500">
+        <p className="text-xs uppercase tracking-wider text-slate-500">
           {typeLabels[type] ?? type}
         </p>
-        <h1 className="mt-4 font-serif text-4xl text-slate-950 sm:text-5xl">
+        <h1 className="mt-4 font-sans font-bold text-4xl text-slate-950 sm:text-5xl">
           {locale === "es" ? "Próximamente" : "Coming Soon"}
         </h1>
         <p className="mt-4 text-lg text-slate-600">
@@ -43,7 +43,7 @@ export function PlaceholderPage({
         </p>
         <Link
           href={locale === "en" ? "/en" : "/"}
-          className="mt-8 inline-flex rounded-full bg-[#c8953d] px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-950"
+          className="mt-8 inline-flex rounded-full bg-[#20d1b3] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-slate-950"
         >
           {locale === "es" ? "Volver al inicio" : "Back to home"}
         </Link>

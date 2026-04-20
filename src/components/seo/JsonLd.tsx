@@ -30,7 +30,7 @@ export function organizationSchema(): JsonLdData {
     alternateName: "Sky Ride Panamá",
     url: BASE_URL,
     logo: `${BASE_URL}/images/logos/logo-skyride.png`,
-    image: `${BASE_URL}/images/hero/skyride-vuelos-privados-panama.webp`,
+    image: `${BASE_URL}/images/hero/canal-panama.webp`,
     description:
       "Premium private aviation in Panama — charter flights, helicopter tours, and exclusive routes to Contadora, San Blas, Costa Rica and beyond.",
     telephone: "+507-6840-0045",
@@ -203,5 +203,166 @@ export function tripSchema(params: {
         { "@type": "Place", name: params.destination },
       ],
     },
+  };
+}
+
+// ─── AggregateRating (PRD §8.2 — homepage + service pages) ────
+
+export function aggregateRatingSchema(params: {
+  ratingValue: number;
+  reviewCount: number;
+  bestRating?: number;
+}): JsonLdData {
+  return {
+    "@context": "https://schema.org",
+    "@type": "AggregateRating",
+    itemReviewed: { "@id": `${BASE_URL}/#organization` },
+    ratingValue: params.ratingValue,
+    bestRating: params.bestRating ?? 5,
+    worstRating: 1,
+    reviewCount: params.reviewCount,
+  };
+}
+
+// ─── Review (PRD §8.2 — testimonials as structured data) ──────
+
+export function reviewSchema(params: {
+  author: string;
+  ratingValue: number;
+  reviewBody: string;
+  datePublished: string;
+}): JsonLdData {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    author: { "@type": "Person", name: params.author },
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: params.ratingValue,
+      bestRating: 5,
+    },
+    reviewBody: params.reviewBody,
+    datePublished: params.datePublished,
+    itemReviewed: { "@id": `${BASE_URL}/#organization` },
+  };
+}
+
+// ─── BlogPosting (audit §6.2 — blog post rich results) ───────
+
+export function blogPostingSchema(params: {
+  headline: string;
+  description: string;
+  image: string;
+  datePublished: string;
+  dateModified?: string;
+  author: string;
+  url: string;
+  locale: "es" | "en";
+  keywords?: string[];
+  articleSection?: string;
+  wordCount?: number;
+}): JsonLdData {
+  const absUrl = params.url.startsWith("http") ? params.url : `${BASE_URL}${params.url}`;
+  const absImage = params.image.startsWith("http") ? params.image : `${BASE_URL}${params.image}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: params.headline,
+    description: params.description,
+    image: [absImage],
+    datePublished: params.datePublished,
+    dateModified: params.dateModified ?? params.datePublished,
+    author: {
+      "@type": "Organization",
+      name: params.author,
+      url: BASE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": `${BASE_URL}/#organization`,
+      name: "Sky Ride Panama",
+      logo: {
+        "@type": "ImageObject",
+        url: `${BASE_URL}/images/logos/logo-skyride.png`,
+        width: 512,
+        height: 512,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": absUrl,
+    },
+    url: absUrl,
+    inLanguage: params.locale === "en" ? "en-US" : "es-PA",
+    ...(params.keywords && params.keywords.length > 0 && { keywords: params.keywords.join(", ") }),
+    ...(params.articleSection && { articleSection: params.articleSection }),
+    ...(params.wordCount && { wordCount: params.wordCount }),
+  };
+}
+
+// ─── SiteNavigationElement (audit §6.2 — sitelinks) ───────────
+
+export function siteNavigationSchema(
+  items: { name: string; url: string }[],
+): JsonLdData {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Primary Navigation",
+    itemListElement: items.map((item, i) => ({
+      "@type": "SiteNavigationElement",
+      position: i + 1,
+      name: item.name,
+      url: item.url.startsWith("http") ? item.url : `${BASE_URL}${item.url}`,
+    })),
+  };
+}
+
+// ─── ItemList for fleet index (audit §6.2 — product carousel) ─
+
+export function itemListSchema(params: {
+  name: string;
+  items: { name: string; url: string; image?: string; description?: string }[];
+}): JsonLdData {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: params.name,
+    numberOfItems: params.items.length,
+    itemListElement: params.items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      url: item.url.startsWith("http") ? item.url : `${BASE_URL}${item.url}`,
+      ...(item.image && {
+        image: item.image.startsWith("http") ? item.image : `${BASE_URL}${item.image}`,
+      }),
+      ...(item.description && { description: item.description }),
+    })),
+  };
+}
+
+// ─── VideoObject (PRD §8.7 — pages with YouTube embeds) ───────
+
+export function videoObjectSchema(params: {
+  name: string;
+  description: string;
+  thumbnailUrl: string;
+  uploadDate: string;
+  contentUrl?: string;
+  embedUrl?: string;
+  duration?: string;
+}): JsonLdData {
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: params.name,
+    description: params.description,
+    thumbnailUrl: params.thumbnailUrl,
+    uploadDate: params.uploadDate,
+    ...(params.contentUrl && { contentUrl: params.contentUrl }),
+    ...(params.embedUrl && { embedUrl: params.embedUrl }),
+    ...(params.duration && { duration: params.duration }),
+    publisher: { "@id": `${BASE_URL}/#organization` },
   };
 }

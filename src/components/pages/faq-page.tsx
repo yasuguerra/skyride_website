@@ -11,7 +11,7 @@ const faqData = {
       category: "Vuelos Chárter",
       questions: [
         { q: "¿Qué es un vuelo chárter?", a: "Un vuelo chárter es un vuelo privado donde usted alquila toda la aeronave. Elige su horario, destino y viaja solo con su grupo." },
-        { q: "¿Cuánto cuesta un vuelo chárter?", a: "Los precios varían según destino, aeronave y número de pasajeros. Vuelos a Contadora desde $950, a San Blas desde $1,250, a Costa Rica desde $3,400. Contáctenos para una cotización personalizada." },
+        { q: "¿Cuánto cuesta un vuelo chárter?", a: "Los precios varían según destino, aeronave y número de pasajeros. Vuelos a Contadora desde $398, a San Blas desde $644, a Bocas del Toro desde $1,605, a Costa Rica desde $3,400, a Medellín desde $5,500, a República Dominicana desde $14,500 y a Miami desde $18,500. Contáctenos para una cotización personalizada." },
         { q: "¿Con cuánta anticipación debo reservar?", a: "Recomendamos reservar con al menos 48 horas de anticipación, aunque podemos organizar vuelos en 24 horas según disponibilidad." },
         { q: "¿Qué documentos necesito?", a: "Solo necesita una identificación válida (cédula o pasaporte). Para vuelos internacionales, se requiere pasaporte vigente." },
       ],
@@ -19,8 +19,8 @@ const faqData = {
     {
       category: "Paseos en Helicóptero",
       questions: [
-        { q: "¿Cuánto cuesta un paseo en helicóptero?", a: "Los precios comienzan desde $350 por persona para vuelos de 15 minutos. Tours VIP y traslados tienen precios personalizados." },
-        { q: "¿Es seguro volar en helicóptero?", a: "Absolutamente. Todos nuestros helicópteros cumplen con las regulaciones de la DGAC y nuestros pilotos tienen miles de horas de experiencia." },
+        { q: "¿Cuánto cuesta un paseo en helicóptero?", a: "Los precios del City Tour (30 min) comienzan desde $588 por aeronave para el Robinson R44 (hasta 3 pasajeros). R66 desde $875, Eurocopter B3 desde $1,284 y B4 desde $1,337. Tours VIP y traslados tienen precios personalizados." },
+        { q: "¿Es seguro volar en helicóptero?", a: "Absolutamente. Trabajamos solo con operadores que cumplen con las regulaciones vigentes y cuyos pilotos tienen miles de horas de experiencia." },
         { q: "¿Cuántas personas pueden volar?", a: "Depende del helicóptero: Robinson R44 (3 pasajeros), R66 (4), Eurocopter AS350 B3 (5), EC130 B4 (6)." },
       ],
     },
@@ -44,7 +44,7 @@ const faqData = {
       category: "Charter Flights",
       questions: [
         { q: "What is a charter flight?", a: "A charter flight is a private flight where you rent the entire aircraft. You choose your schedule, destination, and travel only with your group." },
-        { q: "How much does a charter flight cost?", a: "Prices vary by destination, aircraft, and number of passengers. Flights to Contadora from $950, to San Blas from $1,250, to Costa Rica from $3,400. Contact us for a personalized quote." },
+        { q: "How much does a charter flight cost?", a: "Prices vary by destination, aircraft, and number of passengers. Flights to Contadora from $398, to San Blas from $644, to Bocas del Toro from $1,605, to Costa Rica from $3,400, to Medellín from $5,500, to the Dominican Republic from $14,500, and to Miami from $18,500. Contact us for a personalized quote." },
         { q: "How far in advance should I book?", a: "We recommend booking at least 48 hours in advance, though we can organize flights in 24 hours based on availability." },
         { q: "What documents do I need?", a: "You only need a valid ID (national ID or passport). For international flights, a valid passport is required." },
       ],
@@ -52,8 +52,8 @@ const faqData = {
     {
       category: "Helicopter Rides",
       questions: [
-        { q: "How much does a helicopter ride cost?", a: "Prices start from $350 per person for 15-minute flights. VIP tours and transfers have custom pricing." },
-        { q: "Is it safe to fly in a helicopter?", a: "Absolutely. All our helicopters comply with DGAC regulations and our pilots have thousands of hours of experience." },
+        { q: "How much does a helicopter ride cost?", a: "The 30-minute City Tour starts from $588 per aircraft for the Robinson R44 (up to 3 passengers). R66 from $875, Eurocopter B3 from $1,284, and B4 from $1,337. VIP tours and transfers have custom pricing." },
+        { q: "Is it safe to fly in a helicopter?", a: "Absolutely. We only partner with operators that comply with all aviation regulations and whose pilots have thousands of hours of experience." },
         { q: "How many people can fly?", a: "It depends on the helicopter: Robinson R44 (3 passengers), R66 (4), Eurocopter AS350 B3 (5), EC130 B4 (6)." },
       ],
     },
@@ -84,13 +84,13 @@ export function FAQPage({ locale }: { locale: Locale }) {
   );
 
   return (
-    <div className="min-h-screen bg-[#f7f4ec]">
+    <div className="min-h-screen bg-[#f0f7fa]">
       <Header locale={locale} />
       <Breadcrumbs locale={locale} items={[{ name: title, href: pageUrl }]} />
       <JsonLd data={faqSchema(allQuestions)} />
 
       <section className="mx-auto max-w-4xl px-6 py-20 lg:px-10">
-        <h1 className="font-serif text-4xl text-slate-950 sm:text-5xl">
+        <h1 className="font-sans font-bold text-4xl text-slate-950 sm:text-5xl">
           {locale === "es" ? "Preguntas Frecuentes" : "Frequently Asked Questions"}
         </h1>
         <p className="mt-4 text-lg text-slate-600">
@@ -102,7 +102,7 @@ export function FAQPage({ locale }: { locale: Locale }) {
         <div className="mt-12 space-y-12">
           {data.map((category) => (
             <div key={category.category}>
-              <h2 className="font-serif text-2xl text-slate-950">
+              <h2 className="font-sans font-bold text-2xl text-slate-950">
                 {category.category}
               </h2>
               <div className="mt-4 space-y-3">

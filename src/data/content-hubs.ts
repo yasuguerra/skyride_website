@@ -105,7 +105,7 @@ export const contentHubs: ContentHub[] = [
       es: "Los paseos en helicóptero sobre la Ciudad de Panamá ofrecen una perspectiva única del skyline, el Canal y las islas cercanas. Esta guía cubre todo: desde precios y duración de tours hasta la seguridad de cada aeronave de nuestra flota.",
       en: "Helicopter rides over Panama City offer a unique perspective of the skyline, the Canal, and nearby islands. This guide covers everything: from pricing and tour duration to the safety of each aircraft in our fleet.",
     },
-    heroImage: "/images/hero/skyride-vuelos-privados-panama.webp",
+    heroImage: "/images/hero/canal-panama.webp",
     servicePage: {
       label: { es: "Paseo en helicóptero", en: "Helicopter rides" },
       es: "/paseo-en-helicoptero-en-panama",

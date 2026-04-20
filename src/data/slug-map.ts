@@ -141,6 +141,18 @@ export const slugMap: SlugEntry[] = [
     es: "ruta/panama-medellin",
     en: "route/panama-medellin",
   },
+  {
+    pageId: "route-panama-miami",
+    type: "route",
+    es: "ruta/panama-miami",
+    en: "route/panama-miami",
+  },
+  {
+    pageId: "route-panama-dominican-republic",
+    type: "route",
+    es: "ruta/panama-dominican-republic",
+    en: "route/panama-dominican-republic",
+  },
 
   // ─── Content Hubs ────────────────────────────────
   {
@@ -244,6 +256,19 @@ const enBlogSlugs = [
   "honeymoon-in-costa-rica",
   "long-beach-on-contadora-island-choose-your-next-destination",
   "transportation-to-contadora-island-best-options",
+  "discover-the-best-san-blas-islands",
+  "what-is-a-charter-flight-and-how-to-book",
+  "helicopter-ride-prices-panama",
+  "unforgettable-helicopter-tour-over-panama-city",
+  "private-helicopter-what-you-need-to-know",
+  "private-flight-panama-costa-rica-comfort",
+  "fly-panama-to-bocas-del-toro",
+  "private-and-charter-flights-panama",
+  "book-a-flight-without-overpaying",
+  "apps-for-private-airplane-flights",
+  "tips-for-flying-complete-guide",
+  "can-hypertensive-people-fly",
+  "how-to-choose-private-airplane-seats",
 ];
 
 // Blog translation pairs (ES index → EN slug, null if no translation)
@@ -264,6 +289,32 @@ const blogTranslationMap: Record<string, string | null> = {
     "long-beach-on-contadora-island-choose-your-next-destination",
   "transporte-a-contadora":
     "transportation-to-contadora-island-best-options",
+  "descubre-las-mejores-islas-de-san-blas-skyride":
+    "discover-the-best-san-blas-islands",
+  "que-es-un-vuelo-charter-y-como-se-reserva":
+    "what-is-a-charter-flight-and-how-to-book",
+  "paseo-en-helicoptero-precio-panama":
+    "helicopter-ride-prices-panama",
+  "experimenta-un-tour-de-helicoptero-inolvidable-sobreciudad-de-panama":
+    "unforgettable-helicopter-tour-over-panama-city",
+  "helicoptero-privado-lo-que-debes-saber-sky-ride":
+    "private-helicopter-what-you-need-to-know",
+  "descubre-el-confort-vuelo-privado-panama-costa-rica":
+    "private-flight-panama-costa-rica-comfort",
+  "vuela-de-panama-a-bocas-del-toro-la-mejor-forma-de-llegar-al-paraiso":
+    "fly-panama-to-bocas-del-toro",
+  "vuelos-privados-y-charter-tu-solucion-para-viajes-exclusivos-en-panama":
+    "private-and-charter-flights-panama",
+  "reservar-vuelo-sin-pagar-demasiado":
+    "book-a-flight-without-overpaying",
+  "apps-para-encontrar-viajes-en-avion-privado":
+    "apps-for-private-airplane-flights",
+  "tips-para-viajar-en-avion-guia-completa":
+    "tips-for-flying-complete-guide",
+  "hipertensos-pueden-viajar-en-avion":
+    "can-hypertensive-people-fly",
+  "como-elegir-asientos-de-avion-privado":
+    "how-to-choose-private-airplane-seats",
 };
 
 // Add blog posts to slug map

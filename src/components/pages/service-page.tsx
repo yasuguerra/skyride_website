@@ -8,6 +8,7 @@ import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd, faqSchema, serviceSchema } from "@/components/seo/JsonLd";
+import { TrustBar } from "@/components/sections/TrustBar";
 
 const serviceData: Record<
   string,
@@ -32,13 +33,13 @@ const serviceData: Record<
       en: "Unique aerial experiences over Panama City",
     },
     description: {
-      es: "Disfruta de un paseo en helicóptero inolvidable sobre los rascacielos de la Ciudad de Panamá, el Canal de Panamá y la Calzada de Amador. Nuestros pilotos certificados garantizan una experiencia segura y memorable.",
-      en: "Enjoy an unforgettable helicopter ride over the skyscrapers of Panama City, the Panama Canal, and the Amador Causeway. Our certified pilots ensure a safe and memorable experience.",
+      es: "Disfruta de un paseo en helicóptero inolvidable sobre los rascacielos de la Ciudad de Panamá, el Canal de Panamá y la Calzada de Amador. Pilotos experimentados garantizan una experiencia segura y memorable.",
+      en: "Enjoy an unforgettable helicopter ride over the skyscrapers of Panama City, the Panama Canal, and the Amador Causeway. Experienced pilots ensure a safe and memorable experience.",
     },
     features: {
       es: [
         "Vuelos desde 15 minutos",
-        "Pilotos certificados DGAC",
+        "Pilotos con miles de horas de vuelo",
         "Helicópteros Robinson R44, R66 y Eurocopter",
         "Vuelos panorámicos y traslados",
         "Reserva en minutos por WhatsApp",
@@ -46,22 +47,22 @@ const serviceData: Record<
       ],
       en: [
         "Flights from 15 minutes",
-        "DGAC-certified pilots",
+        "Pilots with thousands of flight hours",
         "Robinson R44, R66 & Eurocopter helicopters",
         "Scenic flights and transfers",
         "Book in minutes via WhatsApp",
         "Photos & video included in VIP tours",
       ],
     },
-    priceLabel: { es: "Desde $350/persona", en: "From $350/person" },
+    priceLabel: { es: "Desde $588 por aeronave", en: "From $588 per aircraft" },
     faq: [
       {
         q: { es: "¿Cuánto cuesta un paseo en helicóptero en Panamá?", en: "How much does a helicopter ride cost in Panama?" },
-        a: { es: "Los precios comienzan desde $350 por persona para vuelos de 15 minutos. Los tours VIP y traslados tienen precios personalizados según destino y duración.", en: "Prices start from $350 per person for 15-minute flights. VIP tours and transfers have custom pricing based on destination and duration." },
+        a: { es: "Los precios comienzan desde $588 por aeronave (hasta 3 pasajeros en R44) para el City Tour de 30 minutos; R66 desde $875 (4 pax), Eurocopter B3 desde $1,284 (5 pax) y B4 desde $1,337 (6 pax). Los tours VIP y traslados tienen precios personalizados según destino y duración.", en: "Prices start from $588 per aircraft (up to 3 passengers on the R44) for the 30-minute City Tour; R66 from $875 (4 pax), Eurocopter B3 from $1,284 (5 pax), and B4 from $1,337 (6 pax). VIP tours and transfers have custom pricing based on destination and duration." },
       },
       {
         q: { es: "¿Es seguro volar en helicóptero?", en: "Is it safe to fly in a helicopter?" },
-        a: { es: "Absolutamente. Todos nuestros helicópteros cumplen con las regulaciones de la DGAC y nuestros pilotos tienen miles de horas de experiencia. La seguridad es nuestra prioridad número uno.", en: "Absolutely. All our helicopters comply with DGAC regulations and our pilots have thousands of hours of experience. Safety is our number one priority." },
+        a: { es: "Absolutamente. Trabajamos solo con operadores que cumplen con todas las regulaciones de aviación y cuyos pilotos tienen miles de horas de experiencia. La seguridad es nuestra prioridad número uno.", en: "Absolutely. We only partner with operators that comply with all aviation regulations and whose pilots have thousands of hours of experience. Safety is our number one priority." },
       },
       {
         q: { es: "¿Cuántas personas pueden volar?", en: "How many people can fly?" },
@@ -85,7 +86,7 @@ const serviceData: Record<
     },
     features: {
       es: [
-        "Flota de 13 aeronaves certificadas",
+        "Red de 13 aeronaves disponibles",
         "Rutas a más de 20 destinos",
         "Vuelos para 3 a 12 pasajeros",
         "Cotización inmediata por WhatsApp",
@@ -93,7 +94,7 @@ const serviceData: Record<
         "Pago con tarjeta o Wompi",
       ],
       en: [
-        "Fleet of 13 certified aircraft",
+        "Network of 13 available aircraft",
         "Routes to 20+ destinations",
         "Flights for 3 to 12 passengers",
         "Instant quotes via WhatsApp",
@@ -101,7 +102,7 @@ const serviceData: Record<
         "Card or Wompi payment",
       ],
     },
-    priceLabel: { es: "Desde $950", en: "From $950" },
+    priceLabel: { es: "Desde $398", en: "From $398" },
     faq: [
       {
         q: { es: "¿Qué es un vuelo chárter?", en: "What is a charter flight?" },
@@ -109,7 +110,7 @@ const serviceData: Record<
       },
       {
         q: { es: "¿Cuánto cuesta un vuelo chárter?", en: "How much does a charter flight cost?" },
-        a: { es: "Los precios varían según destino, aeronave y número de pasajeros. Vuelos a Contadora desde $950, a San Blas desde $1,250, a Costa Rica desde $3,400.", en: "Prices vary by destination, aircraft, and number of passengers. Flights to Contadora from $950, to San Blas from $1,250, to Costa Rica from $3,400." },
+        a: { es: "Los precios varían según destino, aeronave y número de pasajeros. Vuelos a Contadora desde $398, a San Blas desde $644, a Bocas del Toro desde $1,605, a Costa Rica desde $3,400, a Medellín desde $5,500, a República Dominicana desde $14,500 y a Miami desde $18,500.", en: "Prices vary by destination, aircraft, and number of passengers. Flights to Contadora from $398, to San Blas from $644, to Bocas del Toro from $1,605, to Costa Rica from $3,400, to Medellín from $5,500, to the Dominican Republic from $14,500, and to Miami from $18,500." },
       },
     ],
   },
@@ -212,7 +213,7 @@ const serviceData: Record<
         "Corporate billing",
       ],
     },
-    priceLabel: { es: "Desde $4,500", en: "From $4,500" },
+    priceLabel: { es: "Desde $1,798", en: "From $1,798" },
   },
 };
 
@@ -239,7 +240,7 @@ export function ServicePage({
       : `/${pageId === "helicopter" ? "paseo-en-helicoptero-en-panama" : pageId === "charter" ? "vuelos-charter-en-panama" : pageId === "affordable-flights" ? "vuelos-privados-baratos-en-panama" : pageId === "available-seats" ? "asientos-disponibles" : "renta-de-aviones-privados-para-viajes-de-negocios"}`;
 
   return (
-    <div className="min-h-screen bg-[#f7f4ec]">
+    <div className="min-h-screen bg-[#f0f7fa]">
       <Header locale={locale} />
       <Breadcrumbs
         locale={locale}
@@ -267,7 +268,7 @@ export function ServicePage({
       />
 
       {/* Hero */}
-      <section className="relative h-[50vh] min-h-[400px] overflow-hidden bg-[#0b1625]">
+      <section className="relative h-[50vh] min-h-[400px] overflow-hidden bg-[#152c46]">
         <Image
           src={data.image}
           alt={data.title[locale]}
@@ -276,14 +277,14 @@ export function ServicePage({
           className="object-cover opacity-40"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0b1625] via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#152c46] via-transparent to-transparent" />
         <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-12 lg:px-10">
           {data.priceLabel && (
-            <p className="mb-3 inline-flex self-start rounded-full border border-[#d8a651]/30 bg-[#d8a651]/10 px-4 py-1.5 text-sm font-semibold text-[#d8a651]">
+            <p className="mb-3 inline-flex self-start rounded-full border border-[#3edcc2]/30 bg-[#3edcc2]/10 px-4 py-1.5 text-sm font-semibold text-[#3edcc2]">
               {data.priceLabel[locale]}
             </p>
           )}
-          <h1 className="max-w-3xl font-serif text-4xl text-white sm:text-5xl lg:text-6xl">
+          <h1 className="max-w-3xl font-sans font-bold text-4xl text-white sm:text-5xl lg:text-6xl">
             {data.title[locale]}
           </h1>
           <p className="mt-3 max-w-2xl text-lg text-slate-300">
@@ -291,6 +292,8 @@ export function ServicePage({
           </p>
         </div>
       </section>
+
+      <TrustBar locale={locale} variant="dark" />
 
       {/* Content */}
       <section className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
@@ -301,7 +304,7 @@ export function ServicePage({
             </p>
 
             <div className="mt-10">
-              <h2 className="font-serif text-3xl text-slate-950">
+              <h2 className="font-sans font-bold text-3xl text-slate-950">
                 {locale === "es"
                   ? "¿Qué incluye?"
                   : "What's included?"}
@@ -312,7 +315,7 @@ export function ServicePage({
                     key={feature}
                     className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-4"
                   >
-                    <span className="mt-0.5 text-[#c8953d]">✓</span>
+                    <span className="mt-0.5 text-[#20d1b3]">✓</span>
                     <span className="text-sm text-slate-700">{feature}</span>
                   </li>
                 ))}
@@ -322,7 +325,7 @@ export function ServicePage({
             {/* FAQ */}
             {data.faq && data.faq.length > 0 && (
               <div className="mt-16">
-                <h2 className="font-serif text-3xl text-slate-950">
+                <h2 className="font-sans font-bold text-3xl text-slate-950">
                   {locale === "es"
                     ? "Preguntas frecuentes"
                     : "Frequently asked questions"}
@@ -349,7 +352,7 @@ export function ServicePage({
           {/* Sidebar CTA */}
           <aside className="lg:sticky lg:top-28 lg:self-start">
             <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-              <h3 className="font-serif text-2xl text-slate-950">
+              <h3 className="font-sans font-bold text-2xl text-slate-950">
                 {locale === "es"
                   ? "¿Listo para volar?"
                   : "Ready to fly?"}
@@ -361,13 +364,13 @@ export function ServicePage({
               </p>
               <Link
                 href={whatsappHref}
-                className="mt-6 flex w-full items-center justify-center rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white"
+                className="mt-6 flex w-full items-center justify-center rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white"
               >
                 {locale === "es" ? "Cotizar por WhatsApp" : "Quote via WhatsApp"}
               </Link>
               <Link
                 href="tel:+50768400045"
-                className="mt-3 flex w-full items-center justify-center rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-900"
+                className="mt-3 flex w-full items-center justify-center rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold uppercase tracking-wider text-slate-900"
               >
                 +507 6840 0045
               </Link>

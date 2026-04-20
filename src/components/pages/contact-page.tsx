@@ -14,14 +14,14 @@ export function ContactPage({ locale }: { locale: Locale }) {
   const title = locale === "es" ? "Contacto" : "Contact";
 
   return (
-    <div className="min-h-screen bg-[#f7f4ec]">
+    <div className="min-h-screen bg-[#f0f7fa]">
       <Header locale={locale} />
       <Breadcrumbs locale={locale} items={[{ name: title, href: pageUrl }]} />
 
       <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
-            <h1 className="font-serif text-4xl text-slate-950 sm:text-5xl">
+            <h1 className="font-sans font-bold text-4xl text-slate-950 sm:text-5xl">
               {locale === "es" ? "Contacto" : "Contact Us"}
             </h1>
             <p className="mt-4 text-lg leading-8 text-slate-600">
@@ -66,7 +66,7 @@ export function ContactPage({ locale }: { locale: Locale }) {
 
           {/* Contact form */}
           <div className="rounded-2xl border border-slate-200 bg-white p-8">
-            <h2 className="font-serif text-2xl text-slate-950">
+            <h2 className="font-sans font-bold text-2xl text-slate-950">
               {locale === "es" ? "Enviar mensaje" : "Send a message"}
             </h2>
             <ContactForm locale={locale} />
@@ -95,11 +95,11 @@ function ContactItem({
     <div className="flex items-start gap-4">
       <span className="text-2xl">{icon}</span>
       <div>
-        <p className="text-xs uppercase tracking-[0.2em] text-slate-500">
+        <p className="text-xs uppercase tracking-wider text-slate-500">
           {label}
         </p>
         {href ? (
-          <Link href={href} className="mt-1 text-slate-900 hover:text-[#c8953d] transition">
+          <Link href={href} className="mt-1 text-slate-900 hover:text-[#20d1b3] transition">
             {value}
           </Link>
         ) : (

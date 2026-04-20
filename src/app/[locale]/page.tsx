@@ -12,7 +12,7 @@ export async function generateMetadata({
   const { locale } = await params;
   return buildMetadata("home", locale as Locale, {
     esSlug: "",
-    enSlug: "sky-ride-charter-flights",
+    enSlug: "",
   });
 }
 

@@ -12,9 +12,9 @@ Volar en helicóptero privado ya no es un lujo exclusivo de películas. En Panam
 
 ## Seguridad: lo más importante
 
-En Sky Ride, cada helicóptero cumple con:
+En Sky Ride, cada helicóptero de nuestra red cumple con:
 
-- Inspecciones de mantenimiento regulares bajo normas DGAC
+- Inspecciones de mantenimiento regulares bajo normas de aviación civil
 - Pilotos con más de 5,000 horas de vuelo certificadas
 - Seguro de vuelo integral para todos los pasajeros
 - Protocolos de emergencia actualizados

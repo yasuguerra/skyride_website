@@ -59,9 +59,9 @@ export function ContactForm({ locale }: { locale: Locale }) {
 
   if (status === "success") {
     return (
-      <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-8 text-center">
+      <div role="status" className="rounded-2xl border border-emerald-200 bg-emerald-50 p-8 text-center">
         <div className="text-4xl">✓</div>
-        <h3 className="mt-4 font-serif text-2xl text-emerald-900">
+        <h3 className="mt-4 font-sans font-bold text-2xl text-emerald-900">
           {locale === "es" ? "¡Mensaje enviado!" : "Message sent!"}
         </h3>
         <p className="mt-2 text-sm text-emerald-800">
@@ -122,22 +122,23 @@ export function ContactForm({ locale }: { locale: Locale }) {
         />
       </div>
       <div>
-        <label className="block text-sm font-medium text-slate-700">
+        <label htmlFor="contact-message" className="block text-sm font-medium text-slate-700">
           {locale === "es" ? "Mensaje" : "Message"}
           <span className="text-red-500"> *</span>
         </label>
         <textarea
+          id="contact-message"
           name="message"
           rows={4}
           required
           minLength={10}
           maxLength={2000}
-          className="mt-1 w-full rounded-xl border border-slate-300 px-4 py-3 text-sm focus:border-[#c8953d] focus:outline-none focus:ring-1 focus:ring-[#c8953d]"
+          className="mt-1 w-full rounded-xl border border-slate-300 px-4 py-3 text-sm focus:border-[#20d1b3] focus:outline-none focus:ring-1 focus:ring-[#20d1b3]"
         />
       </div>
 
       {status === "error" && (
-        <p className="rounded-xl border border-red-200 bg-red-50 p-3 text-sm text-red-800">
+        <p role="alert" className="rounded-xl border border-red-200 bg-red-50 p-3 text-sm text-red-800">
           {errorMessage}
         </p>
       )}
@@ -145,7 +146,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="w-full rounded-full bg-[#c8953d] px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-950 transition hover:bg-[#d8a651] disabled:opacity-60"
+        className="w-full rounded-full bg-[#20d1b3] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-slate-950 transition hover:bg-[#3edcc2] disabled:opacity-60"
       >
         {status === "submitting"
           ? locale === "es"
@@ -172,15 +173,16 @@ function Field({
 }) {
   return (
     <div>
-      <label className="block text-sm font-medium text-slate-700">
+      <label htmlFor={`contact-${name}`} className="block text-sm font-medium text-slate-700">
         {label}
         {required && <span className="text-red-500"> *</span>}
       </label>
       <input
+        id={`contact-${name}`}
         type={type}
         name={name}
         required={required}
-        className="mt-1 w-full rounded-xl border border-slate-300 px-4 py-3 text-sm focus:border-[#c8953d] focus:outline-none focus:ring-1 focus:ring-[#c8953d]"
+        className="mt-1 w-full rounded-xl border border-slate-300 px-4 py-3 text-sm focus:border-[#20d1b3] focus:outline-none focus:ring-1 focus:ring-[#20d1b3]"
       />
     </div>
   );

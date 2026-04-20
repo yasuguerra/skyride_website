@@ -30,8 +30,8 @@ export const fleet: Aircraft[] = [
     },
     specs: { range: "1,300 km", speed: "278 km/h", altitude: "15,700 ft", engines: "1 × Continental IO-520" },
     image: "/images/fleet/cessna-206.jpg",
-    priceFrom: { es: "Desde $950", en: "From $950" },
-    routes: ["panama-contadora", "panama-san-blas"],
+    priceFrom: { es: "Desde $514", en: "From $514" },
+    routes: ["panama-contadora", "panama-san-blas", "panama-bocas-del-toro"],
   },
   {
     id: "piper-azteca",
@@ -44,7 +44,8 @@ export const fleet: Aircraft[] = [
       en: "Reliable twin-engine for regional flights. The safety of two engines for overwater and mountain routes.",
     },
     specs: { range: "1,820 km", speed: "330 km/h", altitude: "23,500 ft", engines: "2 × Lycoming IO-540" },
-    image: "/images/fleet/piper-azteca.jpeg",
+    image: "/images/fleet/piper-azteca.jpg",
+    priceFrom: { es: "Desde $674", en: "From $674" },
     routes: ["panama-contadora", "panama-san-blas", "panama-bocas-del-toro"],
   },
   {
@@ -58,7 +59,8 @@ export const fleet: Aircraft[] = [
       en: "High-performance single-engine with a spacious cabin. Premium comfort for small groups.",
     },
     specs: { range: "1,700 km", speed: "296 km/h", altitude: "20,000 ft" },
-    image: "/images/fleet/piper-cherokee.jpeg",
+    image: "/images/fleet/piper-saratoga.jpg",
+    priceFrom: { es: "Desde $770", en: "From $770" },
     routes: ["panama-contadora", "panama-san-blas"],
   },
   {
@@ -72,7 +74,8 @@ export const fleet: Aircraft[] = [
       en: "Compact aircraft perfect for couples and small groups. Affordable and reliable.",
     },
     specs: { range: "1,100 km", speed: "220 km/h", altitude: "14,000 ft" },
-    image: "/images/fleet/cherokee-ext.jpeg",
+    image: "/images/fleet/piper-cherokee.jpg",
+    priceFrom: { es: "Desde $398", en: "From $398" },
     routes: ["panama-contadora"],
   },
   {
@@ -87,6 +90,7 @@ export const fleet: Aircraft[] = [
     },
     specs: { range: "1,185 km", speed: "226 km/h", altitude: "14,000 ft" },
     image: "/images/fleet/cessna-172.jpg",
+    priceFrom: { es: "Desde $402", en: "From $402" },
     routes: ["panama-contadora"],
   },
   {
@@ -100,14 +104,14 @@ export const fleet: Aircraft[] = [
       en: "Rugged turboprop designed for short runways and remote destinations. The best choice for San Blas and Bocas del Toro.",
     },
     specs: { range: "2,224 km", speed: "338 km/h", altitude: "25,000 ft", engines: "1 × PT6A-34AG" },
-    image: "/images/fleet/kodiak.jpg",
+    image: "/images/fleet/daher-kodiak.jpg",
     gallery: [
       "/images/fleet/kodiak-gallery-1.jpg",
       "/images/fleet/kodiak-gallery-2.jpg",
       "/images/fleet/kodiak-gallery-3.jpg",
       "/images/fleet/kodiak-gallery-4.jpg",
     ],
-    priceFrom: { es: "Desde $1,800", en: "From $1,800" },
+    priceFrom: { es: "Desde $1,391", en: "From $1,391" },
     routes: ["panama-san-blas", "panama-bocas-del-toro", "panama-contadora"],
   },
   {
@@ -122,7 +126,7 @@ export const fleet: Aircraft[] = [
     },
     specs: { range: "1,982 km", speed: "340 km/h", altitude: "25,000 ft", engines: "1 × PT6A-140" },
     image: "/images/fleet/cessna-caravan.jpg",
-    priceFrom: { es: "Desde $2,500", en: "From $2,500" },
+    priceFrom: { es: "Desde $2,408", en: "From $2,408" },
     routes: ["panama-contadora", "panama-san-blas", "panama-costa-rica", "panama-bocas-del-toro"],
   },
   {
@@ -137,7 +141,7 @@ export const fleet: Aircraft[] = [
     },
     specs: { range: "2,232 km", speed: "500 km/h", altitude: "31,000 ft", engines: "2 × PT6A-135" },
     image: "/images/fleet/king-air-f90.png",
-    priceFrom: { es: "Desde $4,500", en: "From $4,500" },
+    priceFrom: { es: "Desde $1,798", en: "From $1,798" },
     routes: ["panama-costa-rica", "panama-medellin"],
   },
   {
@@ -145,15 +149,15 @@ export const fleet: Aircraft[] = [
     slug: "king-air-200-hasta-9-pasajeros",
     name: "King Air 200",
     type: "airplane",
-    passengers: 9,
+    passengers: 8,
     description: {
       es: "La referencia en aviación ejecutiva regional. Dos motores, cabina presurizada y autonomía para rutas internacionales.",
       en: "The benchmark in regional executive aviation. Twin engines, pressurized cabin, and range for international routes.",
     },
     specs: { range: "3,338 km", speed: "536 km/h", altitude: "35,000 ft", engines: "2 × PT6A-42" },
     image: "/images/fleet/king-air-200.png",
-    priceFrom: { es: "Desde $5,500", en: "From $5,500" },
-    routes: ["panama-costa-rica", "panama-medellin"],
+    priceFrom: { es: "Desde $2,183", en: "From $2,183" },
+    routes: ["panama-costa-rica", "panama-medellin", "panama-miami", "panama-dominican-republic"],
   },
   {
     id: "robinson-r44",
@@ -167,7 +171,7 @@ export const fleet: Aircraft[] = [
     },
     specs: { range: "563 km", speed: "210 km/h", altitude: "14,000 ft", engines: "1 × Lycoming IO-540" },
     image: "/images/fleet/robinson-r44.jpg",
-    priceFrom: { es: "Desde $350/persona", en: "From $350/person" },
+    priceFrom: { es: "Desde $588 (hasta 3 pax)", en: "From $588 (up to 3 pax)" },
     routes: [],
   },
   {
@@ -182,7 +186,7 @@ export const fleet: Aircraft[] = [
     },
     specs: { range: "648 km", speed: "240 km/h", altitude: "14,000 ft", engines: "1 × RR300" },
     image: "/images/fleet/robinson-r66.jpg",
-    priceFrom: { es: "Desde $450/persona", en: "From $450/person" },
+    priceFrom: { es: "Desde $875 (hasta 4 pax)", en: "From $875 (up to 4 pax)" },
     routes: [],
   },
   {
@@ -197,7 +201,7 @@ export const fleet: Aircraft[] = [
     },
     specs: { range: "680 km", speed: "287 km/h", altitude: "23,000 ft", engines: "1 × Arriel 2B1" },
     image: "/images/fleet/eurocopter-b3.jpg",
-    priceFrom: { es: "Desde $500/persona", en: "From $500/person" },
+    priceFrom: { es: "Desde $1,284 (hasta 5 pax)", en: "From $1,284 (up to 5 pax)" },
     routes: [],
   },
   {
@@ -216,7 +220,7 @@ export const fleet: Aircraft[] = [
       "/images/fleet/eurocopter-b4-ext.jpg",
       "/images/fleet/eurocopter-b4-side.jpg",
     ],
-    priceFrom: { es: "Desde $600/persona", en: "From $600/person" },
+    priceFrom: { es: "Desde $1,337 (hasta 6 pax)", en: "From $1,337 (up to 6 pax)" },
     routes: [],
   },
 ];

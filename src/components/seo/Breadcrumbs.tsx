@@ -29,7 +29,7 @@ export function Breadcrumbs({
         aria-label="Breadcrumb"
         className="mx-auto max-w-7xl px-6 pt-6 lg:px-10"
       >
-        <ol className="flex flex-wrap items-center gap-2 text-xs uppercase tracking-[0.18em] text-slate-500">
+        <ol className="flex flex-wrap items-center gap-2 text-xs uppercase tracking-wider text-slate-500">
           {fullItems.map((item, i) => {
             const isLast = i === fullItems.length - 1;
             return (

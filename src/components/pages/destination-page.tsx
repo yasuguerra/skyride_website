@@ -32,7 +32,7 @@ export function DestinationPage({
       : `/destino/${destination.id}`;
 
   return (
-    <div className="min-h-screen bg-[#f7f4ec]">
+    <div className="min-h-screen bg-[#f0f7fa]">
       <Header locale={locale} />
       <Breadcrumbs
         locale={locale}
@@ -53,7 +53,7 @@ export function DestinationPage({
       )}
 
       {/* Hero */}
-      <section className="relative h-[55vh] min-h-[420px] overflow-hidden bg-[#0b1625]">
+      <section className="relative h-[55vh] min-h-[420px] overflow-hidden bg-[#152c46]">
         <Image
           src={destination.image}
           alt={destination.name[locale]}
@@ -62,14 +62,14 @@ export function DestinationPage({
           className="object-cover opacity-50"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0b1625] via-[#0b1625]/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#152c46] via-[#152c46]/40 to-transparent" />
         <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-12 lg:px-10">
           {route && (
-            <p className="mb-3 inline-flex self-start rounded-full border border-[#d8a651]/30 bg-[#d8a651]/10 px-4 py-1.5 text-sm font-semibold text-[#d8a651]">
+            <p className="mb-3 inline-flex self-start rounded-full border border-[#3edcc2]/30 bg-[#3edcc2]/10 px-4 py-1.5 text-sm font-semibold text-[#3edcc2]">
               {locale === "es" ? "Desde" : "From"} ${route.startingPrice.toLocaleString()} · {route.flightTime}
             </p>
           )}
-          <h1 className="max-w-3xl font-serif text-4xl text-white sm:text-5xl lg:text-6xl">
+          <h1 className="max-w-3xl font-sans font-bold text-4xl text-white sm:text-5xl lg:text-6xl">
             {locale === "es"
               ? `Vuelo Privado a ${destination.name.es}`
               : `Private Flight to ${destination.name.en}`}
@@ -80,7 +80,7 @@ export function DestinationPage({
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <Link
               href={whatsappHref}
-              className="inline-flex items-center justify-center rounded-full bg-[#c8953d] px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-950"
+              className="inline-flex items-center justify-center rounded-full bg-[#20d1b3] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-slate-950"
             >
               {locale === "es"
                 ? `Volar a ${destination.name.es}`
@@ -93,7 +93,7 @@ export function DestinationPage({
                     ? `/en/route/${route.slug}`
                     : `/ruta/${route.slug}`
                 }
-                className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white"
+                className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white"
               >
                 {locale === "es" ? "Ver detalles de ruta" : "View route details"}
               </Link>
@@ -104,7 +104,7 @@ export function DestinationPage({
 
       {/* Highlights */}
       <section className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
-        <h2 className="font-serif text-3xl text-slate-950">
+        <h2 className="font-sans font-bold text-3xl text-slate-950">
           {locale === "es"
             ? `¿Por qué volar a ${destination.name.es}?`
             : `Why fly to ${destination.name.en}?`}
@@ -115,7 +115,7 @@ export function DestinationPage({
               key={highlight}
               className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-5"
             >
-              <span className="mt-0.5 text-[#c8953d]">✓</span>
+              <span className="mt-0.5 text-[#20d1b3]">✓</span>
               <span className="text-slate-700">{highlight}</span>
             </div>
           ))}
@@ -123,9 +123,9 @@ export function DestinationPage({
       </section>
 
       {/* CTA */}
-      <section className="bg-[#0c1727] px-6 py-16 lg:px-10">
+      <section className="bg-[#132840] px-6 py-16 lg:px-10">
         <div className="mx-auto max-w-3xl text-center text-white">
-          <h2 className="font-serif text-3xl sm:text-4xl">
+          <h2 className="font-sans font-bold text-3xl sm:text-4xl">
             {locale === "es"
               ? `Reserve su vuelo a ${destination.name.es}`
               : `Book your flight to ${destination.name.en}`}
@@ -137,7 +137,7 @@ export function DestinationPage({
           </p>
           <Link
             href={whatsappHref}
-            className="mt-8 inline-flex rounded-full bg-[#d8a651] px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-950"
+            className="mt-8 inline-flex rounded-full bg-[#3edcc2] px-8 py-3 text-sm font-semibold uppercase tracking-wider text-slate-950"
           >
             {locale === "es" ? "Cotizar ahora" : "Get a quote"}
           </Link>

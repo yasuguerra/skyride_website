@@ -48,7 +48,7 @@ export function renderMarkdown(md: string): string {
         inList = false;
       }
       html.push(
-        `<h2 class="mt-10 font-serif text-3xl text-slate-950">${inline(line.slice(3))}</h2>`,
+        `<h2 class="mt-10 font-sans font-bold text-3xl text-slate-950">${inline(line.slice(3))}</h2>`,
       );
     } else if (line.startsWith("### ")) {
       if (inList) {
@@ -56,7 +56,7 @@ export function renderMarkdown(md: string): string {
         inList = false;
       }
       html.push(
-        `<h3 class="mt-8 font-serif text-2xl text-slate-950">${inline(line.slice(4))}</h3>`,
+        `<h3 class="mt-8 font-sans font-bold text-2xl text-slate-950">${inline(line.slice(4))}</h3>`,
       );
     } else if (line.startsWith("- ")) {
       if (!inList) {

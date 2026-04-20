@@ -1,7 +1,48 @@
 import type { Locale } from "@/i18n/routing";
 import type { Metadata } from "next";
 
-const SITE_URL = "https://www.skyride.city";
+const SITE_URL = "https://skyride.city";
+
+/** Build full metadata (alternates + OG + twitter) from explicit values */
+function buildFullMetadata(
+  locale: Locale,
+  title: string,
+  description: string,
+  esPath: string,
+  enPath: string,
+  opts?: { ogImage?: string; ogType?: "website" | "article" },
+): Metadata {
+  const canonical = `${SITE_URL}${locale === "en" ? enPath : esPath}`;
+  const ogImage = opts?.ogImage ?? `${SITE_URL}/images/hero/canal-panama.webp`;
+  return {
+    title,
+    description,
+    alternates: {
+      canonical,
+      languages: {
+        es: `${SITE_URL}${esPath}`,
+        en: `${SITE_URL}${enPath}`,
+        "x-default": `${SITE_URL}${esPath}`,
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      siteName: "Sky Ride Panama",
+      locale: locale === "es" ? "es_PA" : "en_US",
+      type: opts?.ogType ?? "website",
+      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [ogImage],
+    },
+    robots: { index: true, follow: true },
+  };
+}
 
 interface PageSeo {
   title: { es: string; en: string };
@@ -24,12 +65,12 @@ const seoData: Record<string, PageSeo> = {
   },
   helicopter: {
     title: {
-      es: "Paseo en Helicóptero en Panamá | Desde $350/persona | Sky Ride",
-      en: "Helicopter Rides in Panama | From $350/person | Sky Ride",
+      es: "Paseo en Helicóptero en Panamá | Desde $588 por aeronave | Sky Ride",
+      en: "Helicopter Rides in Panama | From $588 per aircraft | Sky Ride",
     },
     description: {
-      es: "Experimenta un inolvidable paseo en helicóptero sobre la Ciudad de Panamá. Vuelos desde $350/persona. Reserva por WhatsApp en minutos.",
-      en: "Experience an unforgettable helicopter ride over Panama City. Flights from $350/person. Book via WhatsApp in minutes.",
+      es: "Experimenta un inolvidable paseo en helicóptero sobre la Ciudad de Panamá. Vuelos desde $588 por aeronave (hasta 3 pax). Reserva por WhatsApp en minutos.",
+      en: "Experience an unforgettable helicopter ride over Panama City. Flights from $588 per aircraft (up to 3 pax). Book via WhatsApp in minutes.",
     },
     focusKeyword: { es: "paseo en helicóptero panamá", en: "helicopter ride panama" },
   },
@@ -77,12 +118,12 @@ const seoData: Record<string, PageSeo> = {
   },
   "fleet-index": {
     title: {
-      es: "Nuestra Flota Aérea | 13 Aeronaves Certificadas | Sky Ride",
-      en: "Our Air Fleet | 13 Certified Aircraft | Sky Ride",
+      es: "Nuestra Flota Aérea | 13 Aeronaves Disponibles | Sky Ride",
+      en: "Our Air Fleet | 13 Available Aircraft | Sky Ride",
     },
     description: {
-      es: "Conozca nuestra flota de 13 aeronaves certificadas: aviones chárter y helicópteros para todo tipo de vuelo en Panamá.",
-      en: "Meet our fleet of 13 certified aircraft: charter airplanes and helicopters for every type of flight in Panama.",
+      es: "Conozca nuestra red de 13 aeronaves disponibles: aviones chárter y helicópteros para todo tipo de vuelo en Panamá.",
+      en: "Browse our network of 13 available aircraft: charter airplanes and helicopters for every type of flight in Panama.",
     },
     focusKeyword: { es: "flota aérea panamá", en: "air fleet panama" },
   },
@@ -243,60 +284,28 @@ export function buildMetadata(
   const esPath = opts?.esSlug ? `/${opts.esSlug}` : "/";
   const enPath = opts?.enSlug ? `/en/${opts.enSlug}` : "/en";
 
-  return {
-    title: seo.title[locale],
-    description: seo.description[locale],
-    alternates: {
-      canonical: `${SITE_URL}${locale === "en" ? enPath : esPath}`,
-      languages: {
-        es: `${SITE_URL}${esPath}`,
-        en: `${SITE_URL}${enPath}`,
-        "x-default": `${SITE_URL}${esPath}`,
-      },
-    },
-    openGraph: {
-      title: seo.title[locale],
-      description: seo.description[locale],
-      url: `${SITE_URL}${locale === "en" ? enPath : esPath}`,
-      siteName: "Sky Ride Panama",
-      locale: locale === "es" ? "es_PA" : "en_US",
-      type: seo.ogType ?? "website",
-      images: [
-        {
-          url: `${SITE_URL}/images/hero/skyride-vuelos-privados-panama.webp`,
-          width: 1200,
-          height: 630,
-          alt: "Sky Ride Panama — Private flights",
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: seo.title[locale],
-      description: seo.description[locale],
-      images: [`${SITE_URL}/images/hero/skyride-vuelos-privados-panama.webp`],
-    },
-    robots: { index: true, follow: true },
-  };
+  return buildFullMetadata(locale, seo.title[locale], seo.description[locale], esPath, enPath, {
+    ogType: seo.ogType,
+  });
 }
 
 /** Route-specific SEO data */
 export const routeSeoData: Record<string, { title: { es: string; en: string }; description: { es: string; en: string }; focusKeyword: { es: string; en: string } }> = {
   "panama-contadora": {
     title: {
-      es: "Vuelo Privado Panamá → Contadora | Precio desde $950 | Sky Ride",
-      en: "Private Flight Panama → Contadora | From $950 | Sky Ride",
+      es: "Vuelo Privado Panamá → Contadora | Precio desde $398 | Sky Ride",
+      en: "Private Flight Panama → Contadora | From $398 | Sky Ride",
     },
     description: {
-      es: "Vuelo privado de Panamá a Contadora en 20 minutos. Desde $950. Reserva por WhatsApp.",
-      en: "Private flight from Panama to Contadora in 20 minutes. From $950. Book via WhatsApp.",
+      es: "Vuelo privado de Panamá a Contadora en 20 minutos. Desde $398. Reserva por WhatsApp.",
+      en: "Private flight from Panama to Contadora in 20 minutes. From $398. Book via WhatsApp.",
     },
     focusKeyword: { es: "vuelo privado panama contadora precio", en: "private flight panama to contadora price" },
   },
   "panama-san-blas": {
     title: {
-      es: "Vuelo a San Blas desde Panamá | Desde $1,250 | Sky Ride",
-      en: "Flight to San Blas from Panama | From $1,250 | Sky Ride",
+      es: "Vuelo a San Blas desde Panamá | Desde $644 | Sky Ride",
+      en: "Flight to San Blas from Panama | From $644 | Sky Ride",
     },
     description: {
       es: "Vuelo directo a San Blas desde Panamá en 30 minutos. Evite las 4 horas de carretera.",
@@ -317,12 +326,12 @@ export const routeSeoData: Record<string, { title: { es: string; en: string }; d
   },
   "panama-bocas-del-toro": {
     title: {
-      es: "Vuelo Panamá → Bocas del Toro | Desde $2,200 | Sky Ride",
-      en: "Flight Panama → Bocas del Toro | From $2,200 | Sky Ride",
+      es: "Vuelo Panamá → Bocas del Toro | Desde $1,605 | Sky Ride",
+      en: "Flight Panama → Bocas del Toro | From $1,605 | Sky Ride",
     },
     description: {
-      es: "Vuelo directo a Bocas del Toro en 1 hora. Sin escalas. Reserva por WhatsApp.",
-      en: "Direct flight to Bocas del Toro in 1 hour. No layovers. Book via WhatsApp.",
+      es: "Vuelo directo a Bocas del Toro en 1h 35min. Sin escalas. Reserva por WhatsApp.",
+      en: "Direct flight to Bocas del Toro in 1h 35min. No layovers. Book via WhatsApp.",
     },
     focusKeyword: { es: "vuelo panama bocas del toro", en: "flight panama to bocas del toro" },
   },
@@ -337,4 +346,75 @@ export const routeSeoData: Record<string, { title: { es: string; en: string }; d
     },
     focusKeyword: { es: "vuelo privado panama medellin", en: "private flight panama to medellin" },
   },
+  "panama-miami": {
+    title: {
+      es: "Vuelo Privado Panamá → Miami | Desde $18,500 | Sky Ride",
+      en: "Private Flight Panama → Miami | From $18,500 | Sky Ride",
+    },
+    description: {
+      es: "Vuelo privado internacional de Panamá a Miami en 3h 30min. Sin filas ni escalas. Ideal para ejecutivos y familias.",
+      en: "International private flight from Panama to Miami in 3h 30min. No lines or layovers. Ideal for executives and families.",
+    },
+    focusKeyword: { es: "vuelo privado panama miami", en: "private flight panama to miami" },
+  },
+  "panama-dominican-republic": {
+    title: {
+      es: "Vuelo Privado Panamá → República Dominicana | Desde $14,500 | Sky Ride",
+      en: "Private Flight Panama → Dominican Republic | From $14,500 | Sky Ride",
+    },
+    description: {
+      es: "Vuelo privado de Panamá a Santo Domingo o Punta Cana en 2h 45min. Escapadas premium y bodas de destino.",
+      en: "Private flight from Panama to Santo Domingo or Punta Cana in 2h 45min. Premium getaways and destination weddings.",
+    },
+    focusKeyword: { es: "vuelo privado panama republica dominicana", en: "private flight panama to dominican republic" },
+  },
 };
+
+/** Build metadata for route pages (full alternates + OG) */
+export function buildRouteMetadata(
+  routeSlug: string,
+  locale: Locale,
+  esSlug: string,
+  enSlug: string,
+): Metadata {
+  const routeSeo = routeSeoData[routeSlug];
+  if (!routeSeo) return { title: "Sky Ride Panama" };
+
+  return buildFullMetadata(
+    locale,
+    routeSeo.title[locale],
+    routeSeo.description[locale],
+    `/${esSlug}`,
+    `/en/${enSlug}`,
+  );
+}
+
+/** Build metadata for fleet-detail pages */
+export function buildFleetMetadata(
+  locale: Locale,
+  aircraft: { name: string; passengers: number; description: Record<string, string>; image: string },
+  esSlug: string,
+  enSlug: string,
+): Metadata {
+  const title =
+    locale === "es"
+      ? `${aircraft.name} — ${aircraft.passengers} Pasajeros | Sky Ride`
+      : `${aircraft.name} — ${aircraft.passengers} Passengers | Sky Ride`;
+
+  return buildFullMetadata(locale, title, aircraft.description[locale], `/${esSlug}`, `/en/${enSlug}`, {
+    ogImage: `${SITE_URL}${aircraft.image}`,
+  });
+}
+
+/** Build metadata for blog posts */
+export function buildBlogMetadata(
+  locale: Locale,
+  post: { title: string; excerpt: string; image: string; slug: string; altSlug?: string },
+  esSlug: string,
+  enSlug: string,
+): Metadata {
+  return buildFullMetadata(locale, `${post.title} | Sky Ride`, post.excerpt, `/${esSlug}`, `/en/${enSlug}`, {
+    ogImage: `${SITE_URL}${post.image}`,
+    ogType: "article",
+  });
+}

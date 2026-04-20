@@ -20,7 +20,7 @@ Las reservas se confirman una vez recibido el pago total o el depósito acordado
 Cancelaciones con más de 48 horas de anticipación: reembolso completo. Cancelaciones entre 24-48 horas: 50% de reembolso. Cancelaciones con menos de 24 horas: sin reembolso. Cancelaciones por condiciones meteorológicas: reprogramación sin costo adicional o reembolso completo.
 
 4. RESPONSABILIDAD
-Sky Ride Panamá cumple con todas las regulaciones de la Dirección General de Aeronáutica Civil (DGAC) de Panamá. Nuestras aeronaves y pilotos cumplen con todos los requisitos de seguridad aplicables.
+Sky Ride Panamá actúa como intermediario entre los pasajeros y operadores aéreos verificados. Todos los operadores de nuestra red cumplen con las regulaciones de aviación aplicables.
 
 5. EQUIPAJE
 El equipaje está sujeto a las restricciones de peso de cada aeronave. Se informará al pasajero sobre los límites de equipaje al momento de la reserva.
@@ -39,7 +39,7 @@ Bookings are confirmed upon receipt of full payment or agreed deposit. We accept
 Cancellations more than 48 hours in advance: full refund. Cancellations 24-48 hours: 50% refund. Cancellations less than 24 hours: no refund. Weather-related cancellations: free rescheduling or full refund.
 
 4. LIABILITY
-Sky Ride Panama complies with all regulations of Panama's Directorate General of Civil Aviation (DGAC). Our aircraft and pilots meet all applicable safety requirements.
+Sky Ride Panama acts as an intermediary between passengers and vetted air operators. All operators in our network comply with applicable aviation regulations.
 
 5. LUGGAGE
 Luggage is subject to the weight restrictions of each aircraft. Passengers will be informed of luggage limits at the time of booking.
@@ -115,7 +115,7 @@ export function LegalPage({
       : `/${pageId === "terms" ? "terminos-y-condiciones" : "politica-de-privacidad"}`;
 
   return (
-    <div className="min-h-screen bg-[#f7f4ec]">
+    <div className="min-h-screen bg-[#f0f7fa]">
       <Header locale={locale} />
       <Breadcrumbs
         locale={locale}
@@ -123,7 +123,7 @@ export function LegalPage({
       />
 
       <section className="mx-auto max-w-4xl px-6 py-20 lg:px-10">
-        <h1 className="font-serif text-4xl text-slate-950 sm:text-5xl">
+        <h1 className="font-sans font-bold text-4xl text-slate-950 sm:text-5xl">
           {data.title[locale]}
         </h1>
         <div className="mt-10 space-y-4 whitespace-pre-line text-sm leading-7 text-slate-700">

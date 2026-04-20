@@ -8,7 +8,7 @@ export function Footer({ locale }: { locale: Locale }) {
   const t = locale === "es" ? es : en;
 
   return (
-    <footer className="border-t border-slate-200 bg-[#f7f4ec]">
+    <footer className="border-t border-slate-200 bg-[#f0f7fa]">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-10">
         <div className="grid gap-10 lg:grid-cols-4">
           {/* Brand */}
@@ -41,7 +41,7 @@ export function Footer({ locale }: { locale: Locale }) {
 
           {/* Services */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-900">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-900">
               {t.servicesTitle}
             </h3>
             <ul className="mt-4 space-y-2.5 text-sm text-slate-600">
@@ -57,7 +57,7 @@ export function Footer({ locale }: { locale: Locale }) {
 
           {/* Contact */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-900">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-900">
               {t.contactTitle}
             </h3>
             <ul className="mt-4 space-y-2.5 text-sm text-slate-600">
@@ -82,7 +82,7 @@ export function Footer({ locale }: { locale: Locale }) {
 
           {/* Legal + Payments */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-900">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-900">
               {t.legalTitle}
             </h3>
             <ul className="mt-4 space-y-2.5 text-sm text-slate-600">

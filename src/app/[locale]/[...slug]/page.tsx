@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 import type { Locale } from "@/i18n/routing";
 import { findPageBySlug, slugMap, wpRedirects } from "@/data/slug-map";
-import { buildMetadata, routeSeoData } from "@/data/seo";
+import { buildMetadata, buildRouteMetadata, buildFleetMetadata, buildBlogMetadata } from "@/data/seo";
 import { getRoute } from "@/data/routes";
 import { getDestinationByPageId } from "@/data/destinations";
 import { getAircraftBySlug } from "@/data/fleet";
@@ -21,7 +21,6 @@ import { BlogIndexPage } from "@/components/pages/blog-index-page";
 import { BlogPostPage } from "@/components/pages/blog-post-page";
 import { ContentHubPage } from "@/components/pages/content-hub-page";
 import { BookingPage } from "@/components/pages/booking-page";
-import { PlaceholderPage } from "@/components/pages/placeholder-page";
 import { getBlogPost } from "@/data/blog";
 import { getContentHubByPageId } from "@/data/content-hubs";
 
@@ -33,37 +32,35 @@ export async function generateMetadata({
   const { locale, slug } = await params;
   const slugPath = slug.join("/");
   const entry = findPageBySlug(slugPath, locale as Locale);
+  const loc = locale as Locale;
 
   if (!entry) return { title: "Sky Ride Panama" };
 
-  // Route pages have their own SEO data
+  // Route pages — full metadata
   if (entry.type === "route") {
     const routeSlug = slug[slug.length - 1];
-    const routeSeo = routeSeoData[routeSlug];
-    if (routeSeo) {
-      return {
-        title: routeSeo.title[locale as Locale],
-        description: routeSeo.description[locale as Locale],
-      };
-    }
+    return buildRouteMetadata(routeSlug, loc, entry.es, entry.en);
   }
 
-  // Fleet detail pages
+  // Fleet detail pages — full metadata
   if (entry.type === "fleet-detail") {
     const aircraftSlug = slug[slug.length - 1];
     const aircraft = getAircraftBySlug(aircraftSlug);
     if (aircraft) {
-      return {
-        title:
-          locale === "es"
-            ? `${aircraft.name} — ${aircraft.passengers} Pasajeros | Sky Ride`
-            : `${aircraft.name} — ${aircraft.passengers} Passengers | Sky Ride`,
-        description: aircraft.description[locale as Locale],
-      };
+      return buildFleetMetadata(loc, aircraft, entry.es, entry.en);
     }
   }
 
-  return buildMetadata(entry.pageId, locale as Locale, {
+  // Blog posts — full metadata from post data
+  if (entry.type === "blog-post") {
+    const postSlug = slug[slug.length - 1];
+    const post = getBlogPost(postSlug, loc);
+    if (post) {
+      return buildBlogMetadata(loc, post, entry.es, entry.en);
+    }
+  }
+
+  return buildMetadata(entry.pageId, loc, {
     esSlug: entry.es,
     enSlug: entry.en,
   });
@@ -149,17 +146,8 @@ export default async function CatchAllPage({
     case "blog-post": {
       const postSlug = slug[slug.length - 1];
       const post = getBlogPost(postSlug, loc);
-      if (post) {
-        return <BlogPostPage locale={loc} post={post} />;
-      }
-      // Fallback for posts not yet migrated to blog registry
-      return (
-        <PlaceholderPage
-          locale={loc}
-          pageId={entry.pageId}
-          type={entry.type}
-        />
-      );
+      if (!post) notFound();
+      return <BlogPostPage locale={loc} post={post} />;
     }
 
     case "content-hub": {

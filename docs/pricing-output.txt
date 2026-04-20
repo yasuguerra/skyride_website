@@ -1,0 +1,1660 @@
+﻿=== FLIGHTS FILE sheets: [ 'Flights_Table' ]
+=== AIRCRAFT FILE sheets: [ 'Aircraft_Table' ]
+
+=== AIRCRAFT TABLE (first sheet) ===
+columns: [
+  'name',
+  'operator',
+  'type',
+  'capacity',
+  'pets_allowed',
+  'ground_time_price_usd',
+  'product_link'
+]
+[
+  {
+    "name": "C172",
+    "operator": "Blue Skies",
+    "type": "Plane",
+    "capacity": 3,
+    "pets_allowed": "Yes",
+    "ground_time_price_usd": 125,
+    "product_link": "https://www.skyride.city/producto/%f0%9f%9b%ab-cessna-172-hasta-3-pasajeros/"
+  },
+  {
+    "name": "Cherokee",
+    "operator": "Blue Skies",
+    "type": "Plane",
+    "capacity": 3,
+    "pets_allowed": "Yes",
+    "ground_time_price_usd": 125,
+    "product_link": "https://www.skyride.city/producto/%e2%9c%88-piper-cherokee-3-pasajeros/"
+  },
+  {
+    "name": "Azteca",
+    "operator": "Blue Skies",
+    "type": "Plane",
+    "capacity": 5,
+    "pets_allowed": "Yes",
+    "ground_time_price_usd": 125,
+    "product_link": "https://www.skyride.city/producto/%e2%9c%88-piper-azteca-5-pasajeros/"
+  },
+  {
+    "name": "Cessna 206",
+    "operator": "Aerorental",
+    "type": "Plane",
+    "capacity": 5,
+    "pets_allowed": "Yes",
+    "ground_time_price_usd": 125,
+    "product_link": "https://www.skyride.city/producto/%f0%9f%9b%a9-cessna-206-5-pasajeros/"
+  },
+  {
+    "name": "King Air F90",
+    "operator": "Aerorental",
+    "type": "Plane",
+    "capacity": 6,
+    "pets_allowed": "Yes",
+    "ground_time_price_usd": 200,
+    "product_link": "https://www.skyride.city/producto/%f0%9f%9b%ab-king-air-f90-6-pasajeros/"
+  },
+  {
+    "name": "King Air 200",
+    "operator": "Aerorental",
+    "type": "Plane",
+    "capacity": 8,
+    "pets_allowed": "Yes",
+    "ground_time_price_usd": 200,
+    "product_link": "https://www.skyride.city/producto/%f0%9f%9b%a9-king-air-200-hasta-9-pasajeros/"
+  },
+  {
+    "name": "R44",
+    "operator": "Air Suppliers, Helipan",
+    "type": "Helicopter",
+    "capacity": 3,
+    "pets_allowed": "Yes",
+    "ground_time_price_usd": 175,
+    "product_link": "https://www.skyride.city/producto/%f0%9f%9a%81-robinson-r44-3-pasajeros/"
+  },
+  {
+    "name": "R66",
+    "operator": "Helipan, Panama Air Adventures",
+    "type": "Helicopter",
+    "capacity": 4,
+    "pets_allowed": "Yes",
+    "ground_time_price_usd": 175,
+    "product_link": "https://www.skyride.city/producto/%f0%9f%9a%81-robinson-r66-4-pasajeros/"
+  },
+  {
+    "name": "B3",
+    "operator": "Heliflight",
+    "type": "Helicopter",
+    "capacity": 5,
+    "pets_allowed": "Yes",
+    "ground_time_price_usd": 200,
+    "product_link": "https://www.skyride.city/producto/%f0%9f%9a%81-eurocopter-b3-as350-5-pasajeros/"
+  },
+  {
+    "name": "B4",
+    "operator": "Aeroservicios Centroamericanos",
+    "type": "Helicopter",
+    "capacity": 6,
+    "pets_allowed": "Yes",
+    "ground_time_price_usd": 200,
+    "product_link": "https://www.skyride.city/producto/%f0%9f%9a%81-eurocopter-b4-ec130-6-pasajeros/"
+  },
+  {
+    "name": "Kodiak",
+    "operator": "Sky Tropic, Fly Trip",
+    "type": "Plane",
+    "capacity": 9,
+    "pets_allowed": "Yes",
+    "ground_time_price_usd": 125,
+    "product_link": "https://www.skyride.city/producto/%e2%9c%88-daher-kodiak-hasta-9-pasajeros/"
+  },
+  {
+    "name": "Saratoga",
+    "operator": "Sky Tropic",
+    "type": "Plane",
+    "capacity": 5,
+    "pets_allowed": "Yes",
+    "ground_time_price_usd": 125,
+    "product_link": "https://www.skyride.city/producto/%f0%9f%9b%ab-piper-saratoga-5-pasajeros/"
+  },
+  {
+    "name": "Caravan",
+    "operator": "Fly Trip",
+    "type": "Plane",
+    "capacity": 12,
+    "pets_allowed": "yes",
+    "ground_time_price_usd": 150,
+    "product_link": "https://www.skyride.city/producto/%f0%9f%9b%a9-cessna-grand-caravan-12-pasajeros/"
+  }
+]
+
+=== FLIGHTS columns: [
+  'id',
+  'flight_title',
+  'airplane_id',
+  'operator_id',
+  'flight_duration_min',
+  'full_flight_duration_min',
+  'refuel_time',
+  'price_without_itbms',
+  'itbms',
+  'total_price_one_way',
+  'total_price_round_trip',
+  'departure_days',
+  'max_load_weight_lbs',
+  'description'
+]
+Total flights: 180
+
+=== PRICING SUMMARY (min one-way per aircraft+route) ===
+[
+  {
+    "airplane": "Azteca",
+    "route": "Azteca: Panama - Achutupu",
+    "price": 1376.45,
+    "roundTrip": 2752.9,
+    "duration": 61,
+    "maxWeight": 450
+  },
+  {
+    "airplane": "Azteca",
+    "route": "Azteca: Panama - Bocas",
+    "price": 2150.7,
+    "roundTrip": 4301.4,
+    "duration": 96,
+    "maxWeight": 900
+  },
+  {
+    "airplane": "Azteca",
+    "route": "Azteca: Panama - Chame",
+    "price": 688.82,
+    "roundTrip": 1377.64,
+    "duration": 31,
+    "maxWeight": 450
+  },
+  {
+    "airplane": "Azteca",
+    "route": "Azteca: Panama - Changuinola",
+    "price": 2322.16,
+    "roundTrip": 4644.32,
+    "duration": 104,
+    "maxWeight": 900
+  },
+  {
+    "airplane": "Azteca",
+    "route": "Azteca: Panama - Chitre",
+    "price": 1204.99,
+    "roundTrip": 2409.98,
+    "duration": 54,
+    "maxWeight": 900
+  },
+  {
+    "airplane": "Azteca",
+    "route": "Azteca: Panama - Coiba",
+    "price": 1806.59,
+    "roundTrip": 3613.18,
+    "duration": 80,
+    "maxWeight": 900
+  },
+  {
+    "airplane": "Azteca",
+    "route": "Azteca: Panama - Colon",
+    "price": 860.28,
+    "roundTrip": 1720.56,
+    "duration": 38,
+    "maxWeight": 450
+  },
+  {
+    "airplane": "Azteca",
+    "route": "Azteca: Panama - Contadora",
+    "price": 674.1,
+    "roundTrip": 1348.2,
+    "duration": 30,
+    "maxWeight": 450
+  },
+  {
+    "airplane": "Azteca",
+    "route": "Azteca: Panama - Contadora Ri┬¡o Hato",
+    "price": 1290.42,
+    "roundTrip": 2580.84,
+    "duration": 58,
+    "maxWeight": 900
+  },
+  {
+    "airplane": "Azteca",
+    "route": "Azteca: Panama - Corazon de Jesus",
+    "price": 1258.32,
+    "roundTrip": 2516.64,
+    "duration": 56,
+    "maxWeight": 450
+  },
+  {
+    "airplane": "Azteca",
+    "route": "Azteca: Panama - David",
+    "price": 2408.78,
+    "roundTrip": 4817.56,
+    "duration": 107,
+    "maxWeight": 900
+  },
+  {
+    "airplane": "Azteca",
+    "route": "Azteca: Panama - David - Bocas",
+    "price": 2839.82,
+    "roundTrip": 5679.64,
+    "duration": 126,
+    "maxWeight": 900
+  },
+  {
+    "airplane": "Azteca",
+    "route": "Azteca: Panama - Guarare",
+    "price": 1204.99,
+    "roundTrip": 2409.98,
+    "duration": 54,
+    "maxWeight": 900
+  },
+  {
+    "airplane": "Azteca",
+    "route": "Azteca: Panama - Lago Bay",
+    "price": 1605,
+    "roundTrip": 3210,
+    "duration": 71,
+    "maxWeight": 900
+  },
+  {
+    "airplane": "Azteca",
+    "route": "Azteca: Panama - Lagobay Bocas",
+    "price": 2839.82,
+    "roundTrip": 5679.64,
+    "duration": 126,
+    "maxWeight": 900
+  },
+  {
+    "airplane": "Azteca",
+    "route": "Azteca: Panama - Pedasi┬¡",
+    "price": 1290.42,
+    "roundTrip": 2580.84,
+    "duration": 58,
+    "maxWeight": 900
+  },
+  {
+    "airplane": "Azteca",
+    "route": "Azteca: Panama - Pedasi Bocas",
+    "price": 2924.35,
+    "roundTrip": 5848.7,
+    "duration": 130,
+    "maxWeight": 900
+  },
+  {
+    "airplane": "Azteca",
+    "route": "Azteca: Panama - Pedro Gonzalez",
+    "price": 774.85,
+    "roundTrip": 1549.7,
+    "duration": 35,
+    "maxWeight": 450
+  },
+  {
+    "airplane": "Azteca",
+    "route": "Azteca: Panama - Penonome",
+    "price": 1032.74,
+    "roundTrip": 2065.48,
+    "duration": 46,
+    "maxWeight": 450
+  },
+  {
+    "airplane": "Azteca",
+    "route": "Azteca: Panama - Pii┬▒as",
+    "price": 1634.53,
+    "roundTrip": 3269.06,
+    "duration": 73,
+    "maxWeight": 900
+  },
+  {
+    "airplane": "Azteca",
+    "route": "Azteca: Panama - Pixbae",
+    "price": 1723.56,
+    "roundTrip": 3447.12,
+    "duration": 77,
+    "maxWeight": 900
+  },
+  {
+    "airplane": "Azteca",
+    "route": "Azteca: Panama - Playon chico",
+    "price": 1463.88,
+    "roundTrip": 2927.76,
+    "duration": 65,
+    "maxWeight": 900
+  },
+  {
+    "airplane": "Azteca",
+    "route": "Azteca: Panama - Puerto Obaldi┬¡a",
+    "price": 1806.59,
+    "roundTrip": 3613.18,
+    "duration": 80,
+    "maxWeight": 900
+  },
+  {
+    "airplane": "Azteca",
+    "route": "Azteca: Panama - Ri┬¡o Hato",
+    "price": 860.28,
+    "roundTrip": 1720.56,
+    "duration": 38,
+    "maxWeight": 450
+  },
+  {
+    "airplane": "Azteca",
+    "route": "Azteca: Panama - San Jose",
+    "price": 860.28,
+    "roundTrip": 1720.56,
+    "duration": 38,
+    "maxWeight": 450
+  },
+  {
+    "airplane": "Azteca",
+    "route": "Azteca: Panama - Santiago",
+    "price": 1290.42,
+    "roundTrip": 2580.84,
+    "duration": 58,
+    "maxWeight": 450
+  },
+  {
+    "airplane": "B3",
+    "route": "City Tour",
+    "price": 1284,
+    "roundTrip": 2568,
+    "duration": 30,
+    "maxWeight": 1000
+  },
+  {
+    "airplane": "B3",
+    "route": "Jurassic Tour",
+    "price": 2921.1,
+    "roundTrip": 5842.2,
+    "duration": 75,
+    "maxWeight": 1000
+  },
+  {
+    "airplane": "B3",
+    "route": "Ocean to Ocean",
+    "price": 2268.4,
+    "roundTrip": 4536.8,
+    "duration": 60,
+    "maxWeight": 1000
+  },
+  {
+    "airplane": "B4",
+    "route": "City Tour",
+    "price": 1337.5,
+    "roundTrip": 2675,
+    "duration": 30,
+    "maxWeight": 1200
+  },
+  {
+    "airplane": "B4",
+    "route": "Jurassic Tour",
+    "price": 3199.3,
+    "roundTrip": 6398.6,
+    "duration": 75,
+    "maxWeight": 1200
+  },
+  {
+    "airplane": "B4",
+    "route": "Ocean to Ocean",
+    "price": 2493.1,
+    "roundTrip": 4986.2,
+    "duration": 60,
+    "maxWeight": 1200
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Achutupu",
+    "price": 1032.74,
+    "roundTrip": 2065.48,
+    "duration": 72,
+    "maxWeight": 500
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Bocas del Toro",
+    "price": 1592.42,
+    "roundTrip": 3184.84,
+    "duration": 111,
+    "maxWeight": 500
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Chame",
+    "price": 430.14,
+    "roundTrip": 860.28,
+    "duration": 30,
+    "maxWeight": 550
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Changuinola",
+    "price": 1634.53,
+    "roundTrip": 3269.06,
+    "duration": 114,
+    "maxWeight": 500
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Chitre",
+    "price": 731.44,
+    "roundTrip": 1462.88,
+    "duration": 51,
+    "maxWeight": 550
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Coiba",
+    "price": 1333.03,
+    "roundTrip": 2666.06,
+    "duration": 93,
+    "maxWeight": 500
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Colon",
+    "price": 430.14,
+    "roundTrip": 860.28,
+    "duration": 30,
+    "maxWeight": 550
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Contadora",
+    "price": 402,
+    "roundTrip": 804,
+    "duration": 30,
+    "maxWeight": 550
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Corazon de Jesus",
+    "price": 731.44,
+    "roundTrip": 1462.88,
+    "duration": 51,
+    "maxWeight": 550
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - David",
+    "price": 1634.53,
+    "roundTrip": 3269.06,
+    "duration": 114,
+    "maxWeight": 500
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Garachine",
+    "price": 1162.48,
+    "roundTrip": 2324.96,
+    "duration": 81,
+    "maxWeight": 500
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Guarare",
+    "price": 817.87,
+    "roundTrip": 1635.74,
+    "duration": 57,
+    "maxWeight": 550
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Jaque",
+    "price": 1290.42,
+    "roundTrip": 2580.84,
+    "duration": 90,
+    "maxWeight": 500
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Lago Bay",
+    "price": 1123.5,
+    "roundTrip": 2247,
+    "duration": 78,
+    "maxWeight": 500
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Miraflores Darien",
+    "price": 1075.35,
+    "roundTrip": 2150.7,
+    "duration": 75,
+    "maxWeight": 500
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Mulatupu",
+    "price": 1205,
+    "roundTrip": 2410,
+    "duration": 84,
+    "maxWeight": 500
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Nicanor",
+    "price": 1118.36,
+    "roundTrip": 2236.72,
+    "duration": 78,
+    "maxWeight": 500
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Ogobsucum",
+    "price": 1118.36,
+    "roundTrip": 2236.72,
+    "duration": 78,
+    "maxWeight": 500
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Pedasi┬¡",
+    "price": 861.28,
+    "roundTrip": 1722.56,
+    "duration": 60,
+    "maxWeight": 500
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Pedro Gonzalez",
+    "price": 516.37,
+    "roundTrip": 1032.74,
+    "duration": 36,
+    "maxWeight": 550
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Penonome",
+    "price": 644.21,
+    "roundTrip": 1288.42,
+    "duration": 45,
+    "maxWeight": 550
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Pinas Darien",
+    "price": 1205,
+    "roundTrip": 2410,
+    "duration": 84,
+    "maxWeight": 500
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Pixvae",
+    "price": 1333.03,
+    "roundTrip": 2666.06,
+    "duration": 93,
+    "maxWeight": 500
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Playon Chico",
+    "price": 947.31,
+    "roundTrip": 1894.62,
+    "duration": 66,
+    "maxWeight": 500
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Porvenir",
+    "price": 644.21,
+    "roundTrip": 1288.42,
+    "duration": 45,
+    "maxWeight": 550
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Puerto Obaldi┬¡a",
+    "price": 1290.42,
+    "roundTrip": 2580.84,
+    "duration": 90,
+    "maxWeight": 500
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Rambala",
+    "price": 1419.46,
+    "roundTrip": 2838.92,
+    "duration": 99,
+    "maxWeight": 500
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Ri┬¡o Hato",
+    "price": 602.8,
+    "roundTrip": 1205.6,
+    "duration": 42,
+    "maxWeight": 550
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Sambu",
+    "price": 989.92,
+    "roundTrip": 1979.84,
+    "duration": 69,
+    "maxWeight": 500
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - San Jose",
+    "price": 559.38,
+    "roundTrip": 1118.76,
+    "duration": 39,
+    "maxWeight": 550
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - San Miguel",
+    "price": 602.8,
+    "roundTrip": 1205.6,
+    "duration": 42,
+    "maxWeight": 550
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Santiago",
+    "price": 861.28,
+    "roundTrip": 1722.56,
+    "duration": 60,
+    "maxWeight": 550
+  },
+  {
+    "airplane": "C172",
+    "route": "C172: Panama - Tubuala",
+    "price": 1118.36,
+    "roundTrip": 2236.72,
+    "duration": 78,
+    "maxWeight": 500
+  },
+  {
+    "airplane": "Caravan",
+    "route": "Caravan: Albrook - Bocas del Toro",
+    "price": 4012.5,
+    "roundTrip": 8025,
+    "duration": 75,
+    "maxWeight": 2200
+  },
+  {
+    "airplane": "Caravan",
+    "route": "Caravan: Albrook - David",
+    "price": 4173,
+    "roundTrip": 8346,
+    "duration": 80,
+    "maxWeight": 2200
+  },
+  {
+    "airplane": "Caravan",
+    "route": "Caravan: Albrook - Pedasi",
+    "price": 2407.5,
+    "roundTrip": 4815,
+    "duration": 45,
+    "maxWeight": 2200
+  },
+  {
+    "airplane": "Cessna 206",
+    "route": "C206: Panama -  Garachine",
+    "price": 1104.24,
+    "roundTrip": 2208.48,
+    "duration": 52,
+    "maxWeight": 750
+  },
+  {
+    "airplane": "Cessna 206",
+    "route": "C206: Panama -  Pii┬▒as",
+    "price": 1219.8,
+    "roundTrip": 2439.6,
+    "duration": 26,
+    "maxWeight": 750
+  },
+  {
+    "airplane": "Cessna 206",
+    "route": "C206: Panama -  Puerto Obaldia",
+    "price": 1540.8,
+    "roundTrip": 3081.6,
+    "duration": 100,
+    "maxWeight": 750
+  },
+  {
+    "airplane": "Cessna 206",
+    "route": "C206: Panama -  Sambu",
+    "price": 1104.24,
+    "roundTrip": 2208.48,
+    "duration": 29,
+    "maxWeight": 750
+  },
+  {
+    "airplane": "Cessna 206",
+    "route": "C206: Panama - Bocas del Toro",
+    "price": 1605,
+    "roundTrip": 3210,
+    "duration": 95,
+    "maxWeight": 750
+  },
+  {
+    "airplane": "Cessna 206",
+    "route": "C206: Panama - Chame",
+    "price": 513.6,
+    "roundTrip": 1027.2,
+    "duration": 26,
+    "maxWeight": 900
+  },
+  {
+    "airplane": "Cessna 206",
+    "route": "C206: Panama - Changuinola",
+    "price": 1797.6,
+    "roundTrip": 3595.2,
+    "duration": 98,
+    "maxWeight": 750
+  },
+  {
+    "airplane": "Cessna 206",
+    "route": "C206: Panama - Chitre",
+    "price": 834.6,
+    "roundTrip": 1669.2,
+    "duration": 44,
+    "maxWeight": 800
+  },
+  {
+    "airplane": "Cessna 206",
+    "route": "C206: Panama - Colon",
+    "price": 834.6,
+    "roundTrip": 1669.2,
+    "duration": 26,
+    "maxWeight": 900
+  },
+  {
+    "airplane": "Cessna 206",
+    "route": "C206: Panama - Contadora",
+    "price": 552.12,
+    "roundTrip": 1104.24,
+    "duration": 26,
+    "maxWeight": 900
+  },
+  {
+    "airplane": "Cessna 206",
+    "route": "C206: Panama - Corazon de Jesus (San Blas)",
+    "price": 834.6,
+    "roundTrip": 1669.2,
+    "duration": 44,
+    "maxWeight": 800
+  },
+  {
+    "airplane": "Cessna 206",
+    "route": "C206: Panama - David",
+    "price": 1605,
+    "roundTrip": 3210,
+    "duration": 98,
+    "maxWeight": 750
+  },
+  {
+    "airplane": "Cessna 206",
+    "route": "C206: Panama - El Porvenir (San Blas)",
+    "price": 706.2,
+    "roundTrip": 1412.4,
+    "duration": 39,
+    "maxWeight": 800
+  },
+  {
+    "airplane": "Cessna 206",
+    "route": "C206: Panama - Guarare",
+    "price": 834.6,
+    "roundTrip": 1669.2,
+    "duration": 49,
+    "maxWeight": 800
+  },
+  {
+    "airplane": "Cessna 206",
+    "route": "C206: Panama - Isla Pedro Gonzalez",
+    "price": 513.6,
+    "roundTrip": 1027.2,
+    "duration": 31,
+    "maxWeight": 850
+  },
+  {
+    "airplane": "Cessna 206",
+    "route": "C206: Panama - Isla San Jose",
+    "price": 513.6,
+    "roundTrip": 1027.2,
+    "duration": 34,
+    "maxWeight": 850
+  },
+  {
+    "airplane": "Cessna 206",
+    "route": "C206: Panama - Isla San Miguel",
+    "price": 590.64,
+    "roundTrip": 1181.28,
+    "duration": 36,
+    "maxWeight": 850
+  },
+  {
+    "airplane": "Cessna 206",
+    "route": "C206: Panama - Jaque",
+    "price": 1412.4,
+    "roundTrip": 2824.8,
+    "duration": 52,
+    "maxWeight": 750
+  },
+  {
+    "airplane": "Cessna 206",
+    "route": "C206: Panama - Lajas",
+    "price": 1476.6,
+    "roundTrip": 2953.2,
+    "duration": 100,
+    "maxWeight": 750
+  },
+  {
+    "airplane": "Cessna 206",
+    "route": "C206: Panama - Pedasi┬¡",
+    "price": 963,
+    "roundTrip": 1926,
+    "duration": 52,
+    "maxWeight": 800
+  },
+  {
+    "airplane": "Cessna 206",
+    "route": "C206: Panama - Pixbae",
+    "price": 1284,
+    "roundTrip": 2568,
+    "duration": 90,
+    "maxWeight": 800
+  },
+  {
+    "airplane": "Cessna 206",
+    "route": "C206: Panama - Rio Hato",
+    "price": 642,
+    "roundTrip": 1284,
+    "duration": 36,
+    "maxWeight": 850
+  },
+  {
+    "airplane": "Cessna 206",
+    "route": "C206: Panama - Santa Catalina",
+    "price": 1155.6,
+    "roundTrip": 2311.2,
+    "duration": 90,
+    "maxWeight": 1200
+  },
+  {
+    "airplane": "Cessna 206",
+    "route": "C206: Panama - Santiago",
+    "price": 1027.2,
+    "roundTrip": 2054.4,
+    "duration": 52,
+    "maxWeight": 800
+  },
+  {
+    "airplane": "Cherokee",
+    "route": "Cherokee: Panama - Bahi┬¡a Pii┬▒a Darien",
+    "price": 1114.91,
+    "roundTrip": 2229.82,
+    "duration": 84,
+    "maxWeight": 450
+  },
+  {
+    "airplane": "Cherokee",
+    "route": "Cherokee: Panama - Chame",
+    "price": 398.04,
+    "roundTrip": 796.08,
+    "duration": 30,
+    "maxWeight": 450
+  },
+  {
+    "airplane": "Cherokee",
+    "route": "Cherokee: Panama - Chitre",
+    "price": 677.57,
+    "roundTrip": 1355.14,
+    "duration": 51,
+    "maxWeight": 450
+  },
+  {
+    "airplane": "Cherokee",
+    "route": "Cherokee: Panama - Colon",
+    "price": 398.04,
+    "roundTrip": 796.08,
+    "duration": 30,
+    "maxWeight": 450
+  },
+  {
+    "airplane": "Cherokee",
+    "route": "Cherokee: Panama - Contadora",
+    "price": 398.04,
+    "roundTrip": 796.08,
+    "duration": 30,
+    "maxWeight": 450
+  },
+  {
+    "airplane": "Cherokee",
+    "route": "Cherokee: Panama - Guarare",
+    "price": 757.28,
+    "roundTrip": 1514.56,
+    "duration": 57,
+    "maxWeight": 450
+  },
+  {
+    "airplane": "Cherokee",
+    "route": "Cherokee: Panama - Lago Bay",
+    "price": 1078.56,
+    "roundTrip": 2157.12,
+    "duration": 82,
+    "maxWeight": 450
+  },
+  {
+    "airplane": "Cherokee",
+    "route": "Cherokee: Panama - Pedasi┬¡",
+    "price": 796.08,
+    "roundTrip": 1592.16,
+    "duration": 60,
+    "maxWeight": 450
+  },
+  {
+    "airplane": "Cherokee",
+    "route": "Cherokee: Panama - Pedro Gonzalez",
+    "price": 477.85,
+    "roundTrip": 955.7,
+    "duration": 36,
+    "maxWeight": 450
+  },
+  {
+    "airplane": "Cherokee",
+    "route": "Cherokee: Panama - Penonome",
+    "price": 597.06,
+    "roundTrip": 1194.12,
+    "duration": 45,
+    "maxWeight": 450
+  },
+  {
+    "airplane": "Cherokee",
+    "route": "Cherokee: Panama - Pixvae",
+    "price": 1234.82,
+    "roundTrip": 2469.64,
+    "duration": 93,
+    "maxWeight": 450
+  },
+  {
+    "airplane": "Cherokee",
+    "route": "Cherokee: Panama - Ri┬¡o Hato",
+    "price": 557.26,
+    "roundTrip": 1114.52,
+    "duration": 42,
+    "maxWeight": 450
+  },
+  {
+    "airplane": "Cherokee",
+    "route": "Cherokee: Panama - San Jose",
+    "price": 517.85,
+    "roundTrip": 1035.7,
+    "duration": 39,
+    "maxWeight": 450
+  },
+  {
+    "airplane": "Cherokee",
+    "route": "Cherokee: Panama - San Miguel",
+    "price": 557.26,
+    "roundTrip": 1114.52,
+    "duration": 42,
+    "maxWeight": 450
+  },
+  {
+    "airplane": "Cherokee",
+    "route": "Cherokee: Panama - Santiago",
+    "price": 796.08,
+    "roundTrip": 1592.16,
+    "duration": 60,
+    "maxWeight": 450
+  },
+  {
+    "airplane": "King Air 200",
+    "route": "B200: Panama - Bocas del Toro",
+    "price": 3852,
+    "roundTrip": 7704,
+    "duration": 48,
+    "maxWeight": 1600
+  },
+  {
+    "airplane": "King Air 200",
+    "route": "B200: Panama - Chame",
+    "price": 2182.8,
+    "roundTrip": 4365.6,
+    "duration": 13,
+    "maxWeight": 1800
+  },
+  {
+    "airplane": "King Air 200",
+    "route": "B200: Panama - Changuinola",
+    "price": 3852,
+    "roundTrip": 7704,
+    "duration": 49,
+    "maxWeight": 1800
+  },
+  {
+    "airplane": "King Air 200",
+    "route": "B200: Panama - Chitre",
+    "price": 2182.8,
+    "roundTrip": 4365.6,
+    "duration": 22,
+    "maxWeight": 1800
+  },
+  {
+    "airplane": "King Air 200",
+    "route": "B200: Panama - Colon",
+    "price": 2182.8,
+    "roundTrip": 4365.6,
+    "duration": 13,
+    "maxWeight": 1800
+  },
+  {
+    "airplane": "King Air 200",
+    "route": "B200: Panama - David",
+    "price": 3852,
+    "roundTrip": 7704,
+    "duration": 49,
+    "maxWeight": 1800
+  },
+  {
+    "airplane": "King Air 200",
+    "route": "B200: Panama - Guarare",
+    "price": 2182.8,
+    "roundTrip": 4365.6,
+    "duration": 25,
+    "maxWeight": 1800
+  },
+  {
+    "airplane": "King Air 200",
+    "route": "B200: Panama - Isla Pedro Gonzalez",
+    "price": 2182.8,
+    "roundTrip": 4365.6,
+    "duration": 16,
+    "maxWeight": 1800
+  },
+  {
+    "airplane": "King Air 200",
+    "route": "B200: Panama - Isla San Jose",
+    "price": 2182.8,
+    "roundTrip": 4365.6,
+    "duration": 17,
+    "maxWeight": 1800
+  },
+  {
+    "airplane": "King Air 200",
+    "route": "B200: Panama - Jaque",
+    "price": 3595.2,
+    "roundTrip": 7190.4,
+    "duration": 26,
+    "maxWeight": 1800
+  },
+  {
+    "airplane": "King Air 200",
+    "route": "B200: Panama - Lajas",
+    "price": 3595.2,
+    "roundTrip": 7190.4,
+    "duration": 49,
+    "maxWeight": 1800
+  },
+  {
+    "airplane": "King Air 200",
+    "route": "B200: Panama - Pedasi┬¡",
+    "price": 2311.2,
+    "roundTrip": 4622.4,
+    "duration": 26,
+    "maxWeight": 1800
+  },
+  {
+    "airplane": "King Air 200",
+    "route": "B200: Panama - Rio Hato",
+    "price": 2182.8,
+    "roundTrip": 4365.6,
+    "duration": 18,
+    "maxWeight": 1800
+  },
+  {
+    "airplane": "King Air 200",
+    "route": "B200: Panama - Santiago",
+    "price": 2311.2,
+    "roundTrip": 4622.4,
+    "duration": 26,
+    "maxWeight": 1800
+  },
+  {
+    "airplane": "King Air 200",
+    "route": "B200: Panama - Volcan",
+    "price": 4108.8,
+    "roundTrip": 8217.6,
+    "duration": 50,
+    "maxWeight": 1800
+  },
+  {
+    "airplane": "King Air F90",
+    "route": "F90: Panama - Bocas del Toro",
+    "price": 3466.8,
+    "roundTrip": 6933.6,
+    "duration": 54,
+    "maxWeight": 1200
+  },
+  {
+    "airplane": "King Air F90",
+    "route": "F90: Panama - Chame",
+    "price": 1797.6,
+    "roundTrip": 3595.2,
+    "duration": 15,
+    "maxWeight": 1200
+  },
+  {
+    "airplane": "King Air F90",
+    "route": "F90: Panama - Changuinola",
+    "price": 3466.8,
+    "roundTrip": 6933.6,
+    "duration": 55,
+    "maxWeight": 1200
+  },
+  {
+    "airplane": "King Air F90",
+    "route": "F90: Panama - Chitre",
+    "price": 1797.6,
+    "roundTrip": 3595.2,
+    "duration": 25,
+    "maxWeight": 1200
+  },
+  {
+    "airplane": "King Air F90",
+    "route": "F90: Panama - Colon",
+    "price": 1797.6,
+    "roundTrip": 3595.2,
+    "duration": 15,
+    "maxWeight": 1200
+  },
+  {
+    "airplane": "King Air F90",
+    "route": "F90: Panama - Contadora",
+    "price": 1797.6,
+    "roundTrip": 3595.2,
+    "duration": 15,
+    "maxWeight": 1200
+  },
+  {
+    "airplane": "King Air F90",
+    "route": "F90: Panama - David",
+    "price": 3466.8,
+    "roundTrip": 6933.6,
+    "duration": 55,
+    "maxWeight": 1200
+  },
+  {
+    "airplane": "King Air F90",
+    "route": "F90: Panama - Guarare",
+    "price": 1797.6,
+    "roundTrip": 3595.2,
+    "duration": 28,
+    "maxWeight": 1200
+  },
+  {
+    "airplane": "King Air F90",
+    "route": "F90: Panama - Isla Pedro Gonzalez",
+    "price": 1797.6,
+    "roundTrip": 3595.2,
+    "duration": 17,
+    "maxWeight": 1200
+  },
+  {
+    "airplane": "King Air F90",
+    "route": "F90: Panama - Isla San Jose",
+    "price": 1797.6,
+    "roundTrip": 3595.2,
+    "duration": 19,
+    "maxWeight": 1200
+  },
+  {
+    "airplane": "King Air F90",
+    "route": "F90: Panama - Jaque",
+    "price": 3210,
+    "roundTrip": 6420,
+    "duration": 29,
+    "maxWeight": 1200
+  },
+  {
+    "airplane": "King Air F90",
+    "route": "F90: Panama - Lajas",
+    "price": 3338.4,
+    "roundTrip": 6676.8,
+    "duration": 55,
+    "maxWeight": 1200
+  },
+  {
+    "airplane": "King Air F90",
+    "route": "F90: Panama - Pedasi┬¡",
+    "price": 1926,
+    "roundTrip": 3852,
+    "duration": 29,
+    "maxWeight": 1200
+  },
+  {
+    "airplane": "King Air F90",
+    "route": "F90: Panama - Rio Hato",
+    "price": 1797.6,
+    "roundTrip": 3595.2,
+    "duration": 20,
+    "maxWeight": 1200
+  },
+  {
+    "airplane": "King Air F90",
+    "route": "F90: Panama - Santiago",
+    "price": 1926,
+    "roundTrip": 3852,
+    "duration": 29,
+    "maxWeight": 1200
+  },
+  {
+    "airplane": "King Air F90",
+    "route": "F90: Panama - Volcan",
+    "price": 3595.2,
+    "roundTrip": 7190.4,
+    "duration": 55,
+    "maxWeight": 1200
+  },
+  {
+    "airplane": "Kodiak",
+    "route": "Kodiak: Albrook - Bocas Del Toro",
+    "price": 3616.6,
+    "roundTrip": 7233.2,
+    "duration": 78,
+    "maxWeight": 1600
+  },
+  {
+    "airplane": "Kodiak",
+    "route": "Kodiak: Albrook - Changuinola",
+    "price": 3755.7,
+    "roundTrip": 7511.4,
+    "duration": 81,
+    "maxWeight": 1600
+  },
+  {
+    "airplane": "Kodiak",
+    "route": "Kodiak: Albrook - Chitre",
+    "price": 1947.4,
+    "roundTrip": 3894.8,
+    "duration": 42,
+    "maxWeight": 1600
+  },
+  {
+    "airplane": "Kodiak",
+    "route": "Kodiak: Albrook - Coiba",
+    "price": 3338.4,
+    "roundTrip": 6676.8,
+    "duration": 72,
+    "maxWeight": 1600
+  },
+  {
+    "airplane": "Kodiak",
+    "route": "Kodiak: Albrook - Coraz├│n de Jes├║s",
+    "price": 1947.4,
+    "roundTrip": 3894.8,
+    "duration": 45,
+    "maxWeight": 1600
+  },
+  {
+    "airplane": "Kodiak",
+    "route": "Kodiak: Albrook - Coraz├│n de Jes├║s (San Blas)",
+    "price": 1947.4,
+    "roundTrip": 3894.8,
+    "duration": 45,
+    "maxWeight": 1600
+  },
+  {
+    "airplane": "Kodiak",
+    "route": "Kodiak: Albrook - David",
+    "price": 3755.7,
+    "roundTrip": 7511.4,
+    "duration": 81,
+    "maxWeight": 1600
+  },
+  {
+    "airplane": "Kodiak",
+    "route": "Kodiak: Albrook - Guarare",
+    "price": 1947.4,
+    "roundTrip": 3894.8,
+    "duration": 42,
+    "maxWeight": 1600
+  },
+  {
+    "airplane": "Kodiak",
+    "route": "Kodiak: Albrook - Las Lajas",
+    "price": 3199.3,
+    "roundTrip": 6398.6,
+    "duration": 69,
+    "maxWeight": 1600
+  },
+  {
+    "airplane": "Kodiak",
+    "route": "Kodiak: Albrook - Pedasi",
+    "price": 2225.6,
+    "roundTrip": 4451.2,
+    "duration": 48,
+    "maxWeight": 1600
+  },
+  {
+    "airplane": "Kodiak",
+    "route": "Kodiak: Albrook - Pixvae",
+    "price": 3060.2,
+    "roundTrip": 6120.4,
+    "duration": 66,
+    "maxWeight": 1600
+  },
+  {
+    "airplane": "Kodiak",
+    "route": "Kodiak: Albrook - Rambala",
+    "price": 3338.4,
+    "roundTrip": 6676.8,
+    "duration": 72,
+    "maxWeight": 1600
+  },
+  {
+    "airplane": "Kodiak",
+    "route": "Kodiak: Albrook - Rio Hato",
+    "price": 1391,
+    "roundTrip": 2782,
+    "duration": 30,
+    "maxWeight": 1600
+  },
+  {
+    "airplane": "Kodiak",
+    "route": "Kodiak: Albrook - Santiago",
+    "price": 2225.6,
+    "roundTrip": 4451.2,
+    "duration": 48,
+    "maxWeight": 1600
+  },
+  {
+    "airplane": "Kodiak",
+    "route": "Kodiak: Albrook - Volcan",
+    "price": 4033.9,
+    "roundTrip": 8067.8,
+    "duration": 87,
+    "maxWeight": 1600
+  },
+  {
+    "airplane": "R44",
+    "route": "City Tour",
+    "price": 588.5,
+    "roundTrip": 1177,
+    "duration": 30,
+    "maxWeight": 600
+  },
+  {
+    "airplane": "R44",
+    "route": "Jurassic Tour",
+    "price": 1530.1,
+    "roundTrip": 3060.2,
+    "duration": 75,
+    "maxWeight": 600
+  },
+  {
+    "airplane": "R44",
+    "route": "Ocean to Ocean",
+    "price": 1177,
+    "roundTrip": 2354,
+    "duration": 60,
+    "maxWeight": 600
+  },
+  {
+    "airplane": "R66",
+    "route": "City Tour",
+    "price": 875,
+    "roundTrip": 1750,
+    "duration": 30,
+    "maxWeight": 700
+  },
+  {
+    "airplane": "R66",
+    "route": "Jurassic Tour",
+    "price": 1909.95,
+    "roundTrip": 3819.9,
+    "duration": 75,
+    "maxWeight": 700
+  },
+  {
+    "airplane": "R66",
+    "route": "Ocean to Ocean",
+    "price": 1471.25,
+    "roundTrip": 2942.5,
+    "duration": 60,
+    "maxWeight": 700
+  },
+  {
+    "airplane": "Saratoga",
+    "route": "Saratoga: Albrook - Bocas Del Toro",
+    "price": 1926,
+    "roundTrip": 3852,
+    "duration": 90,
+    "maxWeight": 850
+  },
+  {
+    "airplane": "Saratoga",
+    "route": "Saratoga: Albrook - Changuinola",
+    "price": 2054.4,
+    "roundTrip": 4108.8,
+    "duration": 96,
+    "maxWeight": 700
+  },
+  {
+    "airplane": "Saratoga",
+    "route": "Saratoga: Albrook - Chitre",
+    "price": 1027.2,
+    "roundTrip": 2054.4,
+    "duration": 48,
+    "maxWeight": 850
+  },
+  {
+    "airplane": "Saratoga",
+    "route": "Saratoga: Albrook - Coiba",
+    "price": 1669.2,
+    "roundTrip": 3338.4,
+    "duration": 78,
+    "maxWeight": 700
+  },
+  {
+    "airplane": "Saratoga",
+    "route": "Saratoga: Albrook - Coraz├│n de Jes├║s",
+    "price": 823.9,
+    "roundTrip": 1647.8,
+    "duration": 45,
+    "maxWeight": 800
+  },
+  {
+    "airplane": "Saratoga",
+    "route": "Saratoga: Albrook - Coraz├│n de Jes├║s (San Blas)",
+    "price": 823.9,
+    "roundTrip": 1647.8,
+    "duration": 45,
+    "maxWeight": 800
+  },
+  {
+    "airplane": "Saratoga",
+    "route": "Saratoga: Albrook - David",
+    "price": 1990.2,
+    "roundTrip": 3980.4,
+    "duration": 93,
+    "maxWeight": 700
+  },
+  {
+    "airplane": "Saratoga",
+    "route": "Saratoga: Albrook - Guarare",
+    "price": 1027.2,
+    "roundTrip": 2054.4,
+    "duration": 48,
+    "maxWeight": 850
+  },
+  {
+    "airplane": "Saratoga",
+    "route": "Saratoga: Albrook - Las Lajas",
+    "price": 1733.4,
+    "roundTrip": 3466.8,
+    "duration": 81,
+    "maxWeight": 700
+  },
+  {
+    "airplane": "Saratoga",
+    "route": "Saratoga: Albrook - Pedasi",
+    "price": 1155.6,
+    "roundTrip": 2311.2,
+    "duration": 54,
+    "maxWeight": 850
+  },
+  {
+    "airplane": "Saratoga",
+    "route": "Saratoga: Albrook - Pixvae",
+    "price": 1540.8,
+    "roundTrip": 3081.6,
+    "duration": 72,
+    "maxWeight": 850
+  },
+  {
+    "airplane": "Saratoga",
+    "route": "Saratoga: Albrook - Rambala",
+    "price": 1926,
+    "roundTrip": 3852,
+    "duration": 90,
+    "maxWeight": 850
+  },
+  {
+    "airplane": "Saratoga",
+    "route": "Saratoga: Albrook - Rio Hato",
+    "price": 770.4,
+    "roundTrip": 1540.8,
+    "duration": 36,
+    "maxWeight": 850
+  },
+  {
+    "airplane": "Saratoga",
+    "route": "Saratoga: Albrook - Santiago",
+    "price": 1155.6,
+    "roundTrip": 2311.2,
+    "duration": 54,
+    "maxWeight": 850
+  },
+  {
+    "airplane": "Saratoga",
+    "route": "Saratoga: Albrook - Volcan",
+    "price": 2182.8,
+    "roundTrip": 4365.6,
+    "duration": 102,
+    "maxWeight": 700
+  }
+]
+
+=== UNIQUE AIRPLANES IN FLIGHTS: [
+  'C172',         'Cherokee',
+  'Azteca',       'Cessna 206',
+  'King Air F90', 'King Air 200',
+  'R44',          'R66',
+  'B3',           'B4',
+  'Kodiak',       'Saratoga',
+  'Caravan'
+]
+
+=== UNIQUE ROUTES: [
+  'C172: Panama - Contadora',
+  'C172: Panama - Pedro Gonzalez',
+  'C172: Panama - San Jose',
+  'C172: Panama - San Miguel',
+  'C172: Panama - Chame',
+  'C172: Panama - Colon',
+  'C172: Panama - Porvenir',
+  'C172: Panama - Corazon de Jesus',
+  'C172: Panama - Ri┬¡o Hato',
+  'C172: Panama - Penonome',
+  'C172: Panama - Santiago',
+  'C172: Panama - Chitre',
+  'C172: Panama - Guarare',
+  'C172: Panama - Pedasi┬¡',
+  'C172: Panama - Pixvae',
+  'C172: Panama - Lago Bay',
+  'C172: Panama - Pinas Darien',
+  'C172: Panama - Rambala',
+  'C172: Panama - David',
+  'C172: Panama - Bocas del Toro',
+  'C172: Panama - Changuinola',
+  'C172: Panama - Puerto Obaldi┬¡a',
+  'C172: Panama - Miraflores Darien',
+  'C172: Panama - Coiba',
+  'C172: Panama - Sambu',
+  'C172: Panama - Jaque',
+  'C172: Panama - Achutupu',
+  'C172: Panama - Playon Chico',
+  'C172: Panama - Mulatupu',
+  'C172: Panama - Ogobsucum',
+  'C172: Panama - Tubuala',
+  'C172: Panama - Nicanor',
+  'C172: Panama - Garachine',
+  'Cherokee: Panama - Contadora',
+  'Cherokee: Panama - Pedro Gonzalez',
+  'Cherokee: Panama - San Jose',
+  'Cherokee: Panama - San Miguel',
+  'Cherokee: Panama - Chame',
+  'Cherokee: Panama - Colon',
+  'Cherokee: Panama - Ri┬¡o Hato',
+  'Cherokee: Panama - Penonome',
+  'Cherokee: Panama - Santiago',
+  'Cherokee: Panama - Chitre',
+  'Cherokee: Panama - Guarare',
+  'Cherokee: Panama - Pedasi┬¡',
+  'Cherokee: Panama - Pixvae',
+  'Cherokee: Panama - Lago Bay',
+  'Cherokee: Panama - Bahi┬¡a Pii┬▒a Darien',
+  'Azteca: Panama - Contadora',
+  'Azteca: Panama - Pedro Gonzalez',
+  'Azteca: Panama - San Jose',
+  'Azteca: Panama - Chame',
+  'Azteca: Panama - Colon',
+  'Azteca: Panama - Corazon de Jesus',
+  'Azteca: Panama - Ri┬¡o Hato',
+  'Azteca: Panama - Achutupu',
+  'Azteca: Panama - Penonome',
+  'Azteca: Panama - Santiago',
+  'Azteca: Panama - Chitre',
+  'Azteca: Panama - Guarare',
+  'Azteca: Panama - Pedasi┬¡',
+  'Azteca: Panama - Pixbae',
+  'Azteca: Panama - Lago Bay',
+  'Azteca: Panama - Pii┬▒as',
+  'Azteca: Panama - David',
+  'Azteca: Panama - Bocas',
+  'Azteca: Panama - Changuinola',
+  'Azteca: Panama - David - Bocas',
+  'Azteca: Panama - Lagobay Bocas',
+  'Azteca: Panama - Pedasi Bocas',
+  'Azteca: Panama - Playon chico',
+  'Azteca: Panama - Puerto Obaldi┬¡a',
+  'Azteca: Panama - Coiba',
+  'Azteca: Panama - Contadora Ri┬¡o Hato',
+  'C206: Panama - Bocas del Toro',
+  'F90: Panama - Bocas del Toro',
+  'B200: Panama - Bocas del Toro',
+  'C206: Panama - Chame',
+  'F90: Panama - Chame',
+  'B200: Panama - Chame',
+  'C206: Panama - Changuinola',
+  'F90: Panama - Changuinola',
+  'B200: Panama - Changuinola',
+  'C206: Panama - David',
+  'F90: Panama - David',
+  'B200: Panama - David',
+  'C206: Panama - Lajas',
+  'F90: Panama - Lajas',
+  'B200: Panama - Lajas',
+  'F90: Panama - Volcan',
+  'B200: Panama - Volcan',
+  'C206: Panama - Chitre',
+  'F90: Panama - Chitre',
+  'B200: Panama - Chitre',
+  'C206: Panama - Colon',
+  'F90: Panama - Colon',
+  'B200: Panama - Colon',
+  'C206: Panama - Contadora',
+  'F90: Panama - Contadora',
+  'C206: Panama - Jaque',
+  ... 65 more items
+]

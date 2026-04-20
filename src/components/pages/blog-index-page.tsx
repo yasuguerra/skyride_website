@@ -20,12 +20,12 @@ export function BlogIndexPage({ locale }: { locale: Locale }) {
   const dateLocale = locale === "es" ? "es-PA" : "en-US";
 
   return (
-    <div className="min-h-screen bg-[#f7f4ec]">
+    <div className="min-h-screen bg-[#f0f7fa]">
       <Header locale={locale} />
       <Breadcrumbs locale={locale} items={[{ name: title, href: pageUrl }]} />
 
       <section className="mx-auto max-w-7xl px-6 py-12 lg:px-10">
-        <h1 className="font-serif text-4xl text-slate-950 sm:text-5xl">
+        <h1 className="font-sans font-bold text-4xl text-slate-950 sm:text-5xl">
           {title}
         </h1>
         <p className="mt-3 max-w-2xl text-lg text-slate-600">{subtitle}</p>
@@ -60,7 +60,7 @@ export function BlogIndexPage({ locale }: { locale: Locale }) {
                     </div>
                   </div>
                   <div className="p-6">
-                    <p className="text-xs uppercase tracking-[0.18em] text-slate-500">
+                    <p className="text-xs uppercase tracking-wider text-slate-500">
                       {new Date(post.date).toLocaleDateString(dateLocale, {
                         year: "numeric",
                         month: "long",
@@ -69,7 +69,7 @@ export function BlogIndexPage({ locale }: { locale: Locale }) {
                       · {post.readingMinutes}{" "}
                       {locale === "es" ? "min" : "min read"}
                     </p>
-                    <h2 className="mt-3 font-serif text-xl leading-tight text-slate-950">
+                    <h2 className="mt-3 font-sans font-bold text-xl leading-tight text-slate-950">
                       {post.title}
                     </h2>
                     <p className="mt-3 line-clamp-3 text-sm text-slate-600">

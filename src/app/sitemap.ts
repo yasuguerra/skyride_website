@@ -19,6 +19,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   });
 
+  entries.push({
+    url: `${BASE}/en`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 1.0,
+    alternates: {
+      languages: { es: BASE, en: `${BASE}/en` },
+    },
+  });
+
   // All slug-mapped pages
   for (const page of slugMap) {
     const esUrl = `${BASE}/${page.es}`;
@@ -53,7 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: enUrl,
       lastModified: now,
       changeFrequency,
-      priority: priority * 0.95,
+      priority,
       alternates: {
         languages: { es: esUrl, en: enUrl },
       },

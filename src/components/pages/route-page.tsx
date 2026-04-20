@@ -34,7 +34,7 @@ export function RoutePage({
   const routeName = `${route.origin[locale]} → ${route.destination[locale]}`;
 
   return (
-    <div className="min-h-screen bg-[#f7f4ec]">
+    <div className="min-h-screen bg-[#f0f7fa]">
       <Header locale={locale} />
       <Breadcrumbs
         locale={locale}
@@ -53,7 +53,7 @@ export function RoutePage({
       />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#0b1625]">
+      <section className="relative overflow-hidden bg-[#152c46]">
         <Image
           src={route.image}
           alt={`${route.origin[locale]} → ${route.destination[locale]}`}
@@ -62,12 +62,12 @@ export function RoutePage({
           className="object-cover opacity-30"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0b1625]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#152c46]" />
         <div className="relative z-10 mx-auto max-w-7xl px-6 py-20 lg:px-10">
-          <p className="text-xs uppercase tracking-[0.3em] text-sky-200">
+          <p className="text-xs uppercase tracking-wider text-sky-200">
             {locale === "es" ? "Ruta" : "Route"}
           </p>
-          <h1 className="mt-4 font-serif text-4xl text-white sm:text-5xl lg:text-6xl">
+          <h1 className="mt-4 font-sans font-bold text-4xl text-white sm:text-5xl lg:text-6xl">
             {route.origin[locale]} → {route.destination[locale]}
           </h1>
 
@@ -95,13 +95,13 @@ export function RoutePage({
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
               href={whatsappHref}
-              className="inline-flex items-center justify-center rounded-full bg-[#c8953d] px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-950"
+              className="inline-flex items-center justify-center rounded-full bg-[#20d1b3] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-slate-950"
             >
               {locale === "es" ? "Reservar esta ruta" : "Book this route"}
             </Link>
             <Link
               href="tel:+50768400045"
-              className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white"
+              className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white"
             >
               +507 6840 0045
             </Link>
@@ -113,7 +113,7 @@ export function RoutePage({
       <section className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_0.6fr]">
           <div>
-            <h2 className="font-serif text-3xl text-slate-950">
+            <h2 className="font-sans font-bold text-3xl text-slate-950">
               {locale === "es"
                 ? "Acerca de esta ruta"
                 : "About this route"}
@@ -127,7 +127,7 @@ export function RoutePage({
                   key={h}
                   className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-4"
                 >
-                  <span className="mt-0.5 text-[#c8953d]">✓</span>
+                  <span className="mt-0.5 text-[#20d1b3]">✓</span>
                   <span className="text-sm text-slate-700">{h}</span>
                 </div>
               ))}
@@ -146,13 +146,13 @@ export function RoutePage({
               </p>
               <Link
                 href={whatsappHref}
-                className="mt-6 flex w-full items-center justify-center rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white"
+                className="mt-6 flex w-full items-center justify-center rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white"
               >
                 WhatsApp
               </Link>
               <Link
                 href="tel:+50768400045"
-                className="mt-3 flex w-full items-center justify-center rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-900"
+                className="mt-3 flex w-full items-center justify-center rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold uppercase tracking-wider text-slate-900"
               >
                 {locale === "es" ? "Llamar" : "Call"}
               </Link>
@@ -165,7 +165,7 @@ export function RoutePage({
       {routeAircraft.length > 0 && (
         <section className="border-t border-slate-200 bg-white">
           <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
-            <h2 className="font-serif text-3xl text-slate-950">
+            <h2 className="font-sans font-bold text-3xl text-slate-950">
               {locale === "es"
                 ? "Aeronaves disponibles para esta ruta"
                 : "Aircraft available for this route"}
@@ -179,7 +179,7 @@ export function RoutePage({
                       ? `/en/product/${aircraft.slug}`
                       : `/producto/${aircraft.slug}`
                   }
-                  className="group flex items-center gap-4 rounded-2xl border border-slate-200 bg-[#f7f4ec] p-4 transition hover:shadow-md"
+                  className="group flex items-center gap-4 rounded-2xl border border-slate-200 bg-[#f0f7fa] p-4 transition hover:shadow-md"
                 >
                   <div className="relative h-20 w-28 flex-shrink-0 overflow-hidden rounded-xl">
                     <Image
@@ -199,7 +199,7 @@ export function RoutePage({
                       {locale === "es" ? "pasajeros" : "passengers"}
                     </p>
                     {aircraft.priceFrom && (
-                      <p className="text-sm text-[#c8953d]">
+                      <p className="text-sm text-[#20d1b3]">
                         {aircraft.priceFrom[locale]}
                       </p>
                     )}
@@ -230,16 +230,16 @@ function StatCard({
     <div
       className={`rounded-2xl border p-5 ${
         highlight
-          ? "border-[#d8a651]/30 bg-[#d8a651]/10"
+          ? "border-[#3edcc2]/30 bg-[#3edcc2]/10"
           : "border-white/10 bg-white/5"
       }`}
     >
-      <p className="text-xs uppercase tracking-[0.2em] text-slate-400">
+      <p className="text-xs uppercase tracking-wider text-slate-400">
         {label}
       </p>
       <p
         className={`mt-2 text-2xl font-semibold ${
-          highlight ? "text-[#d8a651]" : "text-white"
+          highlight ? "text-[#3edcc2]" : "text-white"
         }`}
       >
         {value}

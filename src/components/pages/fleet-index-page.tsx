@@ -8,6 +8,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
+import { JsonLd, itemListSchema } from "@/components/seo/JsonLd";
 
 export function FleetIndexPage({ locale }: { locale: Locale }) {
   const pageUrl = locale === "en" ? "/en/our-fleet" : "/nuestra-flota";
@@ -15,18 +16,29 @@ export function FleetIndexPage({ locale }: { locale: Locale }) {
   const airplanes = fleet.filter((a) => a.type === "airplane");
   const helicopters = fleet.filter((a) => a.type === "helicopter");
 
+  const fleetListSchema = itemListSchema({
+    name: locale === "es" ? "Flota Sky Ride Panamá" : "Sky Ride Panama Fleet",
+    items: fleet.map((a) => ({
+      name: a.name,
+      url: locale === "en" ? `/en/product/${a.slug}` : `/producto/${a.slug}`,
+      image: a.image,
+      description: a.description[locale],
+    })),
+  });
+
   return (
-    <div className="min-h-screen bg-[#f7f4ec]">
+    <div className="min-h-screen bg-[#f0f7fa]">
       <Header locale={locale} />
       <Breadcrumbs locale={locale} items={[{ name: title, href: pageUrl }]} />
+      <JsonLd data={fleetListSchema} />
 
       {/* Hero */}
-      <section className="bg-[#0b1625] px-6 py-20 text-white lg:px-10">
+      <section className="bg-[#152c46] px-6 py-20 text-white lg:px-10">
         <div className="mx-auto max-w-7xl">
-          <p className="text-xs uppercase tracking-[0.3em] text-sky-200">
-            {locale === "es" ? "13 aeronaves certificadas" : "13 certified aircraft"}
+          <p className="text-xs uppercase tracking-wider text-sky-200">
+            {locale === "es" ? "13 aeronaves disponibles" : "13 available aircraft"}
           </p>
-          <h1 className="mt-4 max-w-3xl font-serif text-4xl sm:text-5xl lg:text-6xl">
+          <h1 className="mt-4 max-w-3xl font-sans font-bold text-4xl sm:text-5xl lg:text-6xl">
             {locale === "es" ? "Nuestra Flota" : "Our Fleet"}
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-slate-300">
@@ -39,7 +51,7 @@ export function FleetIndexPage({ locale }: { locale: Locale }) {
 
       {/* Airplanes */}
       <section className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
-        <h2 className="font-serif text-3xl text-slate-950 sm:text-4xl">
+        <h2 className="font-sans font-bold text-3xl text-slate-950 sm:text-4xl">
           {locale === "es" ? "Aviones" : "Airplanes"}
         </h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -56,7 +68,7 @@ export function FleetIndexPage({ locale }: { locale: Locale }) {
       {/* Helicopters */}
       <section className="border-t border-slate-200 bg-white">
         <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
-          <h2 className="font-serif text-3xl text-slate-950 sm:text-4xl">
+          <h2 className="font-sans font-bold text-3xl text-slate-950 sm:text-4xl">
             {locale === "es" ? "Helicópteros" : "Helicopters"}
           </h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -107,7 +119,7 @@ function AircraftCard({
         </div>
       </div>
       <div className="p-5">
-        <p className="text-xs uppercase tracking-[0.2em] text-sky-700">
+        <p className="text-xs uppercase tracking-wider text-sky-700">
           {locale === "es"
             ? aircraft.type === "airplane"
               ? "Avión"
@@ -116,14 +128,14 @@ function AircraftCard({
               ? "Airplane"
               : "Helicopter"}
         </p>
-        <h3 className="mt-2 font-serif text-2xl text-slate-950">
+        <h3 className="mt-2 font-sans font-bold text-2xl text-slate-950">
           {aircraft.name}
         </h3>
         <p className="mt-2 line-clamp-2 text-sm text-slate-600">
           {aircraft.description[locale]}
         </p>
         {aircraft.priceFrom && (
-          <p className="mt-3 text-sm font-semibold text-[#c8953d]">
+          <p className="mt-3 text-sm font-semibold text-[#20d1b3]">
             {aircraft.priceFrom[locale]}
           </p>
         )}
