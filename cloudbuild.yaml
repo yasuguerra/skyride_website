@@ -7,14 +7,14 @@ steps:
       - "--build-arg=NEXT_PUBLIC_GA4_ID=${_GA4_ID}"
       - "--build-arg=NEXT_PUBLIC_CLARITY_ID=${_CLARITY_ID}"
       - "-t"
-      - "gcr.io/${PROJECT_ID}/skyride-web:${SHORT_SHA}"
+      - "us-central1-docker.pkg.dev/${PROJECT_ID}/skyride-web/app:${_TAG}"
       - "-t"
-      - "gcr.io/${PROJECT_ID}/skyride-web:latest"
+      - "us-central1-docker.pkg.dev/${PROJECT_ID}/skyride-web/app:latest"
       - "."
 
-  # Push the container image to Container Registry
+  # Push the container image to Artifact Registry
   - name: "gcr.io/cloud-builders/docker"
-    args: ["push", "--all-tags", "gcr.io/${PROJECT_ID}/skyride-web"]
+    args: ["push", "--all-tags", "us-central1-docker.pkg.dev/${PROJECT_ID}/skyride-web/app"]
 
   # Deploy to Cloud Run
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
@@ -23,7 +23,7 @@ steps:
       - "run"
       - "deploy"
       - "skyride-web"
-      - "--image=gcr.io/${PROJECT_ID}/skyride-web:${SHORT_SHA}"
+      - "--image=us-central1-docker.pkg.dev/${PROJECT_ID}/skyride-web/app:${_TAG}"
       - "--region=${_REGION}"
       - "--platform=managed"
       - "--allow-unauthenticated"
@@ -37,6 +37,7 @@ steps:
 
 substitutions:
   _REGION: us-central1
+  _TAG: latest
   _GTM_ID: "GTM-W433GH2"
   _GA4_ID: ""
   _CLARITY_ID: ""
