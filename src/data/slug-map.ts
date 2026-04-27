@@ -286,6 +286,7 @@ const esBlogSlugs = [
   "que-ver-en-san-jose-capital-de-costa-rica",
   "luna-de-miel-en-costa-rica",
   "como-elegir-asientos-de-avion-privado",
+  "como-llegar-a-san-blas",
 ];
 
 // ─── Blog Posts (EN) ──────────────────────────────
@@ -313,6 +314,8 @@ const enBlogSlugs = [
   "tips-for-flying-complete-guide",
   "can-hypertensive-people-fly",
   "how-to-choose-private-airplane-seats",
+  "san-blas-islands-travel-guide",
+  "charter-flights-panama-prices",
 ];
 
 // Blog translation pairs (ES index → EN slug, null if no translation)
@@ -359,6 +362,8 @@ const blogTranslationMap: Record<string, string | null> = {
     "can-hypertensive-people-fly",
   "como-elegir-asientos-de-avion-privado":
     "how-to-choose-private-airplane-seats",
+  "como-llegar-a-san-blas":
+    "san-blas-islands-travel-guide",
 };
 
 // Add blog posts to slug map
