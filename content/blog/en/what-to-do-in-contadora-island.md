@@ -32,3 +32,5 @@ Booking with Sky Ride is simple: send us a WhatsApp message with your date and n
 - Check weather conditions the day before your flight
 
 Ready to experience Contadora? Contact us and we'll help you plan the perfect getaway.
+
+[See the Panama City → Contadora Island route →](/en/route/panama-contadora)

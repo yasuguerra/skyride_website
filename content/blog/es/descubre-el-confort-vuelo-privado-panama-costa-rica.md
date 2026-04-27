@@ -36,3 +36,5 @@ Para vuelos internacionales a Costa Rica recomendamos:
 ## Reserva tu vuelo
 
 Cotiza por WhatsApp. Incluimos plan de vuelo, permisos y coordinación migratoria en el servicio.
+
+[Ver ruta Ciudad de Panamá → Costa Rica →](/ruta/panama-costa-rica)

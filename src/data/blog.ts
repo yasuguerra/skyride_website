@@ -317,6 +317,19 @@ export const blogPosts: BlogPost[] = [
     readingMinutes: 4,
     altSlug: "how-to-choose-private-airplane-seats",
   },
+  {
+    slug: "como-llegar-a-san-blas",
+    locale: "es",
+    title: "Cómo llegar a San Blas: todas las opciones explicadas",
+    excerpt:
+      "Vuelo privado en 30 minutos o carretera de 5+ horas. Comparativa completa de todas las formas de llegar al archipiélago de Guna Yala.",
+    image: "/images/hero/turista-skyride.webp",
+    date: "2026-04-28",
+    author: "Sky Ride Editorial",
+    category: "Guías",
+    readingMinutes: 8,
+    altSlug: "san-blas-islands-travel-guide",
+  },
 
   // ─── EN ────────────────────────────────────────
   {
@@ -617,6 +630,31 @@ export const blogPosts: BlogPost[] = [
     category: "Guides",
     readingMinutes: 4,
     altSlug: "como-elegir-asientos-de-avion-privado",
+  },
+  {
+    slug: "san-blas-islands-travel-guide",
+    locale: "en",
+    title: "San Blas Islands Travel Guide: Everything You Need to Know",
+    excerpt:
+      "Over 365 Caribbean islands, pristine reefs, and Guna culture — 30 minutes from Panama City by private flight. Your complete San Blas guide.",
+    image: "/images/hero/turista-skyride.webp",
+    date: "2026-04-28",
+    author: "Sky Ride Editorial",
+    category: "Destinations",
+    readingMinutes: 9,
+    altSlug: "como-llegar-a-san-blas",
+  },
+  {
+    slug: "charter-flights-panama-prices",
+    locale: "en",
+    title: "Charter Flight Prices in Panama: Complete 2026 Guide",
+    excerpt:
+      "Actual charter flight prices from Panama City to Contadora, San Blas, Bocas del Toro, Costa Rica, and beyond. Per-aircraft and per-person breakdown.",
+    image: "/images/hero/charter-exterior.webp",
+    date: "2026-04-28",
+    author: "Sky Ride Editorial",
+    category: "Guides",
+    readingMinutes: 7,
   },
 ];
 

@@ -37,6 +37,17 @@ No debes volar si:
 - Tuviste un evento cardiovascular reciente (consulta a tu cardiólogo)
 - Tu médico ha indicado restricciones específicas de viaje
 
-## Vuela con tranquilidad
+## Vuela sin estrés — vuelos privados para viajeros con hipertensión
 
-Si tienes condiciones de salud y prefieres un vuelo con menos estrés, Sky Ride ofrece vuelos privados donde puedes viajar a tu ritmo. Consulta por WhatsApp.
+Si tienes presión arterial alta o cualquier condición cardiovascular, un vuelo privado elimina los factores que más disparan la presión: filas interminables, multitudes, ruidos del aeropuerto y carreras de último minuto.
+
+Con Sky Ride puedes:
+
+- **Salir a tu ritmo** — sin madrugar para llegar 3 horas antes al aeropuerto
+- **Volar sin escala** — directo a Contadora, San Blas o Bocas del Toro en 20–35 minutos
+- **Llevar tu medicación sin restricciones** — sin reglas de líquidos ni estrés en seguridad
+- **Elegir aeronave presurizada** — para rutas de mayor altitud si tu médico lo recomienda
+
+Una vez que tu médico te autorice a volar, el siguiente paso es elegir cómo hacerlo. Escríbenos por WhatsApp y recibe una cotización sin compromiso en menos de 10 minutos.
+
+[Reservar con Martín — respuesta en minutos](/reservar-con-martin)

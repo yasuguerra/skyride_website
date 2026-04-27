@@ -447,6 +447,8 @@ These target searches like "panama to contadora flight price" — highest conver
 | 28–29 | `/ruta/panama-costa-rica/` | `/en/route/panama-costa-rica/` | Panama → Costa Rica | High |
 | 30–31 | `/ruta/panama-bocas-del-toro/` | `/en/route/panama-bocas-del-toro/` | Panama → Bocas del Toro | High |
 | 32–33 | `/ruta/panama-medellin/` | `/en/route/panama-medellin/` | Panama → Medellín | Medium |
+| 34–35 | `/ruta/panama-miami/` | `/en/route/panama-miami/` | Panama → Miami | Medium |
+| 36–37 | `/ruta/panama-dominican-republic/` | `/en/route/panama-dominican-republic/` | Panama → Dominican Republic | Medium |
 
 Each route page includes: route map, flight time, aircraft options, starting price, WhatsApp CTA, related destination page link.
 
@@ -1000,7 +1002,7 @@ Every revenue-generating action must be tracked in GA4 via GTM dataLayer pushes.
 |------------|---------|------------|
 | `whatsapp_click` | Any WhatsApp CTA click | `page_path`, `service_type` (charter/helicopter/route/general), `locale` |
 | `phone_call_click` | Phone number click (TopBar, contact) | `page_path`, `locale` |
-| `form_submit` | Contact form or booking form submitted | `form_type` (contact/booking), `origin`, `destination`, `locale` |
+| `generate_lead` | Contact form or booking form submitted. **dataLayer event**: `form_submit` (fired by `trackFormSubmit()`). **GTM maps** `form_submit` trigger → sends `generate_lead` to GA4. | `form_type` (contact/booking), `origin`, `destination`, `locale` |
 | `martin_chat_start` | Martin chat widget opened | `page_path`, `trigger` (manual/auto), `locale` |
 | `martin_whatsapp_transfer` | Martin chat hands off to WhatsApp | `page_path`, `messages_count`, `locale` |
 | `fleet_card_click` | Aircraft card clicked on fleet index | `aircraft_name`, `aircraft_type`, `locale` |
@@ -1028,7 +1030,7 @@ export function trackEvent(eventName: string, params: Record<string, string>) {
 
 Configure in GA4 as conversions:
 1. `whatsapp_click` — **Primary conversion** (directly tied to revenue)
-2. `form_submit` — **Primary conversion**
+2. `generate_lead` — **Primary conversion** (dataLayer event `form_submit` → mapped to `generate_lead` by GTM)
 3. `martin_whatsapp_transfer` — **Secondary conversion**
 4. `phone_call_click` — **Secondary conversion**
 
@@ -1219,7 +1221,7 @@ export const helicopterPage = {
 | Phase 0: Content Extraction | 3–4 days | Low-Medium | ✅ Parallel with Phase 1 |
 | Phase 1: Foundation | 5–7 days | **Medium-High** | ✅ Parallel with Phase 0 |
 | Phase 2: SEO Infrastructure | 3–4 days | Medium | After Phase 1 |
-| Phase 3: Core Pages | 12–16 days | **High** | After Phase 2 + Phase 0 |
+| Phase 3: Core Pages | 12–16 days | **High** | After Phase 2 + Phase 0 | **Note: build shipped 7 routes (not 5) + EN booking page + EN affordable flights** |
 | Phase 4: Blog + Content | 5–7 days | Medium | After Phase 1 + Phase 0; partially parallel with Phase 3 |
 | Phase 5: Integrations + Legal | 4–5 days | Medium | After Phase 3 |
 | Phase 6: Testing + QA | 4–6 days | **Medium-High** | After all phases |
@@ -1387,7 +1389,7 @@ Phase 1 (foundation) → Phase 2 (SEO) ──┘                    ↑
 - [ ] Martin Chat widget integrated as native React component
 - [ ] GTM, GA4, Clarity, Google Ads scripts loaded via next/script
 - [ ] GA4 conversion event tracking implemented (`src/lib/analytics.ts`) — all events from §11.6
-- [ ] GA4 conversion goals configured (whatsapp_click, form_submit, martin_whatsapp_transfer, phone_call_click)
+- [ ] GA4 conversion goals configured (whatsapp_click, generate_lead, martin_whatsapp_transfer, phone_call_click)
 - [ ] WhatsApp click-to-chat integration (with per-page pre-filled messages)
 - [ ] Ocean Ride cross-link
 - [ ] Google Business Profile optimized (photos, services, hours, service area) — NEW
@@ -1607,7 +1609,7 @@ NEXT_PUBLIC_OCEANRIDE_URL=https://www.oceanride.city
 - [ ] Martin chat widget functional (floating mode + /reservar-con-martin/ central mode)
 - [ ] WhatsApp buttons working (with correct pre-filled messages per locale)
 - [ ] Language switcher working on all pages (including route + hub pages)
-- [ ] All conversion events firing in GA4 debug view (whatsapp_click, form_submit, etc.)
+- [ ] All conversion events firing in GA4 debug view (whatsapp_click, generate_lead, martin_whatsapp_transfer, etc.)
 - [ ] Trust bar displaying correctly (certifications, flight counter, payment badges)
 - [ ] Testimonials carousel loading with real reviews
 - [ ] Pricing anchors displaying on service/route/fleet pages
@@ -1689,7 +1691,7 @@ Weekly review of conversion funnel metrics tied to the $1MM annual revenue targe
 |--------|------|--------|-----------|
 | Organic visitors | GA4 | ≥ 9,300/month | Weekly |
 | WhatsApp clicks (from organic) | GA4 `whatsapp_click` event | ≥ 280/month (3% rate) | Weekly |
-| Form submissions | GA4 `form_submit` event | ≥ 100/month | Weekly |
+| Form submissions | GA4 `generate_lead` event | ≥ 100/month | Weekly |
 | Martin chat → WhatsApp transfers | GA4 `martin_whatsapp_transfer` | Track trend | Weekly |
 | Bookings from organic (reported by sales) | Internal CRM / WhatsApp logs | ≥ 42/month | Monthly |
 | Revenue from organic bookings | Internal accounting | ≥ $83,333/month | Monthly |

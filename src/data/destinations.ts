@@ -58,6 +58,36 @@ export const destinations: Destination[] = [
     },
   },
   {
+    id: "san-blas",
+    pageId: "dest-san-blas",
+    name: { es: "San Blas (Guna Yala)", en: "San Blas Islands" },
+    description: {
+      es: "El archipiélago más virgen del Caribe panameño. Más de 365 islas con arenas blancas y aguas turquesas a solo 30 minutos de vuelo desde Panamá. Sin carretera de 4 horas.",
+      en: "Panama's most pristine Caribbean archipelago. Over 365 islands with white sand and turquoise waters just 30 minutes from Panama City. Skip the 4-hour road trip.",
+    },
+    image: "/images/destinations/sanblas-catamaran.jpg",
+    routeId: "panama-san-blas",
+    highlights: {
+      es: ["30 min de vuelo directo", "365+ islas vírgenes", "Snorkel con tortugas", "Cultura Guna Yala"],
+      en: ["30-min direct flight", "365+ virgin islands", "Snorkeling with turtles", "Guna Yala culture"],
+    },
+  },
+  {
+    id: "bocas-del-toro",
+    pageId: "dest-bocas-del-toro",
+    name: { es: "Bocas del Toro", en: "Bocas del Toro" },
+    description: {
+      es: "El archipiélago caribeño más buscado de Panamá. Surf, manglares, vida marina única y playas blancas a solo 1 hora de vuelo. Sin las 6–10 horas de carretera por la Cordillera.",
+      en: "Panama's most sought-after Caribbean archipelago. Surf, mangroves, unique marine life, and white sand beaches just 1 hour by private flight. Skip the 6–10 hour mountain drive.",
+    },
+    image: "/images/destinations/Bocas del Toro.jpg",
+    routeId: "panama-bocas-del-toro",
+    highlights: {
+      es: ["1h de vuelo directo", "Surf en Playa Bluff", "Cayo Zapatilla (snorkel)", "Sin 10 horas de carretera"],
+      en: ["1-hour direct flight", "Surf at Playa Bluff", "Cayo Zapatilla snorkeling", "Skip the 10-hour drive"],
+    },
+  },
+  {
     id: "playa-tambor",
     pageId: "dest-playa-tambor",
     name: { es: "Playa Tambor", en: "Playa Tambor" },

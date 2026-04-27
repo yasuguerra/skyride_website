@@ -1,5 +1,7 @@
 ## Playa Cacique: snorkel de clase mundial
 
+> **Nota:** Este artículo es sobre Playa Cacique en **Isla Contadora**, Archipiélago de Las Perlas, Panamá — no debe confundirse con el barrio Calidonia de Ciudad de Panamá ni con ninguna ubicación en la provincia de Colón.
+
 Playa Cacique es el tesoro escondido de Isla Contadora. A diferencia de las playas más conocidas, Cacique ofrece un arrecife de coral accesible desde la orilla, lo que la convierte en el mejor punto de **snorkel** de todo el archipiélago de Las Perlas.
 
 ## Qué la hace especial
@@ -27,3 +29,5 @@ Desde el centro de Contadora, camina 15 minutos por el sendero costero. La playa
 ## Vuela directo desde Panamá
 
 Olvídate del ferry de 2 horas. Con Sky Ride aterrizas en Contadora en **20 minutos** con vuelo privado directo. Cotiza por WhatsApp y recibe opciones en minutos.
+
+[Ver ruta Ciudad de Panamá → Isla Contadora →](/ruta/panama-contadora)

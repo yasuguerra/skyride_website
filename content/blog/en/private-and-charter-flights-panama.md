@@ -35,3 +35,5 @@ Point-to-point flights for executives with tight schedules. Ideal for meetings i
 ## Book your flight
 
 You don't need to be a millionaire to fly private. Contact Sky Ride via WhatsApp and find out how much your favorite route costs.
+
+[See charter flights in Panama →](/en/charter-flights)

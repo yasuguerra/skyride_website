@@ -9,7 +9,8 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
-import { JsonLd, tripSchema } from "@/components/seo/JsonLd";
+import { JsonLd, tripSchema, faqSchema } from "@/components/seo/JsonLd";
+import { TrackedWhatsAppLink, TrackedPhoneLink } from "@/components/ui/TrackedCTA";
 
 export function RoutePage({
   locale,
@@ -51,6 +52,13 @@ export function RoutePage({
           duration: route.flightTime,
         })}
       />
+      {route.faq && route.faq.length > 0 && (
+        <JsonLd
+          data={faqSchema(
+            route.faq.map((f) => ({ question: f.q[locale], answer: f.a[locale] })),
+          )}
+        />
+      )}
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-[#152c46]">
@@ -93,18 +101,23 @@ export function RoutePage({
           </div>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link
+            <TrackedWhatsAppLink
               href={whatsappHref}
+              locale={locale}
+              pagePath={routeUrl}
+              serviceType="route"
               className="inline-flex items-center justify-center rounded-full bg-[#20d1b3] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-slate-950"
             >
               {locale === "es" ? "Reservar esta ruta" : "Book this route"}
-            </Link>
-            <Link
+            </TrackedWhatsAppLink>
+            <TrackedPhoneLink
               href="tel:+50768400045"
+              locale={locale}
+              pagePath={routeUrl}
               className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white"
             >
               +507 6840 0045
-            </Link>
+            </TrackedPhoneLink>
           </div>
         </div>
       </section>
@@ -144,22 +157,55 @@ export function RoutePage({
               <p className="mt-1 text-sm text-slate-600">
                 {locale === "es" ? "Precio inicial" : "Starting price"}
               </p>
-              <Link
+              <TrackedWhatsAppLink
                 href={whatsappHref}
+                locale={locale}
+                pagePath={routeUrl}
+                serviceType="route"
                 className="mt-6 flex w-full items-center justify-center rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white"
               >
                 WhatsApp
-              </Link>
-              <Link
+              </TrackedWhatsAppLink>
+              <TrackedPhoneLink
                 href="tel:+50768400045"
+                locale={locale}
+                pagePath={routeUrl}
                 className="mt-3 flex w-full items-center justify-center rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold uppercase tracking-wider text-slate-900"
               >
                 {locale === "es" ? "Llamar" : "Call"}
-              </Link>
+              </TrackedPhoneLink>
             </div>
           </aside>
         </div>
       </section>
+
+      {/* Extended content sections */}
+      {route.contentSections && route.contentSections.length > 0 && (
+        <section className="border-t border-slate-200 bg-white">
+          <div className="mx-auto max-w-3xl px-6 py-16 lg:px-10">
+            <div className="space-y-12">
+              {route.contentSections.map((section) => (
+                <div key={section.id}>
+                  <h2 className="font-sans font-bold text-2xl text-slate-950">
+                    {section.heading[locale]}
+                  </h2>
+                  <p className="mt-4 leading-8 text-slate-700">{section.body[locale]}</p>
+                  {section.listItems && section.listItems.length > 0 && (
+                    <ul className="mt-4 space-y-3">
+                      {section.listItems.map((item, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <span className="mt-1 flex-shrink-0 text-[#20d1b3]">✓</span>
+                          <span className="text-slate-700">{item[locale]}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Aircraft options */}
       {routeAircraft.length > 0 && (
@@ -207,6 +253,25 @@ export function RoutePage({
                 </Link>
               ))}
             </div>
+          </div>
+        </section>
+      )}
+
+      {/* FAQ Section */}
+      {route.faq && route.faq.length > 0 && (
+        <section className="border-t border-slate-200 bg-[#f0f7fa]">
+          <div className="mx-auto max-w-3xl px-6 py-16 lg:px-10">
+            <h2 className="font-sans font-bold text-3xl text-slate-950">
+              {locale === "es" ? "Preguntas frecuentes" : "Frequently asked questions"}
+            </h2>
+            <dl className="mt-8 space-y-6">
+              {route.faq.map((item, i) => (
+                <div key={i} className="rounded-2xl border border-slate-200 bg-white p-6">
+                  <dt className="font-semibold text-slate-950">{item.q[locale]}</dt>
+                  <dd className="mt-2 text-sm leading-7 text-slate-600">{item.a[locale]}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </section>
       )}

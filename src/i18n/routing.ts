@@ -9,4 +9,5 @@ export const routing = defineRouting({
   localePrefix: {
     mode: "as-needed", // ES has no prefix, EN gets /en/
   },
+  localeDetection: false, // Don't redirect based on Accept-Language header
 });

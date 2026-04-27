@@ -35,3 +35,5 @@ Cuando una aeronave regresa vacía de un destino (ferry flight), Sky Ride ofrece
 ## La ecuación real
 
 Cuando sumas el valor de tu tiempo, la comodidad y la flexibilidad, volar privado no es un lujo — es una **inversión inteligente** en tu experiencia de viaje.
+
+[Reserva tu vuelo con Martín →](/reservar-con-martin)

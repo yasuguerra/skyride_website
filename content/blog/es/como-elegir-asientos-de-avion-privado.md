@@ -45,3 +45,5 @@ Sí. En Sky Ride, si el peso y balance lo permiten, puedes solicitar ir junto al
 ## Reserva tu vuelo
 
 Cotiza por WhatsApp y menciona tu preferencia de asiento. Haremos lo posible por acomodarte.
+
+[Reserva tu vuelo con Martín →](/reservar-con-martin)

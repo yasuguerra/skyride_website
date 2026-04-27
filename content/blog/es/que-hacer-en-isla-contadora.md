@@ -32,3 +32,5 @@ Reservar con Sky Ride es simple: envíanos un mensaje por WhatsApp con tu fecha 
 - Consulta las condiciones meteorológicas el día antes del vuelo
 
 ¿Listo para vivir Contadora? Contáctanos y te ayudamos a planificar la escapada perfecta.
+
+[Ver ruta Ciudad de Panamá → Isla Contadora →](/ruta/panama-contadora)

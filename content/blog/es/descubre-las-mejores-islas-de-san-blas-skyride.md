@@ -40,3 +40,9 @@ Los vuelos privados a San Blas con Sky Ride comienzan desde **$1,250 USD** para 
 - El sol es fuerte — bloqueador biodegradable obligatorio
 - Respeta las normas de la comunidad Guna: pide permiso antes de tomar fotos
 - Temporada seca (diciembre–abril) es la mejor época para visitar
+
+## Navega San Blas con Ocean Ride
+
+¿Ya reservaste tu vuelo? Completa la experiencia en el agua. **Ocean Ride**, empresa hermana de Sky Ride, opera tours privados en catamarán y velero por el archipiélago de Guna Yala. Grupos reducidos, tripulación experta y la libertad de explorar las islas más remotas a tu ritmo.
+
+[Ver tours en catamarán → oceanride.city/san-blas](https://www.oceanride.city/san-blas/)

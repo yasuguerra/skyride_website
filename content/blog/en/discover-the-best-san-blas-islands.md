@@ -40,3 +40,9 @@ Private flights to San Blas with Sky Ride start from **$1,250 USD** for up to 5 
 - The sun is strong — biodegradable sunscreen is mandatory
 - Respect Guna community rules: ask permission before taking photos
 - Dry season (December–April) is the best time to visit
+
+## Sail San Blas with Ocean Ride
+
+Already booked your flight? Complete the experience on the water. **Ocean Ride**, Sky Ride's sister company, operates private catamaran and sailing tours through the Guna Yala archipelago. Small groups, expert crew, and the freedom to explore the most remote islands at your own pace.
+
+[View catamaran tours → oceanride.city/san-blas](https://www.oceanride.city/san-blas/)

@@ -21,7 +21,9 @@ export type PageType =
   | "booking"
   | "legal"
   | "contact"
-  | "faq";
+  | "faq"
+  | "charter-prices"
+  | "reviews";
 
 export interface SlugEntry {
   /** Internal page identifier */
@@ -57,6 +59,18 @@ export const slugMap: SlugEntry[] = [
     en: "charter-flights",
   },
   {
+    pageId: "charter-prices",
+    type: "charter-prices",
+    es: "precios-vuelos-charter",
+    en: "charter-flight-prices",
+  },
+  {
+    pageId: "reviews",
+    type: "reviews",
+    es: "resenas",
+    en: "reviews",
+  },
+  {
     pageId: "affordable-flights",
     type: "service",
     es: "vuelos-privados-baratos",
@@ -73,6 +87,12 @@ export const slugMap: SlugEntry[] = [
     type: "service",
     es: "renta-de-aviones-privados-para-viajes-de-negocios",
     en: "charter-flights-panama-personalized-experience",
+  },
+  {
+    pageId: "private-jet",
+    type: "service",
+    es: "jet-privado-en-panama",
+    en: "private-jet-charter",
   },
 
   // ─── Fleet ───────────────────────────────────────
@@ -101,6 +121,18 @@ export const slugMap: SlugEntry[] = [
     type: "destination",
     es: "vuelos-privados-a-medellin",
     en: "private-flights-to-medellin",
+  },
+  {
+    pageId: "dest-san-blas",
+    type: "destination",
+    es: "vuelo-privado-a-san-blas",
+    en: "private-flight-san-blas",
+  },
+  {
+    pageId: "dest-bocas-del-toro",
+    type: "destination",
+    es: "vuelo-privado-bocas-del-toro",
+    en: "private-flight-bocas-del-toro",
   },
   {
     pageId: "dest-playa-tambor",
@@ -155,6 +187,18 @@ export const slugMap: SlugEntry[] = [
   },
 
   // ─── Content Hubs ────────────────────────────────
+  {
+    pageId: "hub-bocas-del-toro",
+    type: "content-hub",
+    es: "guia-bocas-del-toro",
+    en: "bocas-del-toro-guide",
+  },
+  {
+    pageId: "hub-san-blas",
+    type: "content-hub",
+    es: "guia-san-blas",
+    en: "san-blas-guide",
+  },
   {
     pageId: "hub-contadora",
     type: "content-hub",

@@ -42,3 +42,5 @@ Ya sea tu primer vuelo o simplemente quieres mejorar tu experiencia, estos conse
 ## Destinos populares desde Panamá
 
 Con Sky Ride puedes volar en avión privado a Contadora (20 min), San Blas (30 min), Bocas del Toro (1 h) y Costa Rica (1.5–2 h). Cotiza por WhatsApp.
+
+[Reserva tu vuelo con Martín →](/reservar-con-martin)

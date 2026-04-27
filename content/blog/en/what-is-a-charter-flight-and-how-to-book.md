@@ -39,3 +39,5 @@ The process with Sky Ride takes less than 10 minutes:
 ## How far in advance should I book?
 
 We recommend booking at least **48 hours in advance**, although we can arrange flights within 24 hours depending on availability. For peak dates (December, Carnival, Easter), booking 2–3 weeks ahead guarantees your preferred aircraft.
+
+[See charter flights in Panama →](/en/charter-flights)

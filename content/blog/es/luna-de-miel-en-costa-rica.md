@@ -40,3 +40,5 @@ El Costa Rica más salvaje. Avistamiento de ballenas, buceo en Isla del Caño y 
 ## Reserva con Sky Ride
 
 Escríbenos por WhatsApp con las fechas y diseñamos tu itinerario de luna de miel con vuelos privados incluidos.
+
+[Ver ruta Ciudad de Panamá → Costa Rica →](/ruta/panama-costa-rica)

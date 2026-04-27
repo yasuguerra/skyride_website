@@ -47,3 +47,5 @@ An active volcano with fumaroles, mud pools, and waterfalls. Less touristy than 
 ## Get there faster by private flight
 
 From Panama, Sky Ride connects you directly to San José, Playa Tambor, and Liberia with no layovers. Get a quote via WhatsApp.
+
+[See the Panama City → Costa Rica route →](/en/route/panama-costa-rica)

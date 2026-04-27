@@ -38,3 +38,5 @@ El recorrido típico de 25 minutos cubre:
 ## Reserva tu tour
 
 Contacta a Sky Ride por WhatsApp. Recibirás opciones de aeronaves y precios según tu grupo en menos de 10 minutos.
+
+[Ver paseos en helicóptero en Panamá →](/paseo-en-helicoptero-en-panama)

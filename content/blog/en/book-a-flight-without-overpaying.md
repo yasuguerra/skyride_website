@@ -35,3 +35,5 @@ When an aircraft returns empty from a destination (ferry flight), Sky Ride offer
 ## The real equation
 
 When you add up the value of your time, comfort, and flexibility, flying private isn't a luxury — it's a **smart investment** in your travel experience.
+
+[Book your flight with Martín →](/en/book-with-martin)

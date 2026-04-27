@@ -47,3 +47,5 @@ Volcán activo con fumarolas, pozas de barro y cascadas. Menos turístico que Ar
 ## Llega más rápido volando privado
 
 Desde Panamá, Sky Ride te conecta directamente con San José, Playa Tambor y Liberia sin escalas. Cotiza tu vuelo por WhatsApp.
+
+[Ver ruta Ciudad de Panamá → Costa Rica →](/ruta/panama-costa-rica)

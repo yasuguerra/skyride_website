@@ -28,3 +28,5 @@ Diciembre a abril (temporada seca). Las lluvias de mayo a noviembre son intensas
 ## Vuela directo con Sky Ride
 
 Evita las 10+ horas de viaje comercial. Cotiza tu vuelo privado Panamá–Playa Tambor por WhatsApp.
+
+[Ver ruta Ciudad de Panamá → Costa Rica →](/ruta/panama-costa-rica)

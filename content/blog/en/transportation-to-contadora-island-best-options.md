@@ -44,3 +44,5 @@ Some tour operators offer full-day packages including transportation (usually fe
 ## Which should you choose?
 
 For weekend getaways or business trips, **private flights** maximize your time on the island. For tight budgets and flexible travelers, the ferry works well during dry season.
+
+[See the Panama City → Contadora Island route →](/en/route/panama-contadora)

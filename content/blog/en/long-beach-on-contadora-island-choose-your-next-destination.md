@@ -24,3 +24,5 @@ While the beach itself doesn't have commercial services, a few minutes away you'
 ## The fastest way to reach Contadora
 
 With Sky Ride, the flight from Panama City to Contadora takes **just 20 minutes**. No 2+ hour ferry ride, no seasickness, and the flexibility to choose your schedule. Aircraft from 3 to 12 passengers available.
+
+[See the Panama City → Contadora Island route →](/en/route/panama-contadora)

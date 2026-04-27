@@ -36,3 +36,5 @@ For international flights to Costa Rica we recommend:
 ## Book your flight
 
 Quote via WhatsApp. We include flight plan, permits, and immigration coordination in the service.
+
+[See the Panama City → Costa Rica route →](/en/route/panama-costa-rica)

@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 import { slugMap } from "@/data/slug-map";
 
-const BASE = "https://skyride.city";
+const BASE = "https://www.skyride.city";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

@@ -34,3 +34,5 @@ A private flight package for two covering Panama → Contadora → San Blas → 
 ## Book your honeymoon
 
 Message us on WhatsApp with your dates and desired destinations. Our team designs personalized itineraries for couples.
+
+[Book your flight with Martín →](/en/book-with-martin)

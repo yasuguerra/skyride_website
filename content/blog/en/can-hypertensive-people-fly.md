@@ -37,6 +37,17 @@ You should not fly if:
 - You had a recent cardiovascular event (consult your cardiologist)
 - Your doctor has indicated specific travel restrictions
 
-## Fly with peace of mind
+## Fly without the stress — private flights for hypertensive travelers
 
-If you have health conditions and prefer a less stressful flight, Sky Ride offers private flights where you can travel at your own pace. Inquire via WhatsApp.
+If you have high blood pressure or any cardiovascular condition, a private flight eliminates the stress triggers that affect blood pressure most: long security lines, airport crowds, noise, rushing through terminals, and last-minute delays.
+
+With Sky Ride you can:
+
+- **Depart on your schedule** — no 3-hour early arrivals or airport crowding
+- **Fly non-stop** — directly to Contadora, San Blas, or Bocas del Toro in 20–35 minutes
+- **Bring your medication without restrictions** — no liquid rules or carry-on stress
+- **Choose a pressurized aircraft** — for higher-altitude routes if your doctor recommends it
+
+Once your doctor clears you to fly, the next step is choosing how to do it. Message us on WhatsApp for a no-commitment quote in under 10 minutes.
+
+[Book with Martín — reply in minutes](/reservar-con-martin)

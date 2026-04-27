@@ -24,6 +24,8 @@ export function getNavigation(locale: Locale): NavItem[] {
         href: "#",
         children: [
           { label: "Contadora Island", href: "/en/private-flight-to-contadora" },
+          { label: "San Blas Islands", href: "/en/san-blas-guide" },
+          { label: "Bocas del Toro", href: "/en/bocas-del-toro-guide" },
           { label: "Costa Rica", href: "/en/private-flight-costa-rica" },
           { label: "Medellín", href: "/en/private-flights-to-medellin" },
           { label: "Playa Tambor", href: "/en/flights-to-playa-tambor" },
@@ -52,6 +54,8 @@ export function getNavigation(locale: Locale): NavItem[] {
       href: "#",
       children: [
         { label: "Isla Contadora", href: "/vuelo-privado-a-contadora" },
+        { label: "San Blas", href: "/guia-san-blas" },
+        { label: "Bocas del Toro", href: "/guia-bocas-del-toro" },
         { label: "Costa Rica", href: "/vuelo-privado-costa-rica" },
         { label: "Medellín", href: "/vuelos-privados-a-medellin" },
         { label: "Playa Tambor", href: "/vuelos-a-playa-tambor" },

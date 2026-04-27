@@ -37,3 +37,5 @@ Absolutamente. Nuestros pilotos cuentan con más de 5,000 horas de vuelo y cada 
 ## ¿Cómo reservar?
 
 Envíe un mensaje por WhatsApp con la fecha, número de pasajeros y el tour deseado. Recibirá una cotización en menos de 10 minutos.
+
+[Ver paseos en helicóptero en Panamá →](/paseo-en-helicoptero-en-panama)

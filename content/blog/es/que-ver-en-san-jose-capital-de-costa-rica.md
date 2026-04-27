@@ -36,3 +36,5 @@ Ubicado en el antiguo cuartel Bellavista. Exhibiciones sobre historia natural, a
 - Usa Uber o taxis rojos oficiales
 - Los mejores restaurantes están en Barrio Escalante y Barrio Amón
 - Lunes muchos museos están cerrados
+
+[Ver ruta Ciudad de Panamá → Costa Rica →](/ruta/panama-costa-rica)

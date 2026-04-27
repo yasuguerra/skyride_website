@@ -37,3 +37,16 @@ A private flight for 5 passengers starts at $950 USD total. Split among the grou
 ## Our recommendation
 
 If your time is worth more than the price difference, the private flight is the clear choice. You arrive rested, with more time to enjoy the island, and no risk of cancellations.
+
+## Book your direct flight to Contadora
+
+Sky Ride operates private flights from Albrook Airport (Panama City) to Contadora Island 365 days a year. The process is simple:
+
+1. Message us on WhatsApp with your date and number of passengers
+2. Receive aircraft options and exact pricing in under 10 minutes
+3. Confirm your booking with a deposit
+4. On the day: no lines, no check-in desk, 20 minutes of flight
+
+**Starting from $398 per aircraft** (not per person). For groups of 3 or more, the per-person cost is comparable to the ferry — with all the advantages of a private flight.
+
+[See the Panama City → Contadora Island route](/en/route/panama-contadora)

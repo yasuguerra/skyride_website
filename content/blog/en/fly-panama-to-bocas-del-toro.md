@@ -37,3 +37,5 @@ Bocas del Toro is synonymous with beach, surf, reggae, and wild nature. But gett
 ## Book your flight to Bocas del Toro
 
 Message us on WhatsApp with your date and number of passengers. Instant and flexible quoting.
+
+[See the Panama City → Bocas del Toro route →](/en/route/panama-bocas-del-toro)

@@ -37,3 +37,16 @@ Un vuelo privado para 5 pasajeros desde $950 USD total. Dividido entre el grupo:
 ## Nuestra recomendación
 
 Si tu tiempo vale más que la diferencia de precio, el vuelo privado es la opción clara. Llegas descansado, con más tiempo para disfrutar la isla, y sin riesgo de cancelaciones.
+
+## Reserva tu vuelo directo a Contadora
+
+Sky Ride opera vuelos privados desde el Aeropuerto Albrook (Ciudad de Panamá) a Isla Contadora los 365 días del año. El proceso es simple:
+
+1. Escríbenos por WhatsApp con tu fecha y número de pasajeros
+2. Recibe opciones de aeronave y precio exacto en menos de 10 minutos
+3. Confirma tu reserva con un depósito
+4. El día del vuelo: sin filas, sin check-in, 20 minutos de vuelo
+
+**Precio desde $398 por aeronave** (no por persona). Para grupos de 3 o más viajeros, el costo por persona es comparable al ferry — con todas las ventajas del vuelo privado.
+
+[Ver la ruta Ciudad de Panamá → Isla Contadora](/ruta/panama-contadora)

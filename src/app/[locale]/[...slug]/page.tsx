@@ -21,6 +21,8 @@ import { BlogIndexPage } from "@/components/pages/blog-index-page";
 import { BlogPostPage } from "@/components/pages/blog-post-page";
 import { ContentHubPage } from "@/components/pages/content-hub-page";
 import { BookingPage } from "@/components/pages/booking-page";
+import { CharterPricesPage } from "@/components/pages/charter-prices-page";
+import { ReviewsPage } from "@/components/pages/reviews-page";
 import { getBlogPost } from "@/data/blog";
 import { getContentHubByPageId } from "@/data/content-hubs";
 
@@ -158,6 +160,12 @@ export default async function CatchAllPage({
 
     case "booking":
       return <BookingPage locale={loc} />;
+
+    case "charter-prices":
+      return <CharterPricesPage locale={loc} />;
+
+    case "reviews":
+      return <ReviewsPage locale={loc} />;
 
     default:
       notFound();

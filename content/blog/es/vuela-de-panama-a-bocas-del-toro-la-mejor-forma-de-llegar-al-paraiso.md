@@ -37,3 +37,5 @@ Bocas del Toro es sinónimo de playa, surf, reggae y naturaleza salvaje. Pero ll
 ## Reserva tu vuelo a Bocas del Toro
 
 Escríbenos por WhatsApp con tu fecha y número de pasajeros. Cotización inmediata y flexible.
+
+[Ver ruta Ciudad de Panamá → Bocas del Toro →](/ruta/panama-bocas-del-toro)

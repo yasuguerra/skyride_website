@@ -1,0 +1,8 @@
+Reason,Source,Validation,Pages
+Page with redirect,Website,Not Started,36
+Excluded by ‘noindex’ tag,Website,Passed,34
+Duplicate without user-selected canonical,Website,Passed,5
+Not found (404),Website,N/A,0
+Crawled - currently not indexed,Google systems,Passed,101
+Discovered - currently not indexed,Google systems,Passed,26
+"Duplicate, Google chose different canonical than user",Google systems,N/A,0

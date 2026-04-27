@@ -40,3 +40,5 @@ Costa Rica at its wildest. Whale watching, diving at Caño Island, and eco-luxur
 ## Book with Sky Ride
 
 Message us on WhatsApp with your dates and we'll design your honeymoon itinerary with private flights included.
+
+[See the Panama City → Costa Rica route →](/en/route/panama-costa-rica)

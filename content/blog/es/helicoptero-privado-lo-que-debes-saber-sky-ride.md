@@ -41,3 +41,5 @@ Depende del espacio. Algunos hoteles tienen helipuerto. Consulta disponibilidad 
 ## Reserva tu vuelo
 
 Sky Ride ofrece cotización por WhatsApp en minutos. Cuéntanos tu plan y te presentamos la mejor opción de aeronave y precio.
+
+[Ver paseos en helicóptero en Panamá →](/paseo-en-helicoptero-en-panama)

@@ -42,3 +42,5 @@ Whether it's your first flight or you simply want to improve your experience, th
 ## Popular destinations from Panama
 
 With Sky Ride you can fly private to Contadora (20 min), San Blas (30 min), Bocas del Toro (1 h), and Costa Rica (1.5–2 h). Quote via WhatsApp.
+
+[Book your flight with Martín →](/en/book-with-martin)

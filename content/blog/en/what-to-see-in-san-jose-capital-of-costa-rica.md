@@ -36,3 +36,5 @@ Housed in the former Bellavista barracks. Exhibits on natural history, archaeolo
 - Use Uber or official red taxis for transportation
 - Best restaurants are in Barrio Escalante and Barrio Amón
 - Most museums are closed on Mondays
+
+[See the Panama City → Costa Rica route →](/en/route/panama-costa-rica)

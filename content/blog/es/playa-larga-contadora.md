@@ -24,3 +24,5 @@ Aunque la playa en sí no tiene servicios comerciales directos, a pocos minutos 
 ## La forma más rápida de llegar a Contadora
 
 Con Sky Ride, el vuelo desde Ciudad de Panamá a Contadora toma **solo 20 minutos**. Sin las 2+ horas de ferry, sin mareo, y con la flexibilidad de elegir tu horario. Aeronaves desde 3 hasta 12 pasajeros.
+
+[Ver ruta Ciudad de Panamá → Isla Contadora →](/ruta/panama-contadora)

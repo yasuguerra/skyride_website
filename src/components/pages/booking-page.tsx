@@ -7,6 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { MartinChat } from "@/components/ui/MartinChat";
+import { TrackedWhatsAppLink } from "@/components/ui/TrackedCTA";
 
 /**
  * /reservar-con-martin (ES) · /en/book-with-martin (EN)
@@ -79,12 +80,15 @@ export function BookingPage({ locale }: { locale: Locale }) {
         <div className="mt-12 rounded-2xl border border-[#3edcc2]/30 bg-[#3edcc2]/10 p-8">
           <h2 className="font-sans font-bold text-2xl text-slate-950">{t.cta}</h2>
           <p className="mt-2 text-sm text-slate-700">{t.ctaSub}</p>
-          <Link
+          <TrackedWhatsAppLink
             href={whatsappHref}
+            locale={locale}
+            pagePath={pageHref}
+            serviceType="booking"
             className="mt-6 inline-flex rounded-full bg-[#20d1b3] px-8 py-4 text-sm font-semibold uppercase tracking-wider text-slate-950 transition hover:bg-[#3edcc2]"
           >
             {t.ctaButton}
-          </Link>
+          </TrackedWhatsAppLink>
         </div>
 
         {/* Martin AI Chat — powered by Vertex AI (Gemini) */}

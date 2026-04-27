@@ -44,3 +44,5 @@ Algunos operadores turísticos ofrecen paquetes de día completo que incluyen tr
 ## ¿Cuál elegir?
 
 Para escapadas de fin de semana o viajes ejecutivos, el **vuelo privado** maximiza tu tiempo en la isla. Para presupuestos ajustados y viajeros flexibles, el ferry funciona bien en temporada seca.
+
+[Ver ruta Ciudad de Panamá → Isla Contadora →](/ruta/panama-contadora)

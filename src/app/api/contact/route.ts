@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import { Resend } from "resend";
 import { z } from "zod";
 
 const contactSchema = z.object({
@@ -14,9 +13,11 @@ const contactSchema = z.object({
   website: z.string().max(0).optional().or(z.literal("")),
 });
 
-const RESEND_API_KEY = process.env.RESEND_API_KEY;
+const MAILGUN_API_KEY = process.env.MAILGUN_API_KEY;
+const MAILGUN_DOMAIN = "mg.skyride.city";
 const CONTACT_TO_EMAIL = process.env.CONTACT_TO_EMAIL || "info@skyride.city";
-const CONTACT_FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || "noreply@skyride.city";
+const CONTACT_FROM_EMAIL =
+  process.env.CONTACT_FROM_EMAIL || `noreply@${MAILGUN_DOMAIN}`;
 
 export async function POST(request: Request) {
   try {
@@ -38,15 +39,13 @@ export async function POST(request: Request) {
       return NextResponse.json({ ok: true });
     }
 
-    if (!RESEND_API_KEY) {
-      console.warn("RESEND_API_KEY not set — skipping email send");
+    if (!MAILGUN_API_KEY) {
+      console.warn("MAILGUN_API_KEY not set — skipping email send");
       return NextResponse.json({
         ok: true,
         warning: "Email service not configured",
       });
     }
-
-    const resend = new Resend(RESEND_API_KEY);
 
     const subject =
       locale === "en"
@@ -66,16 +65,30 @@ export async function POST(request: Request) {
       <p style="color:#888;font-size:12px">Submitted via skyride.city (${locale ?? "es"})</p>
     `;
 
-    const { error } = await resend.emails.send({
-      from: `Sky Ride Website <${CONTACT_FROM_EMAIL}>`,
-      to: [CONTACT_TO_EMAIL],
-      replyTo: email,
-      subject,
-      html,
-    });
+    const formData = new URLSearchParams();
+    formData.append("from", `Sky Ride Website <${CONTACT_FROM_EMAIL}>`);
+    formData.append("to", CONTACT_TO_EMAIL);
+    formData.append("h:Reply-To", email);
+    formData.append("subject", subject);
+    formData.append("html", html);
 
-    if (error) {
-      console.error("Resend error:", error);
+    const credentials = Buffer.from(`api:${MAILGUN_API_KEY}`).toString("base64");
+
+    const mgResponse = await fetch(
+      `https://api.mailgun.net/v3/${MAILGUN_DOMAIN}/messages`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Basic ${credentials}`,
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: formData.toString(),
+      },
+    );
+
+    if (!mgResponse.ok) {
+      const errText = await mgResponse.text();
+      console.error("Mailgun error:", mgResponse.status, errText);
       return NextResponse.json(
         { ok: false, error: "Failed to send" },
         { status: 500 },

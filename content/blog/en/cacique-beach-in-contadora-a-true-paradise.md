@@ -1,5 +1,7 @@
 ## Cacique Beach: Contadora's best snorkeling spot
 
+> **Note:** This article is about Cacique Beach on **Contadora Island**, Pearl Islands Archipelago, Panama — not to be confused with any location in Colón Province or Panama City neighborhoods.
+
 Cacique Beach is Contadora Island's hidden gem. While most visitors flock to Executive Beach, Cacique offers something special — a **coral reef accessible directly from shore**, making it the best snorkeling spot in the entire Pearl Islands archipelago.
 
 ## What makes it special
@@ -27,3 +29,5 @@ From central Contadora, walk 15 minutes along the coastal trail. The beach is we
 ## Fly direct from Panama City
 
 Skip the 2-hour ferry. With Sky Ride, you land in Contadora in **just 20 minutes** by private flight. Get a quote via WhatsApp in minutes.
+
+[See the Panama City → Contadora Island route →](/en/route/panama-contadora)

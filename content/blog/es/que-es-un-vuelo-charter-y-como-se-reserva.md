@@ -39,3 +39,5 @@ El proceso con Sky Ride toma menos de 10 minutos:
 ## ¿Con cuánta anticipación reservar?
 
 Recomendamos reservar con al menos **48 horas de anticipación**, aunque podemos organizar vuelos en 24 horas según disponibilidad. Para fechas pico (diciembre, carnaval, Semana Santa), reservar con 2-3 semanas de anticipación garantiza la aeronave de tu preferencia.
+
+[Ver vuelos charter en Panamá →](/vuelos-charter-en-panama)

@@ -36,3 +36,5 @@ Sky Ride operates its own fleet, which allows:
 ## The future of private aviation
 
 Flight-sharing apps (like Sky Ride's available seats) are democratizing access. It's only a matter of time before booking a private flight is as simple as ordering an Uber.
+
+[Book your flight with Martín →](/en/book-with-martin)

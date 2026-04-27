@@ -45,3 +45,5 @@ Yes. At Sky Ride, if weight and balance permit, you can request to sit next to t
 ## Book your flight
 
 Quote via WhatsApp and mention your seat preference. We'll do our best to accommodate you.
+
+[Book your flight with Martín →](/en/book-with-martin)

@@ -28,3 +28,5 @@ December through April (dry season). Rains from May to November are intense but 
 ## Fly direct with Sky Ride
 
 Avoid the 10+ hours of commercial travel. Get a quote for your private flight Panama–Playa Tambor via WhatsApp.
+
+[See the Panama City → Costa Rica route →](/en/route/panama-costa-rica)

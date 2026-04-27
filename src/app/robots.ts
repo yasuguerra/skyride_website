@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/_next/", "/wp-admin/", "/wp-login.php"],
       },
     ],
-    sitemap: "https://skyride.city/sitemap.xml",
+    sitemap: "https://www.skyride.city/sitemap.xml",
   };
 }

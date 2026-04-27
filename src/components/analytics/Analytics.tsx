@@ -18,21 +18,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </Script>
       )}
 
-      {GA4_ID && (
-        <>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}
-            strategy="afterInteractive"
-          />
-          <Script id="ga4" strategy="afterInteractive">
-            {`window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', '${GA4_ID}', { anonymize_ip: true });`}
-          </Script>
-        </>
-      )}
-
       {GADS_ID && (
         <Script id="gads" strategy="afterInteractive">
           {`gtag('config', '${GADS_ID}');`}

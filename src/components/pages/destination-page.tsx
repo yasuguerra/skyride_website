@@ -10,6 +10,7 @@ import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd, tripSchema } from "@/components/seo/JsonLd";
+import { TrackedWhatsAppLink } from "@/components/ui/TrackedCTA";
 
 export function DestinationPage({
   locale,
@@ -78,14 +79,17 @@ export function DestinationPage({
             {destination.description[locale]}
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <Link
+            <TrackedWhatsAppLink
               href={whatsappHref}
+              locale={locale}
+              pagePath={destUrl}
+              serviceType="destination-hero"
               className="inline-flex items-center justify-center rounded-full bg-[#20d1b3] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-slate-950"
             >
               {locale === "es"
                 ? `Volar a ${destination.name.es}`
                 : `Fly to ${destination.name.en}`}
-            </Link>
+            </TrackedWhatsAppLink>
             {route && (
               <Link
                 href={
@@ -135,12 +139,15 @@ export function DestinationPage({
               ? "Cotización en menos de 10 minutos por WhatsApp."
               : "Quote in under 10 minutes via WhatsApp."}
           </p>
-          <Link
+          <TrackedWhatsAppLink
             href={whatsappHref}
+            locale={locale}
+            pagePath={destUrl}
+            serviceType="destination-cta"
             className="mt-8 inline-flex rounded-full bg-[#3edcc2] px-8 py-3 text-sm font-semibold uppercase tracking-wider text-slate-950"
           >
             {locale === "es" ? "Cotizar ahora" : "Get a quote"}
-          </Link>
+          </TrackedWhatsAppLink>
         </div>
       </section>
 

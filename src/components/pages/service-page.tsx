@@ -9,6 +9,13 @@ import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd, faqSchema, serviceSchema } from "@/components/seo/JsonLd";
 import { TrustBar } from "@/components/sections/TrustBar";
+import { TrackedWhatsAppLink, TrackedPhoneLink } from "@/components/ui/TrackedCTA";
+
+interface RelatedLink {
+  label: { es: string; en: string };
+  href: { es: string; en: string };
+  type: "route" | "fleet" | "booking" | "hub";
+}
 
 const serviceData: Record<
   string,
@@ -20,6 +27,7 @@ const serviceData: Record<
     features: { es: string[]; en: string[] };
     priceLabel?: { es: string; en: string };
     faq?: { q: { es: string; en: string }; a: { es: string; en: string } }[];
+    relatedLinks?: RelatedLink[];
   }
 > = {
   helicopter: {
@@ -55,6 +63,11 @@ const serviceData: Record<
       ],
     },
     priceLabel: { es: "Desde $588 por aeronave", en: "From $588 per aircraft" },
+    relatedLinks: [
+      { label: { es: "Ver flota de helicópteros", en: "See helicopter fleet" }, href: { es: "/nuestra-flota", en: "/en/our-fleet" }, type: "fleet" },
+      { label: { es: "Guía de helicópteros en Panamá", en: "Helicopter guide Panama" }, href: { es: "/guia-helicopteros", en: "/en/helicopter-guide" }, type: "hub" },
+      { label: { es: "Reservar con Martín", en: "Book with Martín" }, href: { es: "/reservar-con-martin", en: "/en/book-with-martin" }, type: "booking" },
+    ],
     faq: [
       {
         q: { es: "¿Cuánto cuesta un paseo en helicóptero en Panamá?", en: "How much does a helicopter ride cost in Panama?" },
@@ -103,6 +116,15 @@ const serviceData: Record<
       ],
     },
     priceLabel: { es: "Desde $398", en: "From $398" },
+    relatedLinks: [
+      { label: { es: "Tabla de precios chárter", en: "Charter prices table" }, href: { es: "/precios-vuelos-charter", en: "/en/charter-flight-prices" }, type: "route" },
+      { label: { es: "Ruta Panamá → Contadora", en: "Panama → Contadora route" }, href: { es: "/ruta/panama-contadora", en: "/en/route/panama-contadora" }, type: "route" },
+      { label: { es: "Ruta Panamá → San Blas", en: "Panama → San Blas route" }, href: { es: "/ruta/panama-san-blas", en: "/en/route/panama-san-blas" }, type: "route" },
+      { label: { es: "Ruta Panamá → Bocas del Toro", en: "Panama → Bocas del Toro route" }, href: { es: "/ruta/panama-bocas-del-toro", en: "/en/route/panama-bocas-del-toro" }, type: "route" },
+      { label: { es: "Ruta Panamá → Costa Rica", en: "Panama → Costa Rica route" }, href: { es: "/ruta/panama-costa-rica", en: "/en/route/panama-costa-rica" }, type: "route" },
+      { label: { es: "Ver toda la flota", en: "See the full fleet" }, href: { es: "/nuestra-flota", en: "/en/our-fleet" }, type: "fleet" },
+      { label: { es: "Reservar con Martín", en: "Book with Martín" }, href: { es: "/reservar-con-martin", en: "/en/book-with-martin" }, type: "booking" },
+    ],
     faq: [
       {
         q: { es: "¿Qué es un vuelo chárter?", en: "What is a charter flight?" },
@@ -147,6 +169,12 @@ const serviceData: Record<
       ],
     },
     priceLabel: { es: "Desde $180/asiento", en: "From $180/seat" },
+    relatedLinks: [
+      { label: { es: "Asientos disponibles", en: "Available seats" }, href: { es: "/asientos-disponibles", en: "/en/available-seats" }, type: "route" },
+      { label: { es: "Ruta Panamá → Contadora", en: "Panama → Contadora route" }, href: { es: "/ruta/panama-contadora", en: "/en/route/panama-contadora" }, type: "route" },
+      { label: { es: "Ruta Panamá → San Blas", en: "Panama → San Blas route" }, href: { es: "/ruta/panama-san-blas", en: "/en/route/panama-san-blas" }, type: "route" },
+      { label: { es: "Reservar con Martín", en: "Book with Martín" }, href: { es: "/reservar-con-martin", en: "/en/book-with-martin" }, type: "booking" },
+    ],
   },
   "available-seats": {
     image: "/images/hero/charter-interior.webp",
@@ -180,12 +208,17 @@ const serviceData: Record<
         "Ideal for individual travelers",
       ],
     },
+    relatedLinks: [
+      { label: { es: "Vuelos privados baratos", en: "Affordable private flights" }, href: { es: "/vuelos-privados-baratos", en: "/en/affordable-flights" }, type: "route" },
+      { label: { es: "Ruta Panamá → Contadora", en: "Panama → Contadora route" }, href: { es: "/ruta/panama-contadora", en: "/en/route/panama-contadora" }, type: "route" },
+      { label: { es: "Reservar con Martín", en: "Book with Martín" }, href: { es: "/reservar-con-martin", en: "/en/book-with-martin" }, type: "booking" },
+    ],
   },
   "business-flights": {
     image: "/images/fleet/king-air-200.png",
     title: {
       es: "Renta de Aviones Privados para Viajes de Negocios",
-      en: "Business Charter Flights — Personalized Experience",
+      en: "Business Charter Flights â€” Personalized Experience",
     },
     subtitle: {
       es: "Soluciones ejecutivas de transporte aéreo",
@@ -214,8 +247,71 @@ const serviceData: Record<
       ],
     },
     priceLabel: { es: "Desde $1,798", en: "From $1,798" },
-  },
-};
+    relatedLinks: [
+      { label: { es: "Ruta Panamá → Costa Rica", en: "Panama → Costa Rica route" }, href: { es: "/ruta/panama-costa-rica", en: "/en/route/panama-costa-rica" }, type: "route" },
+      { label: { es: "King Air 200 â€” hasta 9 pasajeros", en: "King Air 200 â€” up to 9 passengers" }, href: { es: "/producto/king-air-200-hasta-9-pasajeros", en: "/en/product/king-air-200-hasta-9-pasajeros" }, type: "fleet" },
+      { label: { es: "King Air F90 â€” 6 pasajeros", en: "King Air F90 â€” 6 passengers" }, href: { es: "/producto/king-air-f90-6-pasajeros", en: "/en/product/king-air-f90-6-pasajeros" }, type: "fleet" },
+      { label: { es: "Reservar con Martín", en: "Book with Martín" }, href: { es: "/reservar-con-martin", en: "/en/book-with-martin" }, type: "booking" },
+    ],
+  },  "private-jet": {
+    image: "/images/fleet/king-air-200.png",
+    title: {
+      es: "Jet Privado en Panamá — Vuelos Ejecutivos",
+      en: "Private Jet Charter Panama — Executive Flights",
+    },
+    subtitle: {
+      es: "La experiencia más exclusiva de la aviación privada en Panamá",
+      en: "The most exclusive private aviation experience in Panama",
+    },
+    description: {
+      es: "Cuando el tiempo y la comodidad son lo primero. Nuestros aviones ejecutivos — King Air 200 y King Air F90 — son la opción preferida por ejecutivos y viajeros de alto perfil que vuelan desde Panamá a Costa Rica, Medellín y más allá. Cabinas presurizadas, horarios a tu medida y sin las colas del aeropuerto comercial.",
+      en: "When time and comfort come first. Our executive aircraft — King Air 200 and King Air F90 — are the preferred choice for executives and high-profile travelers flying from Panama to Costa Rica, Medellín, and beyond. Pressurized cabins, custom schedules, and none of the commercial airport crowds.",
+    },
+    features: {
+      es: [
+        "King Air 200: hasta 9 pasajeros",
+        "King Air F90: hasta 6 pasajeros",
+        "Cabina 100% presurizada",
+        "Alcance: Costa Rica, Medellín, Miami, RD",
+        "Horarios completamente flexibles",
+        "Facturación corporativa disponible",
+      ],
+      en: [
+        "King Air 200: up to 9 passengers",
+        "King Air F90: up to 6 passengers",
+        "Fully pressurized cabin",
+        "Range: Costa Rica, Medellín, Miami, DR",
+        "Completely flexible schedules",
+        "Corporate billing available",
+      ],
+    },
+    priceLabel: { es: "Desde $1,798", en: "From $1,798" },
+    faq: [
+      {
+        q: { es: "¿Cuánto cuesta un jet privado en Panamá?", en: "How much does a private jet cost in Panama?" },
+        a: { es: "Nuestros aviones ejecutivos comienzan desde $1,798 para rutas regionales como Costa Rica. Para destinos como Medellín ($5,500) o Miami ($18,500), el precio incluye una aeronave presurizada con capacidad para 6–9 pasajeros.", en: "Our executive aircraft start from $1,798 for regional routes like Costa Rica. For destinations like Medellín ($5,500) or Miami ($18,500), the price includes a pressurized aircraft with capacity for 6–9 passengers." },
+      },
+      {
+        q: { es: "¿Qué aeronaves ofrecen?", en: "What aircraft do you offer?" },
+        a: { es: "Operamos el King Air 200 (hasta 9 pasajeros, 265 kt) y el King Air F90 (hasta 6 pasajeros, 270 kt). Ambos son turbohélices presurizados que la industria conoce coloquialmente como \"jets privados\" por su experiencia de cabina ejecutiva.", en: "We operate the King Air 200 (up to 9 passengers, 265 kt) and the King Air F90 (up to 6 passengers, 270 kt). Both are pressurized turboprops that the industry colloquially calls \"private jets\" for their executive cabin experience." },
+      },
+      {
+        q: { es: "¿Desde qué aeropuerto salen?", en: "Which airport do you depart from?" },
+        a: { es: "Los vuelos ejecutivos salen del Aeropuerto de Albrook (PAC) en Ciudad de Panamá. Este aeropuerto no tiene filas de check-in ni control de seguridad masivo, lo que significa que puedes llegar 15 minutos antes de tu vuelo.", en: "Executive flights depart from Albrook Airport (PAC) in Panama City. This airport has no check-in lines or mass security screening, meaning you can arrive just 15 minutes before your flight." },
+      },
+      {
+        q: { es: "¿Es posible el pago corporativo?", en: "Is corporate payment available?" },
+        a: { es: "Sí. Aceptamos facturación corporativa, pago con tarjeta de crédito y transferencia bancaria. Consulta condiciones por WhatsApp.", en: "Yes. We accept corporate billing, credit card payment, and bank transfer. Ask about conditions via WhatsApp." },
+      },
+    ],
+    relatedLinks: [
+      { label: { es: "Vuelos de negocios", en: "Business flights" }, href: { es: "/renta-de-aviones-privados-para-viajes-de-negocios", en: "/en/charter-flights-panama-personalized-experience" }, type: "route" },
+      { label: { es: "Ruta Panamá → Costa Rica", en: "Panama → Costa Rica route" }, href: { es: "/ruta/panama-costa-rica", en: "/en/route/panama-costa-rica" }, type: "route" },
+      { label: { es: "King Air 200 — hasta 9 pasajeros", en: "King Air 200 — up to 9 passengers" }, href: { es: "/producto/king-air-200-hasta-9-pasajeros", en: "/en/product/king-air-200-hasta-9-pasajeros" }, type: "fleet" },
+      { label: { es: "King Air F90 — 6 pasajeros", en: "King Air F90 — 6 passengers" }, href: { es: "/producto/king-air-f90-6-pasajeros", en: "/en/product/king-air-f90-6-pasajeros" }, type: "fleet" },
+      { label: { es: "Reservar con Martín", en: "Book with Martín" }, href: { es: "/reservar-con-martin", en: "/en/book-with-martin" }, type: "booking" },
+    ],
+  },};
 
 export function ServicePage({
   locale,
@@ -236,9 +332,8 @@ export function ServicePage({
 
   const pageUrl =
     locale === "en"
-      ? `/en/${pageId === "helicopter" ? "helicopter-rides" : pageId === "charter" ? "charter-flights" : pageId === "affordable-flights" ? "affordable-private-flights" : pageId === "available-seats" ? "available-seats" : "business-charter-flights"}`
-      : `/${pageId === "helicopter" ? "paseo-en-helicoptero-en-panama" : pageId === "charter" ? "vuelos-charter-en-panama" : pageId === "affordable-flights" ? "vuelos-privados-baratos-en-panama" : pageId === "available-seats" ? "asientos-disponibles" : "renta-de-aviones-privados-para-viajes-de-negocios"}`;
-
+      ? `/en/${pageId === "helicopter" ? "helicopter-rides" : pageId === "charter" ? "charter-flights" : pageId === "affordable-flights" ? "affordable-private-flights" : pageId === "available-seats" ? "available-seats" : pageId === "private-jet" ? "private-jet-charter" : "business-charter-flights"}`
+      : `/${pageId === "helicopter" ? "paseo-en-helicoptero-en-panama" : pageId === "charter" ? "vuelos-charter-en-panama" : pageId === "affordable-flights" ? "vuelos-privados-baratos-en-panama" : pageId === "available-seats" ? "asientos-disponibles" : pageId === "private-jet" ? "jet-privado-en-panama" : "renta-de-aviones-privados-para-viajes-de-negocios"}`;
   return (
     <div className="min-h-screen bg-[#f0f7fa]">
       <Header locale={locale} />
@@ -315,7 +410,7 @@ export function ServicePage({
                     key={feature}
                     className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-4"
                   >
-                    <span className="mt-0.5 text-[#20d1b3]">✓</span>
+                    <span className="mt-0.5 text-[#20d1b3]">âœ“</span>
                     <span className="text-sm text-slate-700">{feature}</span>
                   </li>
                 ))}
@@ -362,22 +457,49 @@ export function ServicePage({
                   ? "Envíenos un mensaje por WhatsApp y reciba su cotización en menos de 10 minutos."
                   : "Send us a WhatsApp message and receive your quote in under 10 minutes."}
               </p>
-              <Link
+              <TrackedWhatsAppLink
                 href={whatsappHref}
+                locale={locale}
+                pagePath={pageUrl}
+                serviceType={pageId}
                 className="mt-6 flex w-full items-center justify-center rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white"
               >
                 {locale === "es" ? "Cotizar por WhatsApp" : "Quote via WhatsApp"}
-              </Link>
-              <Link
+              </TrackedWhatsAppLink>
+              <TrackedPhoneLink
                 href="tel:+50768400045"
+                locale={locale}
+                pagePath={pageUrl}
                 className="mt-3 flex w-full items-center justify-center rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold uppercase tracking-wider text-slate-900"
               >
                 +507 6840 0045
-              </Link>
+              </TrackedPhoneLink>
             </div>
           </aside>
         </div>
       </section>
+
+      {/* Related links */}
+      {data.relatedLinks && data.relatedLinks.length > 0 && (
+        <section className="border-t border-slate-200 bg-white py-12">
+          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+            <h2 className="font-sans font-bold text-2xl text-slate-950">
+              {locale === "es" ? "Páginas relacionadas" : "Related pages"}
+            </h2>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {data.relatedLinks.map((link) => (
+                <Link
+                  key={link.href[locale]}
+                  href={link.href[locale]}
+                  className="rounded-full border border-slate-300 bg-[#f0f7fa] px-5 py-2.5 text-sm font-medium text-slate-700 transition hover:border-[#20d1b3] hover:text-[#20d1b3]"
+                >
+                  {link.label[locale]}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <Footer locale={locale} />
       <WhatsAppButton locale={locale} />

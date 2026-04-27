@@ -37,3 +37,5 @@ Absolutely. The pilots in our network have over 5,000 flight hours and each airc
 ## How to book?
 
 Send a WhatsApp message with your date, number of passengers, and desired tour. You'll receive a quote in under 10 minutes.
+
+[See helicopter rides in Panama →](/en/helicopter-rides)

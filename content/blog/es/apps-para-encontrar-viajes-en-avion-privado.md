@@ -36,3 +36,5 @@ Sky Ride opera su propia flota, lo que permite:
 ## El futuro de la aviación privada
 
 Las apps de sharing de vuelos (como asientos disponibles de Sky Ride) están democratizando el acceso. Es cuestión de tiempo antes de que reservar un vuelo privado sea tan simple como pedir un Uber.
+
+[Reserva tu vuelo con Martín →](/reservar-con-martin)

@@ -34,3 +34,5 @@ Un paquete de vuelos privados para dos personas cubriendo Panamá → Contadora 
 ## Reserva tu luna de miel
 
 Escríbenos por WhatsApp con las fechas y destinos deseados. Nuestro equipo diseña itinerarios personalizados para parejas.
+
+[Reserva tu vuelo con Martín →](/reservar-con-martin)

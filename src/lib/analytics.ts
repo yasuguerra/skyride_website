@@ -30,7 +30,7 @@ export function trackPhoneCallClick(pagePath: string, locale: string) {
 }
 
 export function trackFormSubmit(formType: string, locale: string, origin?: string, destination?: string) {
-  trackEvent("form_submit", {
+  trackEvent("generate_lead", {
     form_type: formType,
     locale,
     ...(origin && { origin }),

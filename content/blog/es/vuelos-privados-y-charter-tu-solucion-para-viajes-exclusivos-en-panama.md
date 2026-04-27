@@ -35,3 +35,5 @@ Vuelos punto a punto para ejecutivos con horarios ajustados. Ideal para reunione
 ## Reserva tu vuelo
 
 No necesitas ser millonario para volar privado. Contacta a Sky Ride por WhatsApp y descubre cuánto cuesta tu ruta favorita.
+
+[Ver vuelos charter en Panamá →](/vuelos-charter-en-panama)

@@ -16,7 +16,7 @@ const securityHeaders = [
       "default-src 'self'",
       "script-src 'self' 'unsafe-inline' https://*.googletagmanager.com https://*.google-analytics.com https://*.googleadservices.com https://*.doubleclick.net https://*.clarity.ms https://*.instantfox.co",
       "style-src 'self' 'unsafe-inline'",
-      "img-src 'self' data: https://*.skyride.city https://*.googleusercontent.com https://*.google-analytics.com https://*.google.com https://*.google.com.pa https://*.doubleclick.net https://*.clarity.ms",
+      "img-src 'self' data: https://*.skyride.city https://*.googleusercontent.com https://*.google-analytics.com https://*.google.com https://*.google.com.pa https://*.doubleclick.net https://*.clarity.ms https://*.googletagmanager.com",
       "connect-src 'self' https://*.skyride.city https://*.google-analytics.com https://analytics.google.com https://*.google.com https://*.doubleclick.net https://*.clarity.ms https://*.googletagmanager.com",
       "font-src 'self'",
       "frame-src https://www.youtube.com https://www.googletagmanager.com",
@@ -130,6 +130,10 @@ const nextConfig: NextConfig = {
       { source: "/wp-json", destination: "/", permanent: true },
       { source: "/wp-json/:path*", destination: "/", permanent: true },
       { source: "/xmlrpc.php", destination: "/", permanent: true },
+
+      // ─── Phantom WordPress numeric page ID ───────────────────
+      { source: "/5113-2", destination: "/", permanent: true },
+      { source: "/5113-2/", destination: "/", permanent: true },
 
       // ─── Legacy RSS feeds → blog index ───────────────────────
       { source: "/feed", destination: "/blog", permanent: true },

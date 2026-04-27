@@ -10,9 +10,10 @@ import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { TrackedWhatsAppLink } from "@/components/ui/TrackedCTA";
 import { VideoEmbed } from "@/components/ui/VideoEmbed";
 
-const BASE_URL = "https://skyride.city";
+const BASE_URL = "https://www.skyride.city";
 
 export function ContentHubPage({
   locale,
@@ -162,6 +163,31 @@ export function ContentHubPage({
         </section>
       )}
 
+      {/* Partner cross-sell */}
+      {hub.partnerCta && (
+        <section className="border-t border-slate-200 bg-[#f0f7fa] py-16">
+          <div className="mx-auto max-w-3xl px-6 lg:px-10">
+            <p className="text-xs font-semibold uppercase tracking-widest text-[#20d1b3]">
+              {locale === "es" ? "Empresa hermana" : "Sister company"}
+            </p>
+            <h2 className="mt-3 font-sans font-bold text-3xl text-slate-950">
+              {hub.partnerCta.heading[locale]}
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-slate-700">
+              {hub.partnerCta.body[locale]}
+            </p>
+            <a
+              href={hub.partnerCta.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex rounded-full bg-slate-950 px-8 py-4 text-sm font-semibold uppercase tracking-wider text-white transition hover:bg-slate-800"
+            >
+              {hub.partnerCta.ctaLabel[locale]} →
+            </a>
+          </div>
+        </section>
+      )}
+
       {/* CTA */}
       <section className="bg-slate-950 py-16 text-center">
         <div className="mx-auto max-w-3xl px-6">
@@ -175,12 +201,15 @@ export function ContentHubPage({
               ? "Cotización por WhatsApp en menos de 10 minutos."
               : "Get a WhatsApp quote in under 10 minutes."}
           </p>
-          <Link
+          <TrackedWhatsAppLink
             href={whatsappHref}
+            locale={locale}
+            pagePath={hubHref}
+            serviceType="content-hub"
             className="mt-6 inline-flex rounded-full bg-[#20d1b3] px-8 py-4 text-sm font-semibold uppercase tracking-wider text-slate-950 transition hover:bg-[#3edcc2]"
           >
             {locale === "es" ? "Cotizar por WhatsApp" : "Get a WhatsApp Quote"}
-          </Link>
+          </TrackedWhatsAppLink>
         </div>
       </section>
 

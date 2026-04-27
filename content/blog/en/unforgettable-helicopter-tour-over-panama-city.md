@@ -38,3 +38,5 @@ The typical 25-minute tour covers:
 ## Book your tour
 
 Contact Sky Ride via WhatsApp. You'll receive aircraft options and pricing for your group in under 10 minutes.
+
+[See helicopter rides in Panama →](/en/helicopter-rides)
