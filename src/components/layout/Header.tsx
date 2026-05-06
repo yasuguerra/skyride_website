@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 import type { Locale } from "@/i18n/routing";
 import { getNavigation, getWhatsAppHref } from "@/data/navigation";
 import { trackLanguageSwitch } from "@/lib/analytics";
+import { slugMap } from "@/data/slug-map";
 
 export function Header({ locale }: { locale: Locale }) {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -15,7 +16,17 @@ export function Header({ locale }: { locale: Locale }) {
   const nav = getNavigation(locale);
   const pathname = usePathname();
   const homeHref = locale === "en" ? "/en" : "/";
-  const switchHref = locale === "en" ? "/" : "/en";
+  const switchHref = (() => {
+    if (locale === "en") {
+      const stripped = pathname.replace(/^\/en\//, "");
+      const entry = slugMap.find((e) => e.en === stripped);
+      return entry ? `/${entry.es}` : "/";
+    } else {
+      const stripped = pathname.replace(/^\//, "");
+      const entry = slugMap.find((e) => e.es === stripped);
+      return entry ? `/en/${entry.en}` : "/en";
+    }
+  })();
   const switchLabel = locale === "en" ? "ES" : "EN";
   const hamburgerRef = useRef<HTMLButtonElement>(null);
   const dropdownTimeoutRef = useRef<ReturnType<typeof setTimeout>>(null);
