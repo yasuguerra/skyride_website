@@ -30,7 +30,17 @@ export const fleet: Aircraft[] = [
       en: "Versatile single-engine aircraft, ideal for short and medium flights. Excellent for island transfers and nearby destinations in Panama.",
     },
     specs: { range: "1,300 km", speed: "278 km/h", altitude: "15,700 ft", engines: "1 × Continental IO-520" },
-    image: "/images/fleet/cessna-206.jpg",
+    image: "/images/fleet/C206%20BO.jpg",
+    highlight: {
+      es: "La Cessna 206 es el caballo de batalla de la aviación privada en Panamá. Su motor Continental IO-520 y su resistente estructura la convierten en la aeronave perfecta para aterrizar en las pistas más cortas y remotas del archipiélago de San Blas, las playas de Bocas del Toro o la isla Contadora. Con capacidad para 5 pasajeros y equipaje, ofrece una relación precio-comodidad imbatible para grupos familiares y escapadas de fin de semana. Sencilla, confiable y con décadas de historial probado: la Cessna 206 es la puerta de entrada a los destinos más hermosos de Panamá.",
+      en: "The Cessna 206 is the backbone of private aviation in Panama. Its Continental IO-520 engine and rugged airframe make it the perfect aircraft for landing on the shortest, most remote strips in the San Blas archipelago, the shores of Bocas del Toro, or Contadora island. Carrying 5 passengers with luggage, it delivers an unbeatable price-to-comfort ratio for families and weekend getaways. Simple, reliable, and with decades of proven history — the Cessna 206 is your gateway to Panama's most beautiful destinations.",
+    },
+    gallery: [
+      "/images/fleet/C206%20BO.jpg",
+      "/images/fleet/C206%20BO%20-%20Interior%201.jpeg",
+      "/images/fleet/C206%20BO%20-%20Interior%202.jpeg",
+      "/images/fleet/C206%20BO%20-%20Interior%203.jpeg",
+    ],
     priceFrom: { es: "Desde $514", en: "From $514" },
     routes: ["panama-contadora", "panama-san-blas", "panama-bocas-del-toro"],
   },
