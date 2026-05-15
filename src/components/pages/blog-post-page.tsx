@@ -11,9 +11,8 @@ import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd, blogPostingSchema } from "@/components/seo/JsonLd";
-import { TrackedWhatsAppLink } from "@/components/ui/TrackedCTA";
 
-const BASE_URL = "https://www.skyride.city";
+const BASE_URL = "https://skyride.city";
 
 function ShareButtons({ url, title, locale }: { url: string; title: string; locale: "es" | "en" }) {
   const encoded = encodeURIComponent(url);
@@ -164,15 +163,12 @@ export async function BlogPostPage({
               ? "Cotización por WhatsApp en menos de 10 minutos."
               : "WhatsApp quote in under 10 minutes."}
           </p>
-          <TrackedWhatsAppLink
+          <Link
             href={whatsappHref}
-            locale={locale}
-            pagePath={postHref}
-            serviceType="blog-cta"
             className="mt-4 inline-flex rounded-full bg-[#20d1b3] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-slate-950"
           >
             {locale === "es" ? "Cotizar ahora" : "Get a quote"}
-          </TrackedWhatsAppLink>
+          </Link>
         </div>
       </article>
 

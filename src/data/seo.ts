@@ -85,39 +85,6 @@ const seoData: Record<string, PageSeo> = {
     },
     focusKeyword: { es: "vuelos charter en panamá", en: "charter flights panama" },
   },
-  "charter-prices": {
-    title: {
-      es: "Precios Vuelos Chárter Panamá 2025 — Tabla de Tarifas | Sky Ride",
-      en: "Charter Flight Prices Panama 2025 — Rate Table | Sky Ride",
-    },
-    description: {
-      es: "Consulta los precios de vuelos chárter desde Panamá: Contadora desde $398, San Blas desde $644, Bocas del Toro desde $1,605. Tabla completa por aeronave.",
-      en: "View charter flight prices from Panama: Contadora from $398, San Blas from $644, Bocas del Toro from $1,605. Full table by aircraft.",
-    },
-    focusKeyword: { es: "precios vuelos charter panama", en: "charter flight prices panama" },
-  },
-  "private-jet": {
-    title: {
-      es: "Jet Privado en Panamá — Aviones Ejecutivos | Sky Ride",
-      en: "Private Jet Charter Panama — Executive Flights | Sky Ride",
-    },
-    description: {
-      es: "Alquila un jet privado en Panamá desde $1,798. King Air 200 y F90 con cabina presurizada para vuelos ejecutivos a Costa Rica, Medellín y Miami.",
-      en: "Charter a private jet in Panama from $1,798. King Air 200 & F90 with pressurized cabin for executive flights to Costa Rica, Medellín, and Miami.",
-    },
-    focusKeyword: { es: "jet privado panama", en: "private jet charter panama" },
-  },
-  "reviews": {
-    title: {
-      es: "Reseñas y Opiniones — Sky Ride Panama | 4.9 ★",
-      en: "Reviews & Testimonials — Sky Ride Panama | 4.9 ★",
-    },
-    description: {
-      es: "Lee las opiniones de nuestros pasajeros. Más de 500 vuelos completados y 4.9/5 de calificación promedio. Vuelos chárter, helicópteros y asientos compartidos.",
-      en: "Read our passenger reviews. Over 500 flights completed and 4.9/5 average rating. Charter flights, helicopter tours, and shared seats.",
-    },
-    focusKeyword: { es: "sky ride panama opiniones", en: "sky ride panama reviews" },
-  },
   "affordable-flights": {
     title: {
       es: "Vuelos Privados Baratos en Panamá | Sky Ride",
@@ -181,28 +148,6 @@ const seoData: Record<string, PageSeo> = {
       en: "Direct private flight from Panama to Costa Rica. San José, Playa Tambor, Guanacaste in under 2 hours.",
     },
     focusKeyword: { es: "vuelo privado panamá costa rica", en: "private flight panama costa rica" },
-  },
-  "dest-san-blas": {
-    title: {
-      es: "Vuelo Privado a San Blas desde Panamá | 30 min | Sky Ride",
-      en: "Private Flight to San Blas from Panama | 30 min | Sky Ride",
-    },
-    description: {
-      es: "Vuela a San Blas en 30 minutos desde Panamá. Evita las 4 horas de carretera y llega directo al paraíso del Caribe. Desde $644 por aeronave.",
-      en: "Fly to San Blas in 30 minutes from Panama City. Skip the 4-hour road and land directly in Caribbean paradise. From $644 per aircraft.",
-    },
-    focusKeyword: { es: "vuelo privado san blas panama", en: "private flight san blas panama" },
-  },
-  "dest-bocas-del-toro": {
-    title: {
-      es: "Vuelo Privado a Bocas del Toro | 1 hora desde Panamá | Sky Ride",
-      en: "Private Flight to Bocas del Toro | 1 Hour from Panama | Sky Ride",
-    },
-    description: {
-      es: "Vuelo privado directo a Bocas del Toro en 1 hora. Sin las 6–10 horas de carretera por la Cordillera. Desde $1,605 por aeronave.",
-      en: "Direct private flight to Bocas del Toro in 1 hour. Skip the 6–10 hour mountain drive. From $1,605 per aircraft.",
-    },
-    focusKeyword: { es: "vuelo privado bocas del toro", en: "private flight bocas del toro panama" },
   },
   "dest-medellin": {
     title: {
@@ -275,28 +220,6 @@ const seoData: Record<string, PageSeo> = {
     },
     ogType: "website",
   },
-  "hub-bocas-del-toro": {
-    title: {
-      es: "Guía de Bocas del Toro | Vuelo Privado desde Panamá en 1 Hora | Sky Ride",
-      en: "Bocas del Toro Travel Guide | Private Flight from Panama in 1 Hour | Sky Ride",
-    },
-    description: {
-      es: "Cómo llegar a Bocas del Toro en vuelo privado desde Panamá. Mejores playas, qué hacer y consejos para visitar el Caribe panameño.",
-      en: "How to fly private from Panama City to Bocas del Toro in 1 hour. Best beaches, activities, and tips for visiting Panama's Caribbean archipelago.",
-    },
-    focusKeyword: { es: "vuelo privado bocas del toro panama", en: "private flight bocas del toro panama" },
-  },
-  "hub-san-blas": {
-    title: {
-      es: "Guía Completa de San Blas (Guna Yala) | Cómo Llegar y Qué Ver | Sky Ride",
-      en: "San Blas Islands Travel Guide (Guna Yala) | How to Get There | Sky Ride",
-    },
-    description: {
-      es: "Cómo llegar a San Blas en vuelo privado desde Panamá. Las mejores islas, qué hacer y consejos para tu visita a Guna Yala.",
-      en: "How to get to San Blas by private flight from Panama City. Best islands, what to do, and tips for visiting Guna Yala.",
-    },
-    focusKeyword: { es: "como llegar a san blas vuelo", en: "san blas islands travel guide" },
-  },
   "hub-contadora": {
     title: {
       es: "Guía Completa de Isla Contadora | Vuelos, Playas y Tips | Sky Ride",
@@ -339,6 +262,28 @@ const seoData: Record<string, PageSeo> = {
       es: "Reserva tu vuelo privado en 3 pasos con Martin, nuestro asistente de inteligencia artificial. Cotización inmediata 24/7.",
       en: "Book your private flight in 3 steps with Martin, our AI assistant. Instant quotes 24/7.",
     },
+  },
+  "charter-prices": {
+    title: {
+      es: "Precios de Vuelos Chárter en Panamá | Tabla 2026 | Sky Ride",
+      en: "Charter Flight Prices in Panama | 2026 Rate Table | Sky Ride",
+    },
+    description: {
+      es: "Tabla completa de precios de vuelos chárter privados desde Panamá. Precios por ruta y aeronave, actualizados para 2026.",
+      en: "Complete price table for private charter flights from Panama. Prices by route and aircraft, updated for 2026.",
+    },
+    focusKeyword: { es: "precios vuelos charter panama", en: "charter flight prices panama" },
+  },
+  reviews: {
+    title: {
+      es: "Reseñas y Opiniones — Sky Ride Panama | 4.9 ★",
+      en: "Reviews & Ratings — Sky Ride Panama | 4.9 ★",
+    },
+    description: {
+      es: "Más de 127 reseñas verificadas de pasajeros que han volado con Sky Ride Panama. Calificación 4.9 sobre 5 en Google.",
+      en: "Over 127 verified passenger reviews from people who have flown with Sky Ride Panama. 4.9 out of 5 on Google.",
+    },
+    focusKeyword: { es: "reseñas sky ride panama", en: "sky ride panama reviews" },
   },
 };
 

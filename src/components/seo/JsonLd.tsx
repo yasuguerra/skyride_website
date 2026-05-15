@@ -1,3 +1,5 @@
+import Script from "next/script";
+
 export type JsonLdData = Record<string, unknown>;
 
 export function JsonLd({ data }: { data: JsonLdData | JsonLdData[] }) {
@@ -5,10 +7,11 @@ export function JsonLd({ data }: { data: JsonLdData | JsonLdData[] }) {
   return (
     <>
       {json.map((item, i) => (
-        <script
+        <Script
           key={i}
           id={`ld-${(item["@type"] as string) ?? "schema"}-${i}`}
           type="application/ld+json"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(item) }}
         />
       ))}
@@ -16,7 +19,7 @@ export function JsonLd({ data }: { data: JsonLdData | JsonLdData[] }) {
   );
 }
 
-const BASE_URL = "https://www.skyride.city";
+const BASE_URL = "https://skyride.city";
 
 export function organizationSchema(): JsonLdData {
   return {
@@ -43,13 +46,6 @@ export function organizationSchema(): JsonLdData {
       latitude: 8.9824,
       longitude: -79.5199,
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: 4.9,
-      reviewCount: 127,
-      bestRating: 5,
-      worstRating: 1,
-    },
     sameAs: [
       "https://www.facebook.com/skyridepa/",
       "https://www.instagram.com/skyridepa/",
@@ -74,16 +70,6 @@ export function websiteSchema(locale: "es" | "en"): JsonLdData {
     name: "Sky Ride Panama",
     inLanguage: locale === "en" ? "en-US" : "es-PA",
     publisher: { "@id": `${BASE_URL}/#organization` },
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: locale === "en"
-          ? `${BASE_URL}/en/book-with-martin?q={search_term_string}`
-          : `${BASE_URL}/reservar-con-martin?q={search_term_string}`,
-      },
-      "query-input": "required name=search_term_string",
-    },
   };
 }
 

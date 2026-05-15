@@ -13,8 +13,8 @@ export interface Aircraft {
   };
   image: string;
   gallery?: string[];
-  highlight?: { es: string; en: string };
   priceFrom?: { es: string; en: string };
+  highlight?: { es: string; en: string };
   routes: string[];
 }
 
@@ -30,17 +30,7 @@ export const fleet: Aircraft[] = [
       en: "Versatile single-engine aircraft, ideal for short and medium flights. Excellent for island transfers and nearby destinations in Panama.",
     },
     specs: { range: "1,300 km", speed: "278 km/h", altitude: "15,700 ft", engines: "1 × Continental IO-520" },
-    image: "/images/fleet/C206%20BO.jpg",
-    highlight: {
-      es: "La Cessna 206 es el caballo de batalla de la aviación privada en Panamá. Su motor Continental IO-520 y su resistente estructura la convierten en la aeronave perfecta para aterrizar en las pistas más cortas y remotas del archipiélago de San Blas, las playas de Bocas del Toro o la isla Contadora. Con capacidad para 5 pasajeros y equipaje, ofrece una relación precio-comodidad imbatible para grupos familiares y escapadas de fin de semana. Sencilla, confiable y con décadas de historial probado: la Cessna 206 es la puerta de entrada a los destinos más hermosos de Panamá.",
-      en: "The Cessna 206 is the backbone of private aviation in Panama. Its Continental IO-520 engine and rugged airframe make it the perfect aircraft for landing on the shortest, most remote strips in the San Blas archipelago, the shores of Bocas del Toro, or Contadora island. Carrying 5 passengers with luggage, it delivers an unbeatable price-to-comfort ratio for families and weekend getaways. Simple, reliable, and with decades of proven history — the Cessna 206 is your gateway to Panama's most beautiful destinations.",
-    },
-    gallery: [
-      "/images/fleet/C206%20BO.jpg",
-      "/images/fleet/C206%20BO%20-%20Interior%201.jpeg",
-      "/images/fleet/C206%20BO%20-%20Interior%202.jpeg",
-      "/images/fleet/C206%20BO%20-%20Interior%203.jpeg",
-    ],
+    image: "/images/fleet/cessna-206.jpg",
     priceFrom: { es: "Desde $514", en: "From $514" },
     routes: ["panama-contadora", "panama-san-blas", "panama-bocas-del-toro"],
   },
@@ -71,15 +61,6 @@ export const fleet: Aircraft[] = [
     },
     specs: { range: "1,700 km", speed: "296 km/h", altitude: "20,000 ft" },
     image: "/images/fleet/piper-saratoga.jpg",
-    highlight: {
-      es: "El Piper Saratoga es el favorito de viajeros que buscan vuelos chárter privados en Panamá sin sacrificar comodidad ni velocidad. Con una velocidad de crucero de 296 km/h y un alcance de 1,700 km, conecta Ciudad de Panamá con Contadora, San Blas, Bocas del Toro y otros destinos remotos en cuestión de minutos. Su cabina amplia y silenciosa acomoda hasta 5 pasajeros con equipaje de mano, convirtiendo cada trayecto en una experiencia premium accesible. La opción inteligente para grupos pequeños, escapadas de fin de semana y viajes de negocios.",
-      en: "The Piper Saratoga is the go-to choice for travelers seeking private charter flights in Panama without sacrificing comfort or speed. Cruising at 296 km/h with a 1,700 km range, it connects Panama City to Contadora, San Blas, Bocas del Toro, and other remote destinations in minutes. Its spacious, quiet cabin comfortably seats up to 5 passengers with carry-on luggage, turning every flight into an accessible luxury experience. The smart pick for small groups, weekend getaways, and business travel.",
-    },
-    gallery: [
-      "/images/fleet/Saratoga%20Conta.jpg",
-      "/images/fleet/Saratoga%20Int%201.jpeg",
-      "/images/fleet/Saratoga%20Int%202.jpg",
-    ],
     priceFrom: { es: "Desde $770", en: "From $770" },
     routes: ["panama-contadora", "panama-san-blas"],
   },
@@ -124,16 +105,12 @@ export const fleet: Aircraft[] = [
       en: "Rugged turboprop designed for short runways and remote destinations. The best choice for San Blas and Bocas del Toro.",
     },
     specs: { range: "2,224 km", speed: "338 km/h", altitude: "25,000 ft", engines: "1 × PT6A-34AG" },
-    image: "/images/fleet/Kkodiak%20SK.jpg",
-    highlight: {
-      es: "El Daher Kodiak 100 es la aeronave definitiva para explorar los destinos más remotos de Panamá. Su motor turbohélice PT6A-34AG y su capacidad para operar en pistas de tierra cortas lo convierten en el único avión privado capaz de llevar a 9 pasajeros directamente a las playas vírgenes de San Blas o a las costas tropicales de Bocas del Toro sin escalas. Con una velocidad de crucero de 338 km/h y un alcance de 2,224 km, combina la robustez de una aeronave de trabajo con el confort de un vuelo privado premium. Si buscas aventura sin sacrificar comodidad, el Kodiak es tu aeronave.",
-      en: "The Daher Kodiak 100 is the ultimate aircraft for reaching Panama's most remote destinations. Its PT6A-34AG turboprop engine and ability to land on short dirt strips make it the only private aircraft capable of carrying 9 passengers directly to the untouched beaches of San Blas or the tropical shores of Bocas del Toro — no connections. Cruising at 338 km/h with a 2,224 km range, it blends the toughness of a workhorse aircraft with the comfort of a premium private flight. If you want adventure without sacrificing comfort, the Kodiak is your aircraft.",
-    },
+    image: "/images/fleet/daher-kodiak.jpg",
     gallery: [
-      "/images/fleet/Kkodiak%20SK.jpg",
-      "/images/fleet/Kodiak%20Interior%201.jpg",
-      "/images/fleet/Kodiak%20Interior%202.jpg",
-      "/images/fleet/Kodiak%20Perfil.png",
+      "/images/fleet/kodiak-gallery-1.jpg",
+      "/images/fleet/kodiak-gallery-2.jpg",
+      "/images/fleet/kodiak-gallery-3.jpg",
+      "/images/fleet/kodiak-gallery-4.jpg",
     ],
     priceFrom: { es: "Desde $1,391", en: "From $1,391" },
     routes: ["panama-san-blas", "panama-bocas-del-toro", "panama-contadora"],

@@ -41,5 +41,3 @@ It depends on the space. Some hotels have a helipad. Check availability when boo
 ## Book your flight
 
 Sky Ride offers WhatsApp quotes in minutes. Tell us your plan and we'll present the best aircraft and price option.
-
-[See helicopter rides in Panama →](/en/helicopter-rides)

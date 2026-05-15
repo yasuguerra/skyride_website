@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import type { Locale } from "@/i18n/routing";
-import { trackBookingFormStep, trackFormSubmit } from "@/lib/analytics";
+import { trackBookingFormStep } from "@/lib/analytics";
 import {
   getInstantQuotes,
   formatPrice,
@@ -99,8 +99,6 @@ export function BookingForm({ locale }: { locale: Locale }) {
 
     const aircraftLine = selectedAircraft ? `\n• ${locale === "es" ? "Aeronave" : "Aircraft"}: ${selectedAircraft}` : "";
     const priceLine = selectedPrice ? `\n• ${locale === "es" ? "Precio" : "Price"}: ${formatPrice(selectedPrice)}` : "";
-
-    trackFormSubmit("booking-widget", locale, origin, destination);
 
     const msg =
       locale === "es"

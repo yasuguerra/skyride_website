@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import type { Locale } from "@/i18n/routing";
-import { trackMartinChatStart, trackMartinWhatsAppTransfer } from "@/lib/analytics";
+import { trackMartinChatStart } from "@/lib/analytics";
 
 interface Message {
   role: "user" | "model";
@@ -144,7 +144,6 @@ export function MartinChat({ locale }: { locale: Locale }) {
           target="_blank"
           rel="noopener noreferrer"
           className="text-xs font-medium text-[#25D366] hover:underline"
-          onClick={() => trackMartinWhatsAppTransfer(pathname, messages.length, locale)}
         >
           {copy.whatsappFallback} →
         </a>

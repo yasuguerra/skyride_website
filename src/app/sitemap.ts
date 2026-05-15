@@ -40,6 +40,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       page.type === "fleet-index" ? 0.8 :
       page.type === "fleet-detail" ? 0.7 :
       page.type === "destination" ? 0.8 :
+      page.type === "charter-prices" ? 0.85 :
+      page.type === "reviews" ? 0.7 :
       page.type === "blog-post" ? 0.6 :
       page.type === "legal" ? 0.3 :
       0.5;
@@ -49,25 +51,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
       page.type === "legal" ? "yearly" :
       "weekly";
 
-    entries.push({
-      url: esUrl,
-      lastModified: now,
-      changeFrequency,
-      priority,
-      alternates: {
-        languages: { es: esUrl, en: enUrl },
-      },
-    });
+    // ES URL — skip for EN-only entries
+    if (!page.enOnly) {
+      entries.push({
+        url: esUrl,
+        lastModified: now,
+        changeFrequency,
+        priority,
+        alternates: {
+          languages: { es: esUrl, en: enUrl },
+        },
+      });
+    }
 
-    entries.push({
-      url: enUrl,
-      lastModified: now,
-      changeFrequency,
-      priority,
-      alternates: {
-        languages: { es: esUrl, en: enUrl },
-      },
-    });
+    // EN URL — skip for ES-only entries
+    if (!page.esOnly) {
+      entries.push({
+        url: enUrl,
+        lastModified: now,
+        changeFrequency,
+        priority,
+        alternates: {
+          languages: { es: esUrl, en: enUrl },
+        },
+      });
+    }
   }
 
   return entries;

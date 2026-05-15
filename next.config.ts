@@ -16,7 +16,7 @@ const securityHeaders = [
       "default-src 'self'",
       "script-src 'self' 'unsafe-inline' https://*.googletagmanager.com https://*.google-analytics.com https://*.googleadservices.com https://*.doubleclick.net https://*.clarity.ms https://*.instantfox.co",
       "style-src 'self' 'unsafe-inline'",
-      "img-src 'self' data: https://*.skyride.city https://*.googleusercontent.com https://*.google-analytics.com https://*.google.com https://*.google.com.pa https://*.doubleclick.net https://*.clarity.ms https://*.googletagmanager.com",
+      "img-src 'self' data: https://*.skyride.city https://*.googleusercontent.com https://*.google-analytics.com https://*.google.com https://*.google.com.pa https://*.doubleclick.net https://*.clarity.ms",
       "connect-src 'self' https://*.skyride.city https://*.google-analytics.com https://analytics.google.com https://*.google.com https://*.doubleclick.net https://*.clarity.ms https://*.googletagmanager.com",
       "font-src 'self'",
       "frame-src https://www.youtube.com https://www.googletagmanager.com",
@@ -110,6 +110,25 @@ const nextConfig: NextConfig = {
       { source: "/helicopter-ride", destination: "/en/helicopter-rides", permanent: true },
       { source: "/en/helicopter-ride", destination: "/en/helicopter-rides", permanent: true },
 
+      // ─── Old WordPress content pages (legacy slugs) ───────────
+      {
+        source: "/vuelos-a-contadora-descubre-el-paraiso-en-panama/:path*",
+        destination: "/vuelo-privado-a-contadora",
+        permanent: true,
+      },
+      {
+        source: "/vuelos-privados-en-panama/:path*",
+        destination: "/vuelos-charter-en-panama",
+        permanent: true,
+      },
+      {
+        source: "/vuelos-a-playa-tambor-la-forma-mas-rapida-de-llegar-al-paraiso/:path*",
+        destination: "/vuelos-a-playa-tambor",
+        permanent: true,
+      },
+      // ─── WordPress tour custom post type ─────────────────────
+      { source: "/en/tour/:slug*", destination: "/en/helicopter-rides", permanent: true },
+
       // ─── Commerce / account routes (not used in marketplace) ─
       { source: "/cart", destination: "/contacto", permanent: true },
       { source: "/checkout", destination: "/contacto", permanent: true },
@@ -131,15 +150,23 @@ const nextConfig: NextConfig = {
       { source: "/wp-json/:path*", destination: "/", permanent: true },
       { source: "/xmlrpc.php", destination: "/", permanent: true },
 
-      // ─── Phantom WordPress numeric page ID ───────────────────
-      { source: "/5113-2", destination: "/", permanent: true },
-      { source: "/5113-2/", destination: "/", permanent: true },
-
       // ─── Legacy RSS feeds → blog index ───────────────────────
       { source: "/feed", destination: "/blog", permanent: true },
       { source: "/feed/:path*", destination: "/blog", permanent: true },
       { source: "/en/feed", destination: "/en/blog", permanent: true },
       { source: "/en/feed/:path*", destination: "/en/blog", permanent: true },
+
+      // ─── WordPress per-post / author / category RSS feeds ────
+      { source: "/:path*/feed", destination: "/blog", permanent: true },
+      { source: "/:path*/feed/", destination: "/blog", permanent: true },
+
+      // ─── WordPress author archives ────────────────────────────
+      { source: "/author/:path*", destination: "/", permanent: true },
+      { source: "/en/author/:path*", destination: "/en", permanent: true },
+
+      // ─── WordPress search pages ───────────────────────────────
+      { source: "/search/:path*", destination: "/", permanent: true },
+      { source: "/en/search/:path*", destination: "/en", permanent: true },
     ];
   },
 };
