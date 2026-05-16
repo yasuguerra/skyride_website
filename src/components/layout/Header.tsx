@@ -130,9 +130,6 @@ export function Header({ locale }: { locale: Locale }) {
                       )}
                     </div>
                   )}
-                      ))}
-                    </div>
-                  )}
                 </div>
               ) : (
                 <Link
