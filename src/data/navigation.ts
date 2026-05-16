@@ -4,6 +4,7 @@ export interface NavItem {
   label: string;
   href: string;
   children?: NavItem[];
+  isGroupLabel?: boolean;
 }
 
 export function getNavigation(locale: Locale): NavItem[] {
@@ -32,13 +33,7 @@ export function getNavigation(locale: Locale): NavItem[] {
           { label: "Playa Tambor", href: "/en/flights-to-playa-tambor" },
           { label: "David, Chiriquí", href: "/en/private-flight-to-david-panama" },
           { label: "Pedasi", href: "/en/private-flight-to-pedasi" },
-        ],
-      },
-      { label: "Our Fleet", href: "/en/our-fleet" },
-      {
-        label: "Routes",
-        href: "#",
-        children: [
+          { label: "Flight Routes", href: "#", isGroupLabel: true },
           { label: "Panama → Contadora", href: "/en/route/panama-contadora" },
           { label: "Panama → San Blas", href: "/en/route/panama-san-blas" },
           { label: "Panama → Bocas del Toro", href: "/en/route/panama-bocas-del-toro" },
@@ -48,6 +43,7 @@ export function getNavigation(locale: Locale): NavItem[] {
           { label: "Panama → Pedasi", href: "/en/route/panama-pedasi" },
         ],
       },
+      { label: "Our Fleet", href: "/en/our-fleet" },
       { label: "Blog", href: "/en/blog" },
       { label: "Contact", href: "/en/contact" },
     ];
@@ -77,13 +73,7 @@ export function getNavigation(locale: Locale): NavItem[] {
         { label: "Playa Tambor", href: "/vuelos-a-playa-tambor" },
         { label: "David, Chiriquí", href: "/vuelo-privado-a-david-chiriqui" },
         { label: "Pedasí", href: "/vuelo-privado-a-pedasi" },
-      ],
-    },
-    { label: "Nuestra Flota", href: "/nuestra-flota" },
-    {
-      label: "Rutas",
-      href: "#",
-      children: [
+        { label: "Rutas de Vuelo", href: "#", isGroupLabel: true },
         { label: "Panamá → Contadora", href: "/ruta/panama-contadora" },
         { label: "Panamá → San Blas", href: "/ruta/panama-san-blas" },
         { label: "Panamá → Bocas del Toro", href: "/ruta/panama-bocas-del-toro" },
@@ -93,6 +83,7 @@ export function getNavigation(locale: Locale): NavItem[] {
         { label: "Panamá → Pedasí", href: "/ruta/panama-pedasi" },
       ],
     },
+    { label: "Nuestra Flota", href: "/nuestra-flota" },
     { label: "Blog", href: "/blog" },
     { label: "Contacto", href: "/contacto" },
   ];

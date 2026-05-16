@@ -107,17 +107,29 @@ export function Header({ locale }: { locale: Locale }) {
                     <span className="ml-1 text-[10px]">▾</span>
                   </button>
                   {openDropdown === item.label && (
-                    <div className="absolute left-0 top-full z-50 min-w-[220px] rounded-xl border border-white/10 bg-[#152c46] p-2 shadow-xl">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          onFocus={cancelCloseDropdown}
-                          onBlur={closeDropdown}
-                          className="block rounded-lg px-4 py-2.5 text-sm text-slate-300 transition hover:bg-white/5 hover:text-white"
-                        >
-                          {child.label}
-                        </Link>
+                    <div className="absolute left-0 top-full z-50 min-w-[240px] rounded-xl border border-white/10 bg-[#152c46] p-2 shadow-xl">
+                      {item.children.map((child) =>
+                        child.isGroupLabel ? (
+                          <p
+                            key={child.label}
+                            className="mt-1 border-t border-white/10 px-4 pb-1 pt-3 text-[10px] font-semibold uppercase tracking-widest text-sky-300/70"
+                          >
+                            {child.label}
+                          </p>
+                        ) : (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            onFocus={cancelCloseDropdown}
+                            onBlur={closeDropdown}
+                            className="block rounded-lg px-4 py-2.5 text-sm text-slate-300 transition hover:bg-white/5 hover:text-white"
+                          >
+                            {child.label}
+                          </Link>
+                        ),
+                      )}
+                    </div>
+                  )}
                       ))}
                     </div>
                   )}
@@ -193,16 +205,22 @@ export function Header({ locale }: { locale: Locale }) {
                     <p className="mt-4 text-xs uppercase tracking-wider text-slate-500">
                       {item.label}
                     </p>
-                    {item.children.map((child) => (
-                      <Link
-                        key={child.href}
-                        href={child.href}
-                        onClick={() => setMobileOpen(false)}
-                        className="block py-2 text-sm text-slate-300 transition hover:text-white"
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
+                    {item.children.map((child) =>
+                      child.isGroupLabel ? (
+                        <p key={child.label} className="mt-3 border-t border-white/10 pt-2 text-[10px] font-semibold uppercase tracking-widest text-sky-300/70">
+                          {child.label}
+                        </p>
+                      ) : (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          onClick={() => setMobileOpen(false)}
+                          className="block py-2 text-sm text-slate-300 transition hover:text-white"
+                        >
+                          {child.label}
+                        </Link>
+                      ),
+                    )}
                   </>
                 ) : (
                   <Link
