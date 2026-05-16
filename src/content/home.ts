@@ -10,6 +10,7 @@ type Route = {
   route: string;
   detail: string;
   price: string;
+  slug: string;
 };
 
 type Testimonial = {
@@ -38,6 +39,7 @@ type HomeContent = {
     routesTitle: string;
     routesDescription: string;
     routesCta: string;
+    routesViewAll: string;
     testimonialsLabel: string;
     testimonialsTitle: string;
     ctaLabel: string;
@@ -100,6 +102,7 @@ export const homeContent: Record<Locale, HomeContent> = {
       routesTitle: "Vuelos directos al paraíso. Sin escalas. Sin estrés.",
       routesDescription: "Conectamos viajeros con vuelos regulares y chárter desde Ciudad de Panamá hacia las mejores islas, playas y destinos de Centroamérica.",
       routesCta: "Ver disponibilidad",
+      routesViewAll: "Ver detalles de la ruta →",
       testimonialsLabel: "Testimonios",
       testimonialsTitle: "Más de 500 viajeros ya volaron con nosotros.",
       ctaLabel: "¿Listo para la aventura?",
@@ -166,16 +169,19 @@ export const homeContent: Record<Locale, HomeContent> = {
         route: "Panamá → Contadora",
         detail: "Escápate a la isla en solo 20 minutos. Playas cristalinas, snorkel y sol garantizado.",
         price: "Desde $398",
+        slug: "panama-contadora",
       },
       {
         route: "Panamá → San Blas",
         detail: "Acceso directo al archipiélago Guna Yala. Islas vírgenes, hamacas y cabañas sobre el agua.",
         price: "Desde $644",
+        slug: "panama-san-blas",
       },
       {
         route: "Panamá → Bocas del Toro",
         detail: "Vuelo directo al archipiélago caribeño. Playas, surf y naturaleza sin escalas comerciales.",
         price: "Desde $1,605",
+        slug: "panama-bocas-del-toro",
       },
     ],
     testimonials: [
@@ -253,6 +259,7 @@ export const homeContent: Record<Locale, HomeContent> = {
       routesTitle: "Direct flights to paradise. No layovers. No stress.",
       routesDescription: "We connect travelers with scheduled and charter flights from Panama City to the best islands, beaches, and destinations across Central America.",
       routesCta: "Check availability",
+      routesViewAll: "View route details →",
       testimonialsLabel: "Testimonials",
       testimonialsTitle: "500+ travelers have flown with us.",
       ctaLabel: "Ready for the adventure?",
@@ -321,16 +328,19 @@ export const homeContent: Record<Locale, HomeContent> = {
         route: "Panama → Contadora",
         detail: "Escape to the island in just 20 minutes. Crystal-clear beaches, snorkeling, and guaranteed sunshine.",
         price: "From $398",
+        slug: "panama-contadora",
       },
       {
         route: "Panama → San Blas",
         detail: "Direct access to the Guna Yala archipelago. Pristine islands, hammocks, and overwater cabins.",
         price: "From $644",
+        slug: "panama-san-blas",
       },
       {
         route: "Panama → Bocas del Toro",
         detail: "Direct flight to the Caribbean archipelago. Beaches, surf, and nature with no commercial layovers.",
         price: "From $1,605",
+        slug: "panama-bocas-del-toro",
       },
     ],
     testimonials: [

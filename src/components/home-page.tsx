@@ -218,16 +218,24 @@ export function HomePage({ locale }: HomePageProps) {
                   <div className="p-7">
                     <h3 className="font-sans font-bold text-3xl text-white">{route.route}</h3>
                     <p className="mt-3 text-base leading-7 text-slate-300">{route.detail}</p>
-                    <TrackedWhatsAppLink
-                      href={whatsappRouteHref(route.route, locale)}
-                      locale={locale}
-                      pagePath={locale === "en" ? "/en" : "/"}
-                      serviceType="route-card"
-                      className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 text-xs font-semibold uppercase tracking-wide text-white transition hover:bg-[#20bd5a]"
-                    >
-                      <WhatsAppIcon className="h-4 w-4" />
-                      {content.sections.routesCta}
-                    </TrackedWhatsAppLink>
+                    <div className="mt-5 flex flex-wrap items-center gap-3">
+                      <TrackedWhatsAppLink
+                        href={whatsappRouteHref(route.route, locale)}
+                        locale={locale}
+                        pagePath={locale === "en" ? "/en" : "/"}
+                        serviceType="route-card"
+                        className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 text-xs font-semibold uppercase tracking-wide text-white transition hover:bg-[#20bd5a]"
+                      >
+                        <WhatsAppIcon className="h-4 w-4" />
+                        {content.sections.routesCta}
+                      </TrackedWhatsAppLink>
+                      <Link
+                        href={locale === "en" ? `/en/route/${route.slug}` : `/ruta/${route.slug}`}
+                        className="inline-flex items-center rounded-full border border-white/20 px-5 py-2.5 text-xs font-semibold uppercase tracking-wide text-slate-200 transition hover:border-white/50 hover:text-white"
+                      >
+                        {content.sections.routesViewAll}
+                      </Link>
+                    </div>
                   </div>
                 </article>
               ))}
