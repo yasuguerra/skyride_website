@@ -10,6 +10,7 @@ import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd, faqSchema, serviceSchema } from "@/components/seo/JsonLd";
 import { TrustBar } from "@/components/sections/TrustBar";
+import { TrackedWhatsAppLink, TrackedPhoneLink } from "@/components/ui/TrackedCTA";
 
 const serviceData: Record<
   string,
@@ -364,18 +365,23 @@ export function ServicePage({
                   ? "Envíenos un mensaje por WhatsApp y reciba su cotización en menos de 10 minutos."
                   : "Send us a WhatsApp message and receive your quote in under 10 minutes."}
               </p>
-              <Link
+              <TrackedWhatsAppLink
                 href={whatsappHref}
+                locale={locale}
+                pagePath={pageUrl}
+                serviceType="service-page"
                 className="mt-6 flex w-full items-center justify-center rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white"
               >
                 {locale === "es" ? "Cotizar por WhatsApp" : "Quote via WhatsApp"}
-              </Link>
-              <Link
+              </TrackedWhatsAppLink>
+              <TrackedPhoneLink
                 href="tel:+50768400045"
+                locale={locale}
+                pagePath={pageUrl}
                 className="mt-3 flex w-full items-center justify-center rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold uppercase tracking-wider text-slate-900"
               >
                 +507 6840 0045
-              </Link>
+              </TrackedPhoneLink>
             </div>
           </aside>
         </div>

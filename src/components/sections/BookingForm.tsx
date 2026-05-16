@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import type { Locale } from "@/i18n/routing";
-import { trackBookingFormStep } from "@/lib/analytics";
+import { trackBookingFormStep, trackFormSubmit } from "@/lib/analytics";
 import {
   getInstantQuotes,
   formatPrice,
@@ -105,6 +105,7 @@ export function BookingForm({ locale }: { locale: Locale }) {
         ? `Hola *Sky Ride*, quiero reservar un vuelo:\n• Origen: ${originLabel}\n• Destino: ${destLabel}\n• Fecha: ${date}\n• Pasajeros: ${pax}${aircraftLine}${priceLine}`
         : `Hello *Sky Ride*, I'd like to book a flight:\n• Origin: ${originLabel}\n• Destination: ${destLabel}\n• Date: ${date}\n• Passengers: ${pax}${aircraftLine}${priceLine}`;
 
+    trackFormSubmit("booking-widget", locale, origin, destination);
     window.open(
       `https://wa.me/15557298766?text=${encodeURIComponent(msg)}`,
       "_blank",

@@ -10,6 +10,7 @@ import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd, productSchema } from "@/components/seo/JsonLd";
+import { TrackedWhatsAppLink } from "@/components/ui/TrackedCTA";
 
 export function FleetDetailPage({
   locale,
@@ -87,14 +88,17 @@ export function FleetDetailPage({
               </p>
             )}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link
+              <TrackedWhatsAppLink
                 href={whatsappHref}
+                locale={locale}
+                pagePath={detailUrl}
+                serviceType="fleet-detail"
                 className="inline-flex items-center justify-center rounded-full bg-[#20d1b3] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-slate-950"
               >
                 {locale === "es"
                   ? "Alquilar esta aeronave"
                   : "Charter this aircraft"}
-              </Link>
+              </TrackedWhatsAppLink>
               <Link
                 href={locale === "en" ? "/en/our-fleet" : "/nuestra-flota"}
                 className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white"

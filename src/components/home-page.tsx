@@ -7,6 +7,7 @@ import { TrustBar } from "@/components/sections/TrustBar";
 import { JsonLd, aggregateRatingSchema, reviewSchema } from "@/components/seo/JsonLd";
 import { fleet } from "@/data/fleet";
 import { getBlogPostsByLocale } from "@/data/blog";
+import { TrackedWhatsAppLink } from "@/components/ui/TrackedCTA";
 
 const WHATSAPP_NUMBER = "15557298766";
 
@@ -103,13 +104,16 @@ export function HomePage({ locale }: HomePageProps) {
 
               {/* Primary + Secondary CTA */}
               <div className="flex flex-col gap-4 pt-2 sm:flex-row sm:items-center">
-                <Link
+                <TrackedWhatsAppLink
                   href={whatsappHref}
+                  locale={locale}
+                  pagePath={locale === "en" ? "/en" : "/"}
+                  serviceType="hero"
                   className="inline-flex items-center justify-center gap-2.5 rounded-full bg-[#25D366] px-7 py-3.5 text-sm font-semibold uppercase tracking-wide text-white shadow-lg shadow-green-900/30 transition hover:bg-[#20bd5a] hover:shadow-xl"
                 >
                   <WhatsAppIcon className="h-5 w-5" />
                   {content.hero.primaryCta}
-                </Link>
+                </TrackedWhatsAppLink>
                 <Link
                   href="#routes"
                   className="inline-flex items-center justify-center px-4 py-3 text-sm font-medium tracking-wide text-slate-300 transition hover:text-white"
@@ -170,13 +174,16 @@ export function HomePage({ locale }: HomePageProps) {
                   <p className="text-xs uppercase tracking-wider text-sky-700">{service.badge}</p>
                   <h3 className="mt-3 font-sans font-bold text-3xl text-slate-950">{service.title}</h3>
                   <p className="mt-3 text-base leading-7 text-slate-600">{service.description}</p>
-                  <Link
+                  <TrackedWhatsAppLink
                     href={whatsappHref}
+                    locale={locale}
+                    pagePath={locale === "en" ? "/en" : "/"}
+                    serviceType="service-card"
                     className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 text-xs font-semibold uppercase tracking-wide text-white transition hover:bg-[#20bd5a]"
                   >
                     <WhatsAppIcon className="h-4 w-4" />
                     {content.sections.servicesWhatsapp}
-                  </Link>
+                  </TrackedWhatsAppLink>
                 </div>
               </article>
             ))}
@@ -211,13 +218,16 @@ export function HomePage({ locale }: HomePageProps) {
                   <div className="p-7">
                     <h3 className="font-sans font-bold text-3xl text-white">{route.route}</h3>
                     <p className="mt-3 text-base leading-7 text-slate-300">{route.detail}</p>
-                    <Link
+                    <TrackedWhatsAppLink
                       href={whatsappRouteHref(route.route, locale)}
+                      locale={locale}
+                      pagePath={locale === "en" ? "/en" : "/"}
+                      serviceType="route-card"
                       className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 text-xs font-semibold uppercase tracking-wide text-white transition hover:bg-[#20bd5a]"
                     >
                       <WhatsAppIcon className="h-4 w-4" />
                       {content.sections.routesCta}
-                    </Link>
+                    </TrackedWhatsAppLink>
                   </div>
                 </article>
               ))}
@@ -322,12 +332,15 @@ export function HomePage({ locale }: HomePageProps) {
               >
                 {content.sections.fleetViewAll}
               </Link>
-              <Link
+              <TrackedWhatsAppLink
                 href={whatsappHref}
+                locale={locale}
+                pagePath={locale === "en" ? "/en" : "/"}
+                serviceType="fleet-cta"
                 className="inline-flex items-center rounded-full border-2 border-[#25D366] px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-[#25D366] transition hover:bg-[#25D366] hover:text-white"
               >
                 {content.sections.fleetCta}
-              </Link>
+              </TrackedWhatsAppLink>
             </div>
           </div>
         </section>
