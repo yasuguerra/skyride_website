@@ -7,6 +7,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
+import { JsonLd, itemListSchema } from "@/components/seo/JsonLd";
 
 export function BlogIndexPage({ locale }: { locale: Locale }) {
   const posts = getBlogPostsByLocale(locale);
@@ -19,10 +20,21 @@ export function BlogIndexPage({ locale }: { locale: Locale }) {
 
   const dateLocale = locale === "es" ? "es-PA" : "en-US";
 
+  const blogListSchema = itemListSchema({
+    name: locale === "es" ? "Blog Sky Ride Panamá" : "Sky Ride Panama Blog",
+    items: posts.map((post) => ({
+      name: post.title,
+      url: locale === "en" ? `/en/${post.slug}` : `/${post.slug}`,
+      image: post.image,
+      description: post.excerpt,
+    })),
+  });
+
   return (
     <div className="min-h-screen bg-[#f0f7fa]">
       <Header locale={locale} />
       <Breadcrumbs locale={locale} items={[{ name: title, href: pageUrl }]} />
+      <JsonLd data={blogListSchema} />
 
       <section className="mx-auto max-w-7xl px-6 py-12 lg:px-10">
         <h1 className="font-sans font-bold text-4xl text-slate-950 sm:text-5xl">
