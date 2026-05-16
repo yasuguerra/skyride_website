@@ -45,7 +45,17 @@ export const fleet: Aircraft[] = [
       en: "Reliable twin-engine for regional flights. The safety of two engines for overwater and mountain routes.",
     },
     specs: { range: "1,820 km", speed: "330 km/h", altitude: "23,500 ft", engines: "2 × Lycoming IO-540" },
-    image: "/images/fleet/piper-azteca.jpg",
+    image: "/images/fleet/piper-azteca.jpeg",
+    highlight: {
+      es: "El Piper Azteca es la elección ideal para quienes no quieren comprometer seguridad ni velocidad en sus vuelos privados por Panamá. Su doble motor Lycoming IO-540 garantiza una redundancia total sobre rutas sobre agua y montaña, mientras que su velocidad de crucero de 330 km/h lo convierte en uno de los aviones más rápidos de nuestra flota para llegar a San Blas, Bocas del Toro o Contadora. Con capacidad para 5 pasajeros y una cabina cómoda y silenciosa, es la opción preferida de familias y grupos que viajan con regularidad y valoran la tranquilidad de volar en bimotor.",
+      en: "The Piper Azteca is the ideal choice for travelers who refuse to compromise on safety or speed on their private flights across Panama. Its twin Lycoming IO-540 engines provide full redundancy over overwater and mountain routes, while its 330 km/h cruise speed makes it one of the fastest aircraft in our fleet for reaching San Blas, Bocas del Toro, or Contadora. Seating 5 passengers in a comfortable, quiet cabin, it is the preferred option for families and frequent flyers who value the peace of mind that comes with twin-engine reliability.",
+    },
+    gallery: [
+      "/images/fleet/piper-azteca.jpeg",
+      "/images/fleet/piper-azteca.jpg",
+      "/images/fleet/Azteca%20Ext1.jpeg",
+      "/images/fleet/Azteca%20int1.jpeg",
+    ],
     priceFrom: { es: "Desde $674", en: "From $674" },
     routes: ["panama-contadora", "panama-san-blas", "panama-bocas-del-toro"],
   },
