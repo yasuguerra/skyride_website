@@ -70,7 +70,16 @@ export const fleet: Aircraft[] = [
       en: "High-performance single-engine with a spacious cabin. Premium comfort for small groups.",
     },
     specs: { range: "1,700 km", speed: "296 km/h", altitude: "20,000 ft" },
-    image: "/images/fleet/piper-saratoga.jpg",
+    image: "/images/fleet/Saratoga%20Conta.jpg",
+    highlight: {
+      es: "El Piper Saratoga es el favorito de viajeros que buscan vuelos chárter privados en Panamá sin sacrificar comodidad ni velocidad. Con una velocidad de crucero de 296 km/h y un alcance de 1,700 km, conecta Ciudad de Panamá con Contadora, San Blas, Bocas del Toro y otros destinos remotos en cuestión de minutos. Su cabina amplia y silenciosa acomoda hasta 5 pasajeros con equipaje de mano, convirtiendo cada trayecto en una experiencia premium accesible. La opción inteligente para grupos pequeños, escapadas de fin de semana y viajes de negocios.",
+      en: "The Piper Saratoga is the go-to choice for travelers seeking private charter flights in Panama without sacrificing comfort or speed. Cruising at 296 km/h with a 1,700 km range, it connects Panama City to Contadora, San Blas, Bocas del Toro, and other remote destinations in minutes. Its spacious, quiet cabin comfortably seats up to 5 passengers with carry-on luggage, turning every flight into an accessible luxury experience. The smart pick for small groups, weekend getaways, and business travel.",
+    },
+    gallery: [
+      "/images/fleet/Saratoga%20Conta.jpg",
+      "/images/fleet/Saratoga%20Int%201.jpeg",
+      "/images/fleet/Saratoga%20Int%202.jpg",
+    ],
     priceFrom: { es: "Desde $770", en: "From $770" },
     routes: ["panama-contadora", "panama-san-blas"],
   },
