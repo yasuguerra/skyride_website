@@ -16,6 +16,10 @@ export interface ContentHub {
   fleetSlugs: string[];
   /** YouTube video ID for VideoEmbed (optional) */
   videoId?: string;
+  /** Destination ID from destinations.ts that this hub corresponds to */
+  destinationId?: string;
+  /** Service page ID (from ServicePage pageId) that this hub corresponds to */
+  servicePageId?: string;
   /** Optional cross-sell CTA block linking to a partner page */
   partnerCta?: {
     heading: { es: string; en: string };
@@ -95,6 +99,7 @@ export const contentHubs: ContentHub[] = [
       "luna-de-miel-en-costa-rica",
     ],
     fleetSlugs: ["king-air-f90-6-pasajeros", "king-air-200-hasta-9-pasajeros", "cessna-grand-caravan-12-pasajeros"],
+    destinationId: "costa-rica",
     videoId: undefined,
   },
   {
@@ -129,6 +134,74 @@ export const contentHubs: ContentHub[] = [
       "helicoptero-privado-lo-que-debes-saber-sky-ride",
     ],
     fleetSlugs: ["robinson-r44-3-pasajeros", "robinson-r66-4-pasajeros", "eurocopter-b3-as350-5-pasajeros", "eurocopter-b4-ec130-6-pasajeros"],
+    servicePageId: "helicopter",
+    videoId: undefined,
+  },
+  {
+    id: "san-blas",
+    pageId: "hub-san-blas",
+    title: {
+      es: "Guía Completa de San Blas (Guna Yala)",
+      en: "Complete San Blas Islands Guide (Guna Yala)",
+    },
+    subtitle: {
+      es: "Todo lo que necesitas saber para llegar y disfrutar el Caribe indígena de Panamá",
+      en: "Everything you need to know to reach and enjoy Panama's indigenous Caribbean",
+    },
+    description: {
+      es: "San Blas es el archipiélago más virgen del Caribe panameño — más de 365 islas con aguas turquesas y arena blanca, administradas por la comunidad Guna Yala. En esta guía reunimos las mejores islas, cómo llegar en vuelo privado en solo 30 minutos, y todo lo que necesitas saber para planificar tu visita.",
+      en: "San Blas is Panama's most pristine Caribbean archipelago — over 365 islands with turquoise water and white sand, managed by the Guna Yala community. In this guide we cover the best islands, how to arrive by private flight in just 30 minutes, and everything you need to plan your visit.",
+    },
+    heroImage: "/images/destinations/sanblas-catamaran.jpg",
+    servicePage: {
+      label: { es: "Vuelo privado a San Blas", en: "Private flight to San Blas" },
+      es: "/vuelo-privado-san-blas",
+      en: "/en/private-flight-to-san-blas",
+    },
+    routePage: {
+      label: { es: "Ruta Panamá → San Blas", en: "Panama → San Blas Route" },
+      es: "/ruta/panama-san-blas",
+      en: "/en/route/panama-san-blas",
+    },
+    blogSlugs: [
+      "descubre-las-mejores-islas-de-san-blas-skyride",
+      "como-llegar-a-san-blas",
+    ],
+    fleetSlugs: ["cessna-206-5-pasajeros", "daher-kodiak", "cessna-grand-caravan-12-pasajeros"],
+    destinationId: "san-blas",
+    videoId: undefined,
+  },
+  {
+    id: "bocas",
+    pageId: "hub-bocas",
+    title: {
+      es: "Guía Completa de Bocas del Toro",
+      en: "Complete Bocas del Toro Guide",
+    },
+    subtitle: {
+      es: "Surf, manglares y Caribbean vibes a 1 hora de vuelo privado desde Ciudad de Panamá",
+      en: "Surf, mangroves and Caribbean vibes just 1 hour by private flight from Panama City",
+    },
+    description: {
+      es: "Bocas del Toro es el archipiélago más buscado del Caribe panameño. Con sus playas de arena blanca, corales, surf de clase mundial en Playa Bluff y la vibrante vida nocturna de Bocas Town, es el destino perfecto para escaparse sin las 10 horas de carretera por la Cordillera. Aquí encontrarás todo para planificar tu viaje en vuelo privado.",
+      en: "Bocas del Toro is Panama's most sought-after Caribbean archipelago. With white sand beaches, coral reefs, world-class surf at Playa Bluff, and the vibrant nightlife of Bocas Town, it's the perfect escape from the 10-hour mountain drive. Here's everything you need to plan your private flight trip.",
+    },
+    heroImage: "/images/destinations/Bocas del Toro.jpg",
+    servicePage: {
+      label: { es: "Vuelo privado a Bocas del Toro", en: "Private flight to Bocas del Toro" },
+      es: "/vuelo-privado-bocas-del-toro",
+      en: "/en/private-flight-to-bocas-del-toro",
+    },
+    routePage: {
+      label: { es: "Ruta Panamá → Bocas del Toro", en: "Panama → Bocas del Toro Route" },
+      es: "/ruta/panama-bocas-del-toro",
+      en: "/en/route/panama-bocas-del-toro",
+    },
+    blogSlugs: [
+      "vuela-de-panama-a-bocas-del-toro-la-mejor-forma-de-llegar-al-paraiso",
+    ],
+    fleetSlugs: ["cessna-grand-caravan-12-pasajeros", "king-air-f90-6-pasajeros", "daher-kodiak"],
+    destinationId: "bocas-del-toro",
     videoId: undefined,
   },
 ];
@@ -139,4 +212,12 @@ export function getContentHub(id: string): ContentHub | undefined {
 
 export function getContentHubByPageId(pageId: string): ContentHub | undefined {
   return contentHubs.find((h) => h.pageId === pageId);
+}
+
+export function getContentHubForDestination(destinationId: string): ContentHub | undefined {
+  return contentHubs.find((h) => h.destinationId === destinationId);
+}
+
+export function getContentHubForService(servicePageId: string): ContentHub | undefined {
+  return contentHubs.find((h) => h.servicePageId === servicePageId);
 }

@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { Locale } from "@/i18n/routing";
 import type { Destination } from "@/data/destinations";
 import { getRoute } from "@/data/routes";
+import { getContentHubForDestination } from "@/data/content-hubs";
 import { getWhatsAppHref } from "@/data/navigation";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -20,6 +21,7 @@ export function DestinationPage({
   destination: Destination;
 }) {
   const route = getRoute(destination.routeId);
+  const hub = getContentHubForDestination(destination.id);
   const whatsappHref = getWhatsAppHref(
     locale,
     locale === "es"
@@ -125,6 +127,25 @@ export function DestinationPage({
           ))}
         </div>
       </section>
+
+      {/* Content Hub CTA */}
+      {hub && (
+        <section className="mx-auto max-w-7xl px-6 pb-4 lg:px-10">
+          <Link
+            href={locale === "en" ? hub.servicePage.en : hub.servicePage.es}
+            className="flex items-center justify-between gap-4 rounded-2xl border border-[#20d1b3]/30 bg-[#152c46] px-6 py-5 text-white transition hover:bg-[#1a3655]"
+          >
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-[#20d1b3]">
+                {locale === "es" ? "Guía completa" : "Complete guide"}
+              </p>
+              <p className="mt-1 font-semibold text-lg">{hub.title[locale]}</p>
+              <p className="mt-1 text-sm text-slate-300">{hub.subtitle[locale]}</p>
+            </div>
+            <span className="shrink-0 text-[#20d1b3] text-2xl">&rarr;</span>
+          </Link>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="bg-[#132840] px-6 py-16 lg:px-10">

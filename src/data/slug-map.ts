@@ -115,6 +115,31 @@ export const slugMap: SlugEntry[] = [
     en: "flights-to-playa-tambor",
   },
 
+  {
+    pageId: "dest-san-blas",
+    type: "destination",
+    es: "vuelo-privado-san-blas",
+    en: "private-flight-to-san-blas",
+  },
+  {
+    pageId: "dest-bocas-del-toro",
+    type: "destination",
+    es: "vuelo-privado-bocas-del-toro",
+    en: "private-flight-to-bocas-del-toro",
+  },
+  {
+    pageId: "dest-david",
+    type: "destination",
+    es: "vuelo-privado-a-david-chiriqui",
+    en: "private-flight-to-david-panama",
+  },
+  {
+    pageId: "dest-pedasi",
+    type: "destination",
+    es: "vuelo-privado-a-pedasi",
+    en: "private-flight-to-pedasi",
+  },
+
   // ─── Route Pages ─────────────────────────────────
   // URL pattern: /ruta/{slug} (ES), /en/route/{slug} (EN)
   {
@@ -140,6 +165,18 @@ export const slugMap: SlugEntry[] = [
     type: "route",
     es: "ruta/panama-bocas-del-toro",
     en: "route/panama-bocas-del-toro",
+  },
+  {
+    pageId: "route-panama-david",
+    type: "route",
+    es: "ruta/panama-david",
+    en: "route/panama-david",
+  },
+  {
+    pageId: "route-panama-pedasi",
+    type: "route",
+    es: "ruta/panama-pedasi",
+    en: "route/panama-pedasi",
   },
   {
     pageId: "route-panama-medellin",
@@ -178,6 +215,18 @@ export const slugMap: SlugEntry[] = [
     type: "content-hub",
     es: "guia-helicopteros",
     en: "helicopter-guide",
+  },
+  {
+    pageId: "hub-san-blas",
+    type: "content-hub",
+    es: "guia-san-blas",
+    en: "san-blas-guide",
+  },
+  {
+    pageId: "hub-bocas",
+    type: "content-hub",
+    es: "guia-bocas-del-toro",
+    en: "bocas-del-toro-guide",
   },
 
   // ─── Booking ─────────────────────────────────────
@@ -265,6 +314,10 @@ const esBlogSlugs = [
   "luna-de-miel-en-costa-rica",
   "como-elegir-asientos-de-avion-privado",
   "como-llegar-a-san-blas",
+  "que-hacer-en-bocas-del-toro",
+  "vuelo-privado-a-david-chiriqui-guia-completa",
+  "vuelo-privado-a-pedasi-azuero",
+  "vuelo-privado-vs-aerolinea-comercial-panama",
 ];
 
 // ─── Blog Posts (EN) ──────────────────────────────
@@ -294,6 +347,10 @@ const enBlogSlugs = [
   "how-to-choose-private-airplane-seats",
   "san-blas-islands-travel-guide",
   "charter-flights-panama-prices",
+  "what-to-do-in-bocas-del-toro",
+  "private-flight-to-david-chiriqui-guide",
+  "private-flight-to-pedasi-azuero",
+  "private-flight-vs-commercial-airline-panama",
 ];
 
 // Blog translation pairs (ES index → EN slug, null if no translation)
@@ -342,6 +399,14 @@ const blogTranslationMap: Record<string, string | null> = {
     "how-to-choose-private-airplane-seats",
   "como-llegar-a-san-blas":
     "san-blas-islands-travel-guide",
+  "que-hacer-en-bocas-del-toro":
+    "what-to-do-in-bocas-del-toro",
+  "vuelo-privado-a-david-chiriqui-guia-completa":
+    "private-flight-to-david-chiriqui-guide",
+  "vuelo-privado-a-pedasi-azuero":
+    "private-flight-to-pedasi-azuero",
+  "vuelo-privado-vs-aerolinea-comercial-panama":
+    "private-flight-vs-commercial-airline-panama",
 };
 
 // Add blog posts to slug map

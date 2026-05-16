@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "weekly",
     priority: 1.0,
     alternates: {
-      languages: { es: BASE, en: `${BASE}/en` },
+      languages: { es: BASE, en: `${BASE}/en`, "x-default": BASE },
     },
   });
 
@@ -23,9 +23,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${BASE}/en`,
     lastModified: now,
     changeFrequency: "weekly",
-    priority: 1.0,
+    priority: 0.9,
     alternates: {
-      languages: { es: BASE, en: `${BASE}/en` },
+      languages: { es: BASE, en: `${BASE}/en`, "x-default": BASE },
     },
   });
 
@@ -51,15 +51,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       page.type === "legal" ? "yearly" :
       "weekly";
 
+    const lastModified =
+      page.type === "legal" ? new Date("2025-01-01") :
+      page.type === "fleet-detail" ? new Date("2026-01-01") :
+      page.type === "blog-post" ? new Date("2025-12-01") :
+      page.type === "blog-index" ? now :
+      new Date("2026-03-01");
+
+    const xDefault = page.enOnly ? enUrl : esUrl;
+
     // ES URL — skip for EN-only entries
     if (!page.enOnly) {
       entries.push({
         url: esUrl,
-        lastModified: now,
+        lastModified,
         changeFrequency,
         priority,
         alternates: {
-          languages: { es: esUrl, en: enUrl },
+          languages: { es: esUrl, en: enUrl, "x-default": xDefault },
         },
       });
     }
@@ -68,11 +77,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (!page.esOnly) {
       entries.push({
         url: enUrl,
-        lastModified: now,
+        lastModified,
         changeFrequency,
         priority,
         alternates: {
-          languages: { es: esUrl, en: enUrl },
+          languages: { es: esUrl, en: enUrl, "x-default": xDefault },
         },
       });
     }

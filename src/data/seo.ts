@@ -220,6 +220,94 @@ const seoData: Record<string, PageSeo> = {
     },
     ogType: "website",
   },
+  "dest-san-blas": {
+    title: {
+      es: "Vuelo Privado a San Blas (Guna Yala) | 30 min desde Panamá | Sky Ride",
+      en: "Private Flight to San Blas Islands | 30 min from Panama City | Sky Ride",
+    },
+    description: {
+      es: "Llega a San Blas en 30 minutos de vuelo privado. 365+ islas vírgenes, aguas turquesas y cultura Guna Yala. Reserva tu vuelo con Sky Ride desde $598.",
+      en: "Reach San Blas in 30 minutes by private flight. 365+ pristine islands, turquoise water and Guna Yala culture. Book your flight with Sky Ride from $598.",
+    },
+    focusKeyword: { es: "vuelo privado san blas", en: "private flight san blas islands" },
+  },
+  "dest-bocas-del-toro": {
+    title: {
+      es: "Vuelo Privado a Bocas del Toro | 1 hora desde Panamá | Sky Ride",
+      en: "Private Flight to Bocas del Toro | 1 Hour from Panama City | Sky Ride",
+    },
+    description: {
+      es: "Bocas del Toro en 1 hora de vuelo privado. Surf, manglares y Caribe sin 10 horas de carretera. Flota disponible y precios desde $998. Reserva con Sky Ride.",
+      en: "Bocas del Toro in 1 hour by private flight. Surf, mangroves and Caribbean vibes — no 10-hour mountain drive. Fleet available from $998. Book with Sky Ride.",
+    },
+    focusKeyword: { es: "vuelo privado bocas del toro", en: "private flight bocas del toro" },
+  },
+  "hub-san-blas": {
+    title: {
+      es: "Guía San Blas Panamá: Vuelos Privados, Islas y Consejos | Sky Ride",
+      en: "San Blas Islands Guide: Private Flights, Islands & Tips | Sky Ride",
+    },
+    description: {
+      es: "Guía completa de San Blas: mejores islas, cómo llegar en vuelo privado en 30 min, qué llevar, precios y consejos de nuestra tripulación para disfrutar Guna Yala.",
+      en: "Complete San Blas guide: best islands, how to arrive by private flight in 30 min, what to bring, prices and crew tips for experiencing Guna Yala.",
+    },
+    focusKeyword: { es: "guia san blas panama vuelo privado", en: "san blas islands guide private flight" },
+  },
+  "hub-bocas": {
+    title: {
+      es: "Guía Bocas del Toro: Vuelo Privado, Playas y Actividades | Sky Ride",
+      en: "Bocas del Toro Guide: Private Flight, Beaches & Activities | Sky Ride",
+    },
+    description: {
+      es: "Todo sobre Bocas del Toro: cómo llegar en vuelo privado en 1 hora, mejores playas, surf en Playa Bluff, Cayo Zapatilla y consejos de nuestra tripulación.",
+      en: "Everything about Bocas del Toro: how to arrive by private flight in 1 hour, best beaches, surfing at Playa Bluff, Cayo Zapatilla, and crew tips.",
+    },
+    focusKeyword: { es: "guia bocas del toro vuelo privado", en: "bocas del toro guide private flight" },
+  },
+  "dest-david": {
+    title: {
+      es: "Vuelo Privado a David Chiriquí | 55 min desde Panamá | Sky Ride",
+      en: "Private Flight to David Chiriquí | 55 min from Panama City | Sky Ride",
+    },
+    description: {
+      es: "Vuelo privado directo a David, Chiriquí en 55 minutos. Puerta de entrada al Boquete, volcán Barú y Tierras Altas. Sin 7 horas de carretera. Reserva con Sky Ride.",
+      en: "Direct private flight to David, Chiriquí in 55 minutes. Gateway to Boquete, Barú Volcano, and the Highlands. Skip the 7-hour drive. Book with Sky Ride.",
+    },
+    focusKeyword: { es: "vuelo privado david chiriqui", en: "private flight david chiriqui panama" },
+  },
+  "dest-pedasi": {
+    title: {
+      es: "Vuelo Privado a Pedásí Azuero | 40 min desde Panamá | Sky Ride",
+      en: "Private Flight to Pedásí Azuero | 40 min from Panama City | Sky Ride",
+    },
+    description: {
+      es: "Vuelo privado a Pedásí en 40 minutos. Playas vírgenes, surf y tortugas en la Península de Azuero. Sin 4 horas de carretera. Precios desde $750. Reserva ya.",
+      en: "Private flight to Pedásí in 40 minutes. Pristine beaches, surf and sea turtles on the Azuero Peninsula. No 4-hour drive. From $750. Book now.",
+    },
+    focusKeyword: { es: "vuelo privado pedasi azuero", en: "private flight pedasi panama" },
+  },
+  "route-panama-david": {
+    title: {
+      es: "Ruta Panamá a David Chiriquí | Vuelo Privado 55 min | Sky Ride",
+      en: "Panama to David Chiriquí Route | 55-min Private Flight | Sky Ride",
+    },
+    description: {
+      es: "Vuelo privado Panamá → David en 55 minutos. Ver flota disponible, precios desde $1,200 y reservar al instante. Sky Ride, el marketplace de aviación privada de Panamá.",
+      en: "Private flight Panama → David in 55 minutes. See available fleet, prices from $1,200 and book instantly. Sky Ride, Panama's private aviation marketplace.",
+    },
+    focusKeyword: { es: "vuelo privado panama david chiriqui", en: "private flight panama to david chiriqui" },
+  },
+  "route-panama-pedasi": {
+    title: {
+      es: "Ruta Panamá a Pedásí | Vuelo Privado 40 min | Sky Ride",
+      en: "Panama to Pedásí Route | 40-min Private Flight | Sky Ride",
+    },
+    description: {
+      es: "Vuelo privado Panamá → Pedásí en 40 minutos. Reserva en minutos, elige tu aeronave y llega fresco a la Península de Azuero. Sky Ride desde $750.",
+      en: "Private flight Panama → Pedásí in 40 minutes. Book in minutes, choose your aircraft and arrive fresh on the Azuero Peninsula. Sky Ride from $750.",
+    },
+    focusKeyword: { es: "vuelo privado panama pedasi", en: "private flight panama pedasi azuero" },
+  },
   "hub-contadora": {
     title: {
       es: "Guía Completa de Isla Contadora | Vuelos, Playas y Tips | Sky Ride",

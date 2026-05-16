@@ -20,7 +20,7 @@ import "../globals.css";
 const bodyFont = Open_Sans({
   variable: "--font-body",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["300", "400", "700", "800"],
   display: "swap",
 });
 

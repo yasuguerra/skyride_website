@@ -1,5 +1,3 @@
-import Script from "next/script";
-
 export type JsonLdData = Record<string, unknown>;
 
 export function JsonLd({ data }: { data: JsonLdData | JsonLdData[] }) {
@@ -7,11 +5,9 @@ export function JsonLd({ data }: { data: JsonLdData | JsonLdData[] }) {
   return (
     <>
       {json.map((item, i) => (
-        <Script
+        <script
           key={i}
-          id={`ld-${(item["@type"] as string) ?? "schema"}-${i}`}
           type="application/ld+json"
-          strategy="afterInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(item) }}
         />
       ))}
@@ -19,7 +15,7 @@ export function JsonLd({ data }: { data: JsonLdData | JsonLdData[] }) {
   );
 }
 
-const BASE_URL = "https://skyride.city";
+const BASE_URL = "https://www.skyride.city";
 
 export function organizationSchema(): JsonLdData {
   return {

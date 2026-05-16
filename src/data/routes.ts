@@ -164,6 +164,46 @@ export const routes: RouteData[] = [
       en: ["Direct Caribbean flight", "Santo Domingo & Punta Cana", "Perfect for couples", "Pressurized cabin"],
     },
   },
+  {
+    id: "panama-david",
+    slug: "panama-david",
+    origin: { es: "Ciudad de Panamá", en: "Panama City" },
+    destination: { es: "David, Chiriquí", en: "David, Chiriquí" },
+    flightTime: "55 min",
+    distance: "470 km",
+    startingPrice: 1200,
+    currency: "USD",
+    description: {
+      es: "Vuelo privado directo a David, la capital de Chiriquí. Evite las 7 horas de carretera y llegue descansado a la puerta del Boquete, el Baru y las Tierras Altas. Ideal para viajes de negocios y escapadas de naturaleza.",
+      en: "Direct private flight to David, Chiriquí's capital. Skip the 7-hour highway drive and arrive fresh at the gateway to Boquete, Baru volcano, and the Highlands. Perfect for business trips and nature escapes.",
+    },
+    aircraft: ["cessna-caravan", "daher-kodiak", "king-air-f90"],
+    image: "/images/hero/skyride-vuelos-privados-panama.webp",
+    highlights: {
+      es: ["55 min de vuelo directo", "Puerta al Boquete y Baru", "Ideal para negocios", "Sin 7 horas de carretera"],
+      en: ["55-min direct flight", "Gateway to Boquete & Baru", "Ideal for business", "Skip the 7-hour drive"],
+    },
+  },
+  {
+    id: "panama-pedasi",
+    slug: "panama-pedasi",
+    origin: { es: "Ciudad de Panamá", en: "Panama City" },
+    destination: { es: "Pedásí, Azuero", en: "Pedásí, Azuero" },
+    flightTime: "40 min",
+    distance: "230 km",
+    startingPrice: 750,
+    currency: "USD",
+    description: {
+      es: "Vuelo privado a Pedásí, el corazón surf de la Península de Azuero. Playas vírgenes, tortugas marinas y el Panamá más auténtico a solo 40 minutos de vuelo. Sin las 4 horas de carretera.",
+      en: "Private flight to Pedásí, the surf heart of the Azuero Peninsula. Pristine beaches, sea turtles, and the most authentic Panama — just 40 minutes away by air. No 4-hour highway drive.",
+    },
+    aircraft: ["cessna-206", "piper-azteca", "daher-kodiak"],
+    image: "/images/hero/service-4.webp",
+    highlights: {
+      es: ["40 min de vuelo directo", "Surf y tortugas marinas", "Panamá rural auténtico", "Sin 4 horas de carretera"],
+      en: ["40-min direct flight", "Surf & sea turtles", "Authentic rural Panama", "Skip the 4-hour drive"],
+    },
+  },
 ];
 
 export function getRoute(id: string): RouteData | undefined {

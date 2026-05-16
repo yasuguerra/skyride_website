@@ -33,7 +33,7 @@ steps:
       - "--min-instances=0"
       - "--max-instances=10"
       - "--set-env-vars=NODE_ENV=production,VERTEX_AI_PROJECT=${PROJECT_ID}"
-      - "--set-secrets=MAILGUN_API_KEY=mailgun-api-key:latest"
+      - "--remove-secrets=MAILGUN_API_KEY"
 
 substitutions:
   _REGION: us-central1

@@ -102,6 +102,36 @@ export const destinations: Destination[] = [
       en: ["Quiet beach", "Surf & nature", "Sea turtles", "Nicoya Peninsula"],
     },
   },
+  {
+    id: "david",
+    pageId: "dest-david",
+    name: { es: "David, Chiriquí", en: "David, Chiriquí" },
+    description: {
+      es: "La segunda ciudad de Panamá y puerta de entrada a la Cordillera de Chiriquí, el Baru y Boquete. A solo 55 minutos de vuelo desde la Ciudad de Panamá, con cero embotellamientos y sin 7 horas de carretera.",
+      en: "Panama's second city and gateway to the Chiriquí Highlands, Baru volcano, and Boquete. Just 55 minutes by private flight from Panama City — no highway traffic, no 7-hour drive.",
+    },
+    image: "/images/hero/skyride-vuelos-privados-panama.webp",
+    routeId: "panama-david",
+    highlights: {
+      es: ["Puerta al Boquete", "Volcán Barú", "Clima montañoso", "Sin 7 horas de carretera"],
+      en: ["Gateway to Boquete", "Barú Volcano", "Mountain climate", "Skip the 7-hour drive"],
+    },
+  },
+  {
+    id: "pedasi",
+    pageId: "dest-pedasi",
+    name: { es: "Pedásí, Azuero", en: "Pedásí, Azuero" },
+    description: {
+      es: "El secreto mejor guardado de la Peninsula de Azuero: playas de surf virgen, tortugas marinas y el auténtico Panamá rural. A 40 minutos de vuelo privado desde Ciudad de Panamá. Sin las 4 horas de carretera.",
+      en: "The best-kept secret of the Azuero Peninsula: pristine surf beaches, sea turtles, and authentic rural Panama. Just 40 minutes by private flight from Panama City. No 4-hour highway drive.",
+    },
+    image: "/images/hero/service-4.webp",
+    routeId: "panama-pedasi",
+    highlights: {
+      es: ["Surf virgen", "Tortugas marinas", "Panamá auténtico", "Sin 4 horas de carretera"],
+      en: ["Pristine surf", "Sea turtles", "Authentic Panama", "Skip the 4-hour drive"],
+    },
+  },
 ];
 
 export function getDestination(id: string): Destination | undefined {
