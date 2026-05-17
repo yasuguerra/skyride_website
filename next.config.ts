@@ -167,6 +167,22 @@ const nextConfig: NextConfig = {
       // ─── WordPress search pages ───────────────────────────────
       { source: "/search/:path*", destination: "/", permanent: true },
       { source: "/en/search/:path*", destination: "/en", permanent: true },
+
+      // ─── Route pages → destination pages (merged content) ────
+      { source: "/ruta/panama-contadora", destination: "/vuelo-privado-a-contadora", permanent: true },
+      { source: "/ruta/panama-san-blas", destination: "/guia-san-blas", permanent: true },
+      { source: "/ruta/panama-bocas-del-toro", destination: "/guia-bocas-del-toro", permanent: true },
+      { source: "/ruta/panama-costa-rica", destination: "/vuelo-privado-costa-rica", permanent: true },
+      { source: "/ruta/panama-medellin", destination: "/vuelos-privados-a-medellin", permanent: true },
+      { source: "/ruta/panama-david", destination: "/vuelo-privado-a-david-chiriqui", permanent: true },
+      { source: "/ruta/panama-pedasi", destination: "/vuelo-privado-a-pedasi", permanent: true },
+      { source: "/en/route/panama-contadora", destination: "/en/private-flight-to-contadora", permanent: true },
+      { source: "/en/route/panama-san-blas", destination: "/en/san-blas-guide", permanent: true },
+      { source: "/en/route/panama-bocas-del-toro", destination: "/en/bocas-del-toro-guide", permanent: true },
+      { source: "/en/route/panama-costa-rica", destination: "/en/private-flight-costa-rica", permanent: true },
+      { source: "/en/route/panama-medellin", destination: "/en/private-flights-to-medellin", permanent: true },
+      { source: "/en/route/panama-david", destination: "/en/private-flight-to-david-panama", permanent: true },
+      { source: "/en/route/panama-pedasi", destination: "/en/private-flight-to-pedasi", permanent: true },
     ];
   },
 };
