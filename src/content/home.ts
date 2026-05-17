@@ -30,7 +30,7 @@ type HomeContent = {
   localeLabel: string;
   switchHref: string;
   switchLabel: string;
-  nav: { label: string; href: string }[];
+  nav: { label: string; href: string; children?: { label: string; href: string }[] }[];
   sections: {
     servicesLabel: string;
     servicesTitle: string;
@@ -123,8 +123,23 @@ export const homeContent: Record<Locale, HomeContent> = {
     },
     nav: [
       { label: "Servicios", href: "#services" },
-      { label: "Rutas", href: "#routes" },      { label: "Flota", href: "/nuestra-flota" },
-      { label: "Blog", href: "/blog" },      { label: "Testimonios", href: "#testimonials" },
+      {
+        label: "Destinos",
+        href: "#",
+        children: [
+          { label: "Isla Contadora", href: "/vuelo-privado-a-contadora" },
+          { label: "San Blas", href: "/guia-san-blas" },
+          { label: "Bocas del Toro", href: "/guia-bocas-del-toro" },
+          { label: "Costa Rica", href: "/vuelo-privado-costa-rica" },
+          { label: "Medellín", href: "/vuelos-privados-a-medellin" },
+          { label: "Playa Tambor", href: "/vuelos-a-playa-tambor" },
+          { label: "David, Chiriquí", href: "/vuelo-privado-a-david-chiriqui" },
+          { label: "Pedasí", href: "/vuelo-privado-a-pedasi" },
+        ],
+      },
+      { label: "Flota", href: "/nuestra-flota" },
+      { label: "Blog", href: "/blog" },
+      { label: "Testimonios", href: "#testimonials" },
       { label: "Contacto", href: "#contact" },
     ],
     hero: {
@@ -280,7 +295,20 @@ export const homeContent: Record<Locale, HomeContent> = {
     },
     nav: [
       { label: "Services", href: "#services" },
-      { label: "Routes", href: "#routes" },
+      {
+        label: "Destinations",
+        href: "#",
+        children: [
+          { label: "Contadora Island", href: "/en/private-flight-to-contadora" },
+          { label: "San Blas Islands", href: "/en/san-blas-guide" },
+          { label: "Bocas del Toro", href: "/en/bocas-del-toro-guide" },
+          { label: "Costa Rica", href: "/en/private-flight-costa-rica" },
+          { label: "Medellín", href: "/en/private-flights-to-medellin" },
+          { label: "Playa Tambor", href: "/en/flights-to-playa-tambor" },
+          { label: "David, Chiriquí", href: "/en/private-flight-to-david-panama" },
+          { label: "Pedasi", href: "/en/private-flight-to-pedasi" },
+        ],
+      },
       { label: "Fleet", href: "/en/our-fleet" },
       { label: "Blog", href: "/en/blog" },
       { label: "Reviews", href: "#testimonials" },

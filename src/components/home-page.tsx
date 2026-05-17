@@ -64,11 +64,27 @@ export function HomePage({ locale }: HomePageProps) {
           />
         </Link>
         <nav className="hidden items-center gap-8 lg:flex">
-          {content.nav.map((item) => (
-            <Link key={item.label} href={item.href} className="transition hover:text-white">
-              {item.label}
-            </Link>
-          ))}
+          {content.nav.map((item) =>
+            item.children ? (
+              <div key={item.label} className="group relative">
+                <button className="flex items-center gap-1 transition hover:text-white">
+                  {item.label}
+                  <svg className="h-3 w-3 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+                </button>
+                <div className="pointer-events-none absolute left-0 top-full z-50 min-w-[200px] translate-y-1 rounded-xl border border-white/10 bg-slate-900 py-2 opacity-0 shadow-xl transition-all group-hover:pointer-events-auto group-hover:opacity-100">
+                  {item.children.map((child) => (
+                    <Link key={child.href} href={child.href} className="block px-4 py-2 text-sm text-slate-300 transition hover:bg-white/5 hover:text-white">
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <Link key={item.label} href={item.href} className="transition hover:text-white">
+                {item.label}
+              </Link>
+            )
+          )}
         </nav>
         <Link
           href={content.switchHref}
