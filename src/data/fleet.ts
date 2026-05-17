@@ -62,7 +62,6 @@ export const fleet: Aircraft[] = [
     },
     gallery: [
       "/images/fleet/piper-azteca.jpeg",
-      "/images/fleet/piper-azteca.jpg",
       "/images/fleet/Azteca%20Ext1.jpeg",
       "/images/fleet/Azteca%20int1.jpeg",
     ],
@@ -103,8 +102,18 @@ export const fleet: Aircraft[] = [
       es: "Avión compacto perfecto para parejas y grupos pequeños. Económico y confiable.",
       en: "Compact aircraft perfect for couples and small groups. Affordable and reliable.",
     },
-    specs: { range: "1,100 km", speed: "220 km/h", altitude: "14,000 ft" },
+    specs: { range: "1,100 km", speed: "220 km/h", altitude: "14,000 ft", engines: "1 × Lycoming O-360" },
     image: "/images/fleet/piper-cherokee.jpg",
+    highlight: {
+      es: "La Piper Cherokee es la aeronave perfecta para quien busca un vuelo privado íntimo y accesible sin renunciar a la confiabilidad. Su motor Lycoming O-360 y su diseño de ala baja la convierten en una de las aeronaves privadas más estables y fáciles de operar del mundo, con décadas de historial de seguridad comprobada. Con capacidad para 3 pasajeros, es la elección ideal para parejas en escapada romántica a Contadora o familias pequeñas que quieren explorar las islas del Pacífico panameño. Su cabina renovada, con asientos tapizados en cuero gris y panel de instrumentos moderno, ofrece una experiencia de vuelo cómoda y placentera desde el momento en que subes a bordo.",
+      en: "The Piper Cherokee is the perfect aircraft for travelers seeking an intimate private flight without compromising on reliability. Its Lycoming O-360 engine and low-wing design make it one of the most stable and trusted private aircraft in the world, with decades of proven safety history. Seating up to 3 passengers, it is the ideal choice for couples on a romantic escape to Contadora or small families looking to explore Panama's Pacific islands. Its refreshed cabin — featuring grey leather seats and a modern instrument panel — delivers a comfortable and enjoyable flight experience from the moment you step aboard.",
+    },
+    gallery: [
+      "/images/fleet/Cherokee%204.jpg",
+      "/images/fleet/Cherokee%201.jpg",
+      "/images/fleet/Cherokee%202.jpg",
+      "/images/fleet/Cherokee%203.jpg",
+    ],
     priceFrom: { es: "Desde $398", en: "From $398" },
     routes: ["panama-contadora"],
   },
